@@ -10,6 +10,7 @@ struct ContentView: View {
     @State private var appState: AppState = .listening
     @State private var flashingAnimation = false
     @GestureState private var isDetectingLongPress = false
+    @State private var completedLongPress = true
     
     var body: some View {
         ZStack {
@@ -40,27 +41,28 @@ struct ContentView: View {
                     ))
             }
         }
-        .animation(.easeInOut(duration: 0.3), value: appState)
-        // Gesture for tap and hold
+        .animation(.easeInOut(duration: 1), value: appState)
         .gesture(
-            LongPressGesture(minimumDuration: 5)
-                .updating($isDetectingLongPress) { currentValue, state, _ in
-                    state = currentValue
-                    if currentValue && appState == .listening {
+            DragGesture(minimumDistance: 0)
+                .onChanged { _ in
+                    if appState != .processing {
                         withAnimation {
                             appState = .processing
                         }
                     }
                 }
                 .onEnded { _ in
-                    if appState == .processing {
-                        withAnimation {
-                            appState = .caution
-                            flashingAnimation = true
-                        }
+                    withAnimation {
+                        appState = .caution
+                    }
+                    // Start flashing when caution mode is triggered
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                        flashingAnimation = true
                     }
                 }
         )
+
+
     }
     
     // Helper properties to determine appearance based on state
@@ -72,7 +74,7 @@ struct ContentView: View {
         case .processing:
             return Color.blue
         case .caution:
-            return flashingAnimation ? Color.red : Color.red.opacity(0.7)
+            return flashingAnimation ? Color.red : Color.white
         }
     }
     
