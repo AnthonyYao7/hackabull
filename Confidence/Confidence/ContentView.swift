@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     enum AppState {
@@ -11,6 +12,8 @@ struct ContentView: View {
     @State private var flashingAnimation = false
     @GestureState private var isDetectingLongPress = false
     @State private var completedLongPress = true
+    @State private var audioRecorder: AVAudioRecorder?
+
     
     var body: some View {
         ZStack {
@@ -49,21 +52,66 @@ struct ContentView: View {
                         withAnimation {
                             appState = .processing
                         }
+                        startRecording()
                     }
                 }
                 .onEnded { _ in
+                    stopRecording()
                     withAnimation {
                         appState = .caution
                     }
-                    // Start flashing when caution mode is triggered
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                         flashingAnimation = true
                     }
                 }
         )
-
-
     }
+    
+    private func startRecording() {
+        let session = AVAudioSession.sharedInstance()
+        
+        do {
+            try session.setCategory(.playAndRecord, mode: .default)
+            try session.setActive(true)
+            session.requestRecordPermission { allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        let settings = [
+                            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+                            AVSampleRateKey: 12000,
+                            AVNumberOfChannelsKey: 1,
+                            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+                        ]
+
+                        let fileName = UUID().uuidString + ".m4a"
+                        let url = FileManager.default.temporaryDirectory.appendingPathComponent(fileName)
+                        print("🎙️ Recording started. File saved at: \(url)")
+
+                        do {
+                            self.audioRecorder = try AVAudioRecorder(url: url, settings: settings)
+                            self.audioRecorder?.record()
+                            print("🎙️ Recording started: \(url.lastPathComponent)")
+                        } catch {
+                            print("❌ Could not start recording: \(error.localizedDescription)")
+                        }
+                    } else {
+                        print("❌ Microphone permission denied")
+                    }
+                }
+            }
+        } catch {
+            print("❌ AVAudioSession setup failed: \(error.localizedDescription)")
+        }
+    }
+    
+    private func stopRecording() {
+        if audioRecorder?.isRecording == true {
+            audioRecorder?.stop()
+            print("🛑 Recording stopped")
+        }
+    }
+
+
     
     // Helper properties to determine appearance based on state
     
