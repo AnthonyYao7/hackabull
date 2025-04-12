@@ -1,0 +1,41 @@
+name: ios-tests
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - 'apps/ios/**'
+            - '.github/workflows/ios-tests.yml'
+    pull_request:
+        branches:
+            - main
+        paths:
+            - 'apps/ios/**'
+    workflow_dispatch:
+jobs:
+    unit-tests:
+        runs-on: macos-14
+        steps:
+            - uses: actions/checkout@v4
+            - name: setup
+              run: |
+                # when updating, see https://github.com/actions/runner-images/blob/main/images/macos/macos-14-Readme.md for supported versions
+                xcode_path=/Applications/Xcode_16.1.app
+                sudo xcode-select -s "${xcode_path}/Contents/Developer"
+                xcodebuild -version
+                gem install xcpretty
+            - name: Build
+              run: >
+                xcodebuild build-for-testing -workspace apps/ios/GuideDogs.xcworkspace
+                -scheme Soundscape -destination "platform=iOS Simulator,OS=18.1,name=iPhone 16"
+                CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+                | tee xcodebuild.log | xcpretty && exit ${PIPESTATUS[0]}
+            - name: uploadlog
+              uses: actions/upload-artifact@v4
+              with:
+                name: xcodebuild-log
+                path: xcodebuild.log
+            - name: Test
+              run: >
+                xcodebuild test-without-building -workspace apps/ios/GuideDogs.xcworkspace
+                -scheme Soundscape -destination "platform=iOS Simulator,OS=18.1,name=iPhone 16"

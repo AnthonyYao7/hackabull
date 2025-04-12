@@ -1,0 +1,4423 @@
+/*  */
+"general.alert.yes" = "Ja";
+
+
+/*  */
+"general.alert.no" = "Nee";
+
+
+/*  */
+"general.alert.dismiss" = "Sluiten";
+
+
+/*  */
+"general.alert.skip" = "Overslaan";
+
+
+/*  */
+"general.alert.cancel" = "Annuleren";
+
+
+/*  */
+"general.alert.not_now" = "Niet nu";
+
+
+/*  */
+"general.alert.disconnect" = "Verbinding verbreken";
+
+
+/*  */
+"general.alert.forget" = "Vergeten";
+
+
+/*  */
+"general.alert.done" = "Gereed";
+
+
+/*  */
+"general.alert.exit" = "Afsluiten";
+
+
+/*  */
+"general.alert.delete" = "Verwijderen";
+
+
+/*  */
+"general.alert.reset" = "Opnieuw instellen";
+
+
+/*  */
+"general.alert.remove" = "Verwijderen";
+
+
+/*  */
+"general.alert.resume" = "Hervatten";
+
+
+/*  */
+"general.alert.keep" = "Behouden";
+
+
+/*  */
+"general.alert.edit" = "Bewerken";
+
+
+/*  */
+"general.alert.add" = "Toevoegen";
+
+
+/*  */
+"general.alert.download" = "Downloaden";
+
+
+/*  */
+"general.alert.details" = "Details";
+
+
+/*  */
+"general.alert.next" = "Volgende";
+
+
+/*  */
+"general.alert.continue" = "Doorgaan";
+
+
+/*  */
+"general.alert.stop" = "Stoppen";
+
+
+/*  */
+"general.alert.close" = "Sluiten";
+
+
+/*  */
+"general.alert.choose_an_action" = "Een actie kiezen";
+
+
+/*  */
+"general.alert.choose_an_app" = "Een app kiezen";
+
+
+/*  */
+"general.alert.destructive_undone_message" = "Deze actie kan niet ongedaan worden gemaakt";
+
+
+/*  */
+"general.alert.open_settings" = "Instellingen openen";
+
+
+/*  */
+"general.alert.open" = "Openen";
+
+
+/*  */
+"general.alert.replace" = "Vervangen";
+
+
+/*  */
+"general.alert.confirmation_title" = "Weet u het zeker?";
+
+
+/*  */
+"general.alert.discard" = "Wissen";
+
+
+/*  */
+"general.text.clear_text" = "Tekst wissen";
+
+
+/*  */
+"general.text.clear" = "Wissen";
+
+
+/*  */
+"general.loading.almost_ready" = "Bijna klaar…";
+
+
+/*  */
+"general.loading.loading" = "Laden…";
+
+
+/*  */
+"general.loading.no_punctuation" = "Laden";
+
+
+/*  */
+"general.percentage" = "%@%%";
+
+
+/*  */
+"general.percentage.complete" = "%@%% voltooid";
+
+
+/*  */
+"general.alert.offline_default.title" = "Offline modus";
+
+
+/*  */
+"general.alert.offline_default.message" = "Soundscape werkt offline. Soundscape blijft wel werken, maar bepaalde functies zijn beperkt.";
+
+
+/*  */
+"general.alert.offline_search.title" = "Zoeken is niet beschikbaar";
+
+
+/*  */
+"general.alert.offline_search.message" = "Wanneer Soundscape offline werkt, is de zoekfunctie uitgeschakeld. Sluit om terug te gaan naar het vorige scherm";
+
+
+/*  */
+"general.alert.offline.learn_more" = "Meer informatie";
+
+
+/*  */
+"general.alert.error.message" = "Probeer het later opnieuw.";
+
+
+/*  */
+"general.loading.start" = "Alles voorbereiden...";
+
+
+/*  */
+"general.loading.end" = "Alles opschonen...";
+
+
+/*  */
+"general.mute" = "Dempen";
+
+
+/*  */
+"general.volume" = "Volume";
+
+
+/*  */
+"general.tabs" = "%1$@, tabblad, %2$@ van %3$@";
+
+
+/*  */
+"general.alert.survey.title" = "We horen graag van u!";
+
+
+/*  */
+"general.alert.survey.message" = "Hebt u tijd voor een onderzoek van 5 minuten?";
+
+
+/*  */
+"general.text.string_with_quotation_marks" = "\"%@\"";
+
+
+/*  */
+"general.play" = "Afspelen";
+
+
+/*  */
+"general.stop" = "Stoppen";
+
+
+/*  */
+"general.downloading" = "Downloaden";
+
+
+/*  */
+"general.app_open" = "App openen";
+
+
+/*  */
+"general.app_download" = "App downloaden";
+
+
+/*  */
+"general.error.error_occurred" = "Er is een fout opgetreden";
+
+
+/*  */
+"general.error.location_services" = "Schakel Locatievoorzieningen in om Soundscape te gebruiken";
+
+
+/*  */
+"general.error.precise_location" = "Schakel Exacte locatie in om Soundscape te gebruiken";
+
+
+/*  */
+"general.error.location_services.authorize.title" = "Locatievoorzieningen autoriseren";
+
+
+/*  */
+"general.error.location_services.authorize.description" = "Soundscape gebruikt uw locatie om plaatsen en dingen om u heen te vinden en deze te beschrijven. De app heeft uw toestemming nodig om Locatievoorzieningen te gebruiken.";
+
+
+/*  */
+"general.error.location_services.authorize.instructions" = "1. Open de Instellingen-app hieronder\n2. Selecteer Locatie\n3. Selecteer Altijd of Tijdens het gebruiken van de app";
+
+
+/*  */
+"general.error.location_services.precise_location.instructions" = "1. Open de Instellingen-app hieronder\n2. Selecteer Locatie\n3. Schakel Exacte locatie in";
+
+
+/*  */
+"general.error.location_services_resume" = "Open Soundscape om Locatievoorzieningen te hervatten";
+
+
+/*  */
+"general.error.location_services_enable" = "Locatievoorzieningen inschakelen";
+
+
+/*  */
+"general.error.location_services_enable_description" = "Locatievoorzieningen zijn momenteel uitgeschakeld. Soundscape kan niet werken als Locatievoorzieningen zijn uitgeschakeld.";
+
+
+/*  */
+"general.error.location_services_enable_instructions.2" = "Schakel Locatievoorzieningen in via de Instellingen-app om door te gaan.\n\n1. Druk op de knop Vorige (met de naam Instellingen)\n2. Selecteer Privacy\n3. Selecteer Locatievoorzieningen\n4. Schakel Locatievoorzieningen in";
+
+
+/*  */
+"general.error.location_services_enable_instructions.3" = "Schakel Locatievoorzieningen in via de Instellingen-app om door te gaan.\n\n1. Druk op Instellingen openen\n2. Druk op de knop Vorige (met de naam Instellingen)\n3. Selecteer Privacy\n4. Selecteer Locatievoorzieningen\n5. Schakel Locatievoorzieningen in";
+
+
+/*  */
+"general.error.location_services_find_location_error" = "We kunnen uw huidige locatie niet vinden.";
+
+
+/*  */
+"general.error.heading" = "Soundscape weet niet in welke richting u kijkt. Houd uw telefoon horizontaal of begin te lopen en probeer het opnieuw";
+
+
+/*  */
+"general.error.location_services_find_location_error.try_again" = "We kunnen uw huidige locatie niet vinden. Probeer het later opnieuw.";
+
+
+/*  */
+"general.error.wifi" = "Het lijkt erop dat u geen Wi-Fi-verbinding hebt.";
+
+
+/*  */
+"general.error.wifi.info" = "U hebt een Wi-Fi-verbinding nodig om te downloaden.";
+
+
+/*  */
+"general.error.network_connection_required" = "Netwerkverbinding vereist";
+
+
+/*  */
+"general.error.network_connection_required.deleting_data" = "Er is een netwerkverbinding vereist voor het verwijderen en opnieuw laden van de kaartgegevens van Soundscape. Controleer of uw telefoon niet in de vliegtuigstand staat.";
+
+
+/*  */
+"general.error.ble.unauthorized.title" = "Bluetooth machtigen";
+
+
+/*  */
+"general.error.ble.unauthorized.message" = "Bluetooth-machtiging is vereist om uw apparaten te verbinden. Open de Instellingen-app hieronder om Bluetooth in te schakelen. Mogelijk wordt de app hierdoor opnieuw gestart.";
+
+
+/*  */
+"general.error.add_marker_error" = "We kunnen deze plek niet markeren. Probeer het later opnieuw.";
+
+
+/*  */
+"general.error.set_beacon_error" = "We kunnen het baken nu niet instellen. Probeer het later opnieuw.";
+
+
+/*  */
+"general.error.preview" = "Locatievoorzieningen kunnen niet worden gestart op deze locatie.";
+
+
+/*  */
+"device_motion.title" = "Beweging & Conditie";
+
+
+/*  */
+"device_motion.enable.title" = "Beweging & Conditie bijhouden inschakelen";
+
+
+/*  */
+"device_motion.enable.description" = "Beweging & Conditie bijhouden is momenteel uitgeschakeld. Soundscape werkt niet wanneer Beweging & Conditie bijhouden is uitgeschakeld.";
+
+
+/*  */
+"device_motion.enable.instructions" = "Schakel Houd conditie bij in de app Instellingen in om door te gaan.\n\n1. Druk op Instellingen openen\n2. Druk op de knop Terug (met de naam Instellingen)\n3. Selecteer Privacy\n4. Selecteer Beweging & Conditie\n5. Schakel Houd conditie bij in\n6. Start Soundscape opnieuw";
+
+
+/*  */
+"device_motion.authorize.title" = "Beweging & Conditie bijhouden toestaan";
+
+
+/*  */
+"device_motion.authorize.description" = "Hiermee kan Soundscape uw ervaring verbeteren op basis van het feit of u aan het lopen bent, in een auto zit of stilstaat. De app heeft uw toestemming nodig om Beweging & Conditie te gebruiken. Voordat u Soundscape hiervoor toestemming geeft. moet u misschien ook Houd conditie bij inschakelen onder Instellingen → Privacy → Beweging & Conditie.";
+
+
+/*  */
+"device_motion.authorize.instructions" = "1. Open de app Instellingen hieronder\n2. Schakel Beweging & Conditie bijhouden in";
+
+
+/*  */
+"settings.screen_title" = "Instellingen";
+
+
+/*  */
+"settings.clear_cache.alert_title" = "Opgeslagen gegevens verwijderen?";
+
+
+/*  */
+"settings.clear_cache.alert_message" = "Soundscape slaat kaartgegevens op om gegevens- en batterijverbruik te verminderen. Als u opgeslagen gegevens verwijdert, moet Soundscape de gegevens opnieuw downloaden.";
+
+
+/*  */
+"settings.clear_cache.markers.alert_title" = "Markeringen en routes behouden?";
+
+
+/*  */
+"settings.clear_cache.markers.alert_message" = "Kies Verwijderen om markeringen, bakens en routes te wissen of Behouden om alleen kaartgegevens te verwijderen. Met Verwijderen wordt de app teruggezet naar de installatiestatus. Dit kan niet ongedaan worden gemaakt.";
+
+
+/*  */
+"settings.clear_cache.no_service.title" = "Kan de opgeslagen kaartgegevens niet wissen";
+
+
+/*  */
+"settings.clear_cache.no_service.message" = "Soundscape kan momenteel geen verbinding maken met internet. Er is een internetverbinding vereist om de opgeslagen kaartgegevens te wissen zodat de kaartgegevens kunnen worden vernieuwd.";
+
+
+/*  */
+"settings.telemetry.optout.alert_title" = "Afmelden voor telemetrie";
+
+
+/*  */
+"settings.telemetry.optout.alert_message" = "Met deze actie wordt de opgeslagen informatie gewist en meldt u zich af voor toekomstige verzamelacties van telemetriegegevens. Weet u het zeker?";
+
+
+/*  */
+"settings.telemetry.optout.action" = "Afmelden";
+
+
+/*  */
+"settings.version.history.version" = "Versie %@";
+
+
+/*  */
+"settings.version.about.version" = "Versie %1$@ (%2$@)";
+
+
+/*  */
+"settings.feedback.subject" = "Feedback over Soundscape";
+
+
+/*  */
+"settings.feedback.choose_email_app" = "Kies een app voor e-mail:";
+
+
+/*  */
+"settings.feedback.no_mail_client_error" = "Geen app voor e-mail geïnstalleerd";
+
+
+/*  */
+"settings.general.voice" = "Stem";
+
+
+/*  */
+"settings.units.imperial" = "Imperial (voet)";
+
+
+/*  */
+"settings.units.metric" = "Metrisch (meter)";
+
+
+/*  */
+"settings.clear_data" = "Opgeslagen kaartgegevens wissen";
+
+
+/*  */
+"settings.about_app" = "Over Soundscape";
+
+
+/*  */
+"settings.section.general" = "Algemene instellingen";
+
+
+/*  */
+"settings.section.units" = "Meeteenheden";
+
+
+/*  */
+"settings.section.troubleshooting" = "Problemen oplossen";
+
+
+/*  */
+"settings.section.about" = "Over";
+
+
+/*  */
+"settings.section.telemetry" = "Telemetrie";
+
+
+/*  */
+"settings.section.share_usage_data" = "Gebruiksgegevens delen";
+
+
+/*  */
+"settings.section.telemetry.footer" = "Help Soundscape te verbeteren door automatisch diagnoses, foutrapporten en gebruiksgegevens te verzenden. Er worden geen persoonlijke gegevens verzameld.";
+
+
+/*  */
+"settings.language.screen_title" = "Taal";
+
+
+/*  */
+"settings.language.screen_title.2" = "Taal en regio";
+
+
+/*  */
+"settings.language.change_alert" = "Wilt u de app-taal wijzigen in %@?";
+
+
+/*  */
+"settings.language.change_alert_action" = "Wijzigen in %@";
+
+
+/*  */
+"settings.language.language_name" = "%1$@ (%2$@)";
+
+
+/*  */
+"settings.audio.media_controls" = "Mediaregelaars";
+
+
+/*  */
+"settings.audio.mix_with_others.title" = "Mediaregelaars inschakelen";
+
+
+/*  */
+"settings.audio.mix_with_others.description" = "Gebruik deze optie om Soundscape te regelen met de knoppen op uw koptelefoon en afspeelknoppen voor medio op het vergrendelscherm. Als dit is ingeschakeld, kan Soundscape niet worden gebruikt terwijl andere media zoals podcasts of muziek wordt afgespeeld.";
+
+
+/*  */
+"setting.audio.mix_with_others.confirmation" = "Als u deze instelling inschakelt, worden de waarschuwingen van Soundscape en andere audio onderbroken wanneer u een andere media-app gebruikt. Ga terug naar Soundscape om de waarschuwingen te hervatten.";
+
+
+/*  */
+"settings.volume.other" = "Geluidseffecten";
+
+
+/*  */
+"voice.action.preview" = "Voorbeeld";
+
+
+/*  */
+"voice.preview" = "Hallo. Mijn naam is %@.";
+
+
+/*  */
+"voice.settings.speaking_rate" = "Spreeksnelheid";
+
+
+/*  */
+"voice.voices" = "Stemmen";
+
+
+/*  */
+"voice.voice_rate_test" = "Hoe klinkt dit?";
+
+
+/*  */
+"voice.title.voice_name_and_locale" = "%1$@, %2$@.";
+
+
+/*  */
+"voice.title.voice_name_and_locale_selected" = "%1$@, %2$@, geselecteerd.";
+
+
+/*  */
+"voice.voice_cell.selected.acc_hint" = "Deze stem is momenteel geselecteerd. Veeg omhoog of omlaag voor een voorbeeld.";
+
+
+/*  */
+"voice.voice_cell.use.acc_hint" = "Dubbeltik om deze stem te gebruiken. Veeg omhoog of omlaag voor een voorbeeld.";
+
+
+/*  */
+"voice.apple.other_languages" = "Andere talen";
+
+
+/*  */
+"voice.apple.male" = "Man";
+
+
+/*  */
+"voice.apple.female" = "Vrouw";
+
+
+/*  */
+"voice.apple.default" = "%@ (standaardstem)";
+
+
+/*  */
+"voice.apple.preview" = "Dit is %@. Hoe klinkt dit?";
+
+
+/*  */
+"voice.apple.preview_hint" = "Dubbeltik om te selecteren en een voorbeeld af te spelen.";
+
+
+/*  */
+"voice.settings.enhanced_available.title" = "Verbeterde stem beschikbaar!";
+
+
+/*  */
+"voice.settings.enhanced_available" = "Er is mogelijk een versie met een betere kwaliteit van deze stem beschikbaar. Als u deze en andere stemmen wilt downloaden, gaat u naar de sectie Gesproken materiaal van de iOS-toegankelijkheidsinstellingen.";
+
+
+/*  */
+"voice.settings.enhanced_available.button" = "Huidige versie gebruiken";
+
+
+/*  */
+"voice.apple.no_siri" = "Houd er rekening mee dat Siri-stemmen niet beschikbaar zijn voor Soundscape en niet zijn opgenomen in de onderstaande lijst.";
+
+
+/*  */
+"beacon.settings_title" = "Bakeninstellingen";
+
+
+/*  */
+"beacon.settings.style" = "Audiostijlen";
+
+
+/*  */
+"beacon.settings.style.haptic" = "Haptische stijlen";
+
+
+/*  */
+"beacon.settings.style.haptic.explanation" = "Deze bakenstijlen omvatten naast het gebruikelijke bakengeluid ook haptische feedback die u kunt voelen. Haptische feedback is alleen beschikbaar wanneer uw telefoon is ontgrendeld en Soundscape is geopend.";
+
+
+/*  */
+"beacon.settings.cues" = "Aankomst en vertrek";
+
+
+/*  */
+"beacon.settings.melodies" = "Verwijzingen voor vertrek en aankomst inschakelen";
+
+
+/*  */
+"beacon.settings.explanation" = "Als u een bakenstijl kiest, selecteer dan een stijl die prettig is om naar te luisteren en die u buiten in een lawaaierige omgeving goed kunt horen. Zorg dat u de richting gemakkelijk kunt bepalen via het luisterapparaat van uw voorkeur (koptelefoon of telefoonspeaker).";
+
+
+/*  */
+"settings.bluetooth.forget" = "Dit apparaat vergeten";
+
+
+/*  */
+"troubleshooting.gps_status" = "Locatienauwkeurigheid";
+
+
+/*  */
+"troubleshooting.gps_status.explanation.meters" = "Deze waarde is een schatting van hoe precies Soundscape weet waar u zich bevindt. Minder dan ca. 10 meter is goed. Minder dan ca. 20 meter is redelijk. Hogere waarden zijn slecht. Locatiegegevens zijn het nauwkeurigste als u buiten bent en niet onder een constructie staat.";
+
+
+/*  */
+"troubleshooting.gps_status.explanation.feet" = "Deze waarde is een schatting van hoe precies Soundscape weet waar u zich bevindt. Minder dan ca. 30 voet is goed. Minder dan ca. 60 voet is redelijk. Hogere waarden zijn slecht. Locatiegegevens zijn het nauwkeurigste als u buiten bent en niet onder een constructie staat.";
+
+
+/*  */
+"troubleshooting.gps_status.meters" = "±%@ meter";
+
+
+/*  */
+"troubleshooting.gps_status.feet" = "±%@ voet";
+
+
+/*  */
+"troubleshooting.check_audio" = "Audio controleren";
+
+
+/*  */
+"troubleshooting.check_audio.hint" = "Dubbeltik om de status te controleren van de koptelefoon die u gebruikt met Soundscape.";
+
+
+/*  */
+"troubleshooting.check_audio.explanation" = "Tik op deze knop om de status te controleren van de koptelefoon die u gebruikt met Soundscape.";
+
+
+/*  */
+"troubleshooting.cache" = "Kaartgegevens";
+
+
+/*  */
+"troubleshooting.cache.hint" = "Dubbeltik om opgeslagen kaartgegevens te verwijderen en opnieuw te downloaden.";
+
+
+/*  */
+"troubleshooting.cache.explanation" = "Soundscape downloadt kaartgegevens terwijl u loopt zodat de app u kan vertellen over de objecten en plaatsen om u heen. Als u problemen hebt met Soundscape of als er te veel geheugen wordt gebruikt, kunt u de opgeslagen kaartgegevens wissen. Soundscape downloadt vervolgens alleen opnieuw de kaartgegevens rond uw huidige locatie.";
+
+
+/*  */
+"settings.about.title.whats_new" = "Wat is er nieuw?";
+
+
+/*  */
+"settings.about.title.privacy" = "Privacyverklaring van Soundscape Community";
+
+
+/*  */
+"settings.about.title.service_agreement" = "Serviceovereenkomst";
+
+
+/*  */
+"settings.about.title.third_party" = "Kennisgevingen van derden";
+
+
+/*  */
+"settings.new_feature.num_of_num" = "%1$@ van %2$@";
+
+
+/*  */
+"settings.new_feature.accept_button.acc_label" = "Dubbeltik om aankondigingen te sluiten";
+
+
+/*  */
+"settings.new_feature.accept_button.acc_hint" = "Dubbeltik om de aankondiging voor de volgende update weer te geven";
+
+
+/*  */
+"settings.new_feature.recent_updates" = "Recente updates";
+
+
+/*  */
+"beacon.generic_name" = "Baken";
+
+
+/*  */
+"beacon.styles.current" = "Huidig";
+
+
+/*  */
+"beacon.styles.original" = "Oorspronkelijk";
+
+
+/*  */
+"beacon.styles.flare" = "Flits";
+
+
+/*  */
+"beacon.styles.shimmer" = "Glinstering";
+
+
+/*  */
+"beacon.styles.tactile" = "Tactiel";
+
+
+/*  */
+"beacon.styles.ping" = "Ping";
+
+
+/*  */
+"beacon.styles.drop" = "Vallen";
+
+
+/*  */
+"beacon.styles.signal" = "Signaal";
+
+
+/*  */
+"beacon.styles.signal.slow" = "Signaal (traag)";
+
+
+/*  */
+"beacon.styles.signal.very_slow" = "Signaal (zeer traag)";
+
+
+/*  */
+"beacon.styles.mallet" = "Hamer";
+
+
+/*  */
+"beacon.styles.mallet.slow" = "Hamer (traag)";
+
+
+/*  */
+"beacon.styles.mallet.very_slow" = "Hamer (heel traag)";
+
+
+/*  */
+"beacon.styles.haptic.wand" = "Haptische aanwijzer";
+
+
+/*  */
+"beacon.styles.haptic.pulse" = "Haptische pulsering";
+
+
+/*  */
+"beacon.audio_beacon" = "Audiobaken";
+
+
+/*  */
+"beacon.beacon_on" = "Baken op %@";
+
+
+/*  */
+"beacon.distance.unknown" = "Afstand onbekend";
+
+
+/*  */
+"beacon.action.remove_beacon" = "Baken verwijderen";
+
+
+/*  */
+"beacon.action.remove_beacon.double_tap.acc_hint" = "Dubbeltik op deze knop om het huidige audiobaken te verwijderen";
+
+
+/*  */
+"beacon.action.mute_beacon" = "Baken dempen";
+
+
+/*  */
+"beacon.action.mute_beacon.acc_hint" = "Dubbeltik om het audiobaken te dempen.";
+
+
+/*  */
+"beacon.action.unmute_beacon" = "Baken dempen opheffen";
+
+
+/*  */
+"beacon.action.unmute_beacon.acc_hint" = "Dubbeltik om het dempen van het audiobaken op te heffen.";
+
+
+/*  */
+"beacon.action.mute_unmute_beacon" = "Baken dempen aan of uit";
+
+
+/*  */
+"beacon.action.callout_beacon" = "Waarschuwen voor baken";
+
+
+/*  */
+"beacon.action.mute_unmute_beacon.acc_hint" = "Dubbeltik om het audiobaken te dempen of het dempen op te heffen.";
+
+
+/*  */
+"beacon.action.view_details" = "Details weergeven";
+
+
+/*  */
+"beacon.action.view_details.acc_hint.details" = "Dubbeltik om extra details weer te geven";
+
+
+/*  */
+"beacon.distance_update" = "Bakenafstand bijwerken";
+
+
+/*  */
+"beacon.beacon_location_within" = "Baken over %@";
+
+
+/*  */
+"beacon.beacon_location_within_audio_beacon_muted" = "Baken over %@. Audiobaken is gedempt";
+
+
+/*  */
+"preview.title" = "Soundscape Street Preview";
+
+
+/*  */
+"preview.current_intersection_unknown.label" = "Huidige locatie onbekend";
+
+
+/*  */
+"preview.next_intersection.label" = "Naar %@";
+
+
+/*  */
+"preview.approaching_intersection.label" = "U nadert een kruispunt";
+
+
+/*  */
+"preview.content.orientation.text.with_cardinal" = "%1$@° %2$@";
+
+
+/*  */
+"preview.content.orientation.text.without_cardinal" = "%1$@°";
+
+
+/*  */
+"preview.content.edge.text" = "%1$@ op %2$@";
+
+
+/*  */
+"preview.content.edge.text.accessibility_hint" = "Dubbeltik om naar het volgende kruispunt te gaan";
+
+
+/*  */
+"preview.go.title" = "Start";
+
+
+/*  */
+"preview.go_back.title" = "Vorige";
+
+
+/*  */
+"preview.go_back.accessibility_text" = "Dubbeltik om terug te gaan naar het vorige kruispunt";
+
+
+/*  */
+"preview.search.label" = "Nabije omgeving verkennen";
+
+
+/*  */
+"preview.search.accessibility_hint" = "Dubbeltik om te zoeken naar plaatsen in de buurt";
+
+
+/*  */
+"preview.alert.restart.title" = "Voorbeeld wordt al getoond";
+
+
+/*  */
+"preview.alert.restart.message" = "Wilt u Soundscape Street Preview opnieuw starten op deze locatie?";
+
+
+/*  */
+"preview.alert.restart.button" = "Opnieuw starten";
+
+
+/*  */
+"preview.callout.paused" = "Street Preview gepauzeerd";
+
+
+/*  */
+"preview.callout.end" = "Soundscape Street Preview beëindigen";
+
+
+/*  */
+"preview.callout.previous" = "Teruggaan naar vorige kruispunt";
+
+
+/*  */
+"preview.callout.start.at" = "Street Preview starten bij %@";
+
+
+/*  */
+"preview.callout.start.along" = "Street Preview starten langs %@";
+
+
+/*  */
+"preview.callout.continue.at" = "Street Preview voortzetten bij %@";
+
+
+/*  */
+"preview.callout.continue.along" = "Street Preview voortzetten langs %@";
+
+
+/*  */
+"preview.callout.road_finder.instructions" = "Draai uw telefoon om beschikbare wegen te zien";
+
+
+/*  */
+"preview.callout.road_finder.error_instructions" = "Draai om een weg te selecteren en druk op Start";
+
+
+/*  */
+"preview.callout.road_finder.road" = "%1$@, u loopt naar het %2$@";
+
+
+/*  */
+"preview.callout.road_finder.intersection" = "Volgende kruispunt: %@";
+
+
+/*  */
+"preview.callout.road_finder.intersection.same" = "Volgende kruispunt: maakt een bocht terug naar huidige kruispunt";
+
+
+/*  */
+"preview.callout.road_finder.intersection.end" = "Volgende kruispunt: wegeinde";
+
+
+/*  */
+"preview.callout.approach.end" = "U nadert een wegeinde";
+
+
+/*  */
+"preview.callout.turn.left" = "Links afgeslagen. Nu langs %@";
+
+
+/*  */
+"preview.callout.turn.right" = "Rechts afgeslagen. Nu langs %@";
+
+
+/*  */
+"preview.callout.turn.continue" = "Verdergaan langs %@";
+
+
+/*  */
+"preview.callout.turn.roundabout" = "Rotonde verlaten. Nu langs %@";
+
+
+/*  */
+"preview.include_unnamed_roads.title" = "Naamloze straten";
+
+
+/*  */
+"preview.include_unnamed_roads.subtitle" = "Naamloze straten opnemen bij Soundscape Street Preview";
+
+
+/*  */
+"preview.include_unnamed_roads.label.off" = "Naamloze straten inschakelen";
+
+
+/*  */
+"preview.include_unnamed_roads.label.on" = "Naamloze straten uitschakelen";
+
+
+/*  */
+"preview.include_unnamed_roads.hint.off" = "Dubbeltik om naamloze straten op te nemen bij Soundscape Street Preview";
+
+
+/*  */
+"preview.include_unnamed_roads.hint.on" = "Dubbeltik om naamloze straten uit te sluiten bij Soundscape Street Preview";
+
+
+/*  */
+"preview.tutorial.done.hint" = "Dubbeltik om de zelfstudie af te sluiten";
+
+
+/*  */
+"preview.tutorial.title.1" = "Welkom bij Soundscape Street Preview!";
+
+
+/*  */
+"preview.tutorial.content.1" = "Verken en krijg inzicht in gebieden waar dan ook ter wereld. U krijgt de beste beleving als u staande op uw plaats ronddraait en een stereokoptelefoon gebruikt.";
+
+
+/*  */
+"preview.tutorial.title.2" = "Wat staat er te gebeuren";
+
+
+/*  */
+"preview.tutorial.content.2" = "U wordt verplaatst naar het midden van de straat bij de door u geselecteerde locatie. Gebruik de telefoon als aanwijzer, draai langzaam rond en de straatnamen worden opgesomd terwijl u draait. Als u kijkt naar de straat die u wilt volgen, tikt u op Start en gaat u naar het volgende kruispunt.";
+
+
+/*  */
+"preview.tutorial.title.3" = "Uw verkenning voortzetten";
+
+
+/*  */
+"preview.tutorial.content.3" = "Bij elk kruispunt kunt u met de telefoon weer kiezen welke straat u wilt volgen of u kunt uw onmiddellijke omgeving verkennen met de bekende Soundscape-knoppen onderaan het scherm. Tik op Zoeken om het audiobaken van een willekeurig referentiepunt te starten, wijzig uw locatie om bekijk meer details over de omgeving.";
+
+
+/*  */
+"preview.tutorial.content.4" = "Geniet van dit handige hulpmiddel!";
+
+
+/*  */
+"location_detail.title.default" = "Locatiedetails";
+
+
+/*  */
+"location_detail.title.marker" = "Markeringsdetails";
+
+
+/*  */
+"location_detail.title.waypoint" = "Routepuntdetails";
+
+
+/*  */
+"location_detail.action.beacon" = "Audiobaken starten";
+
+
+/*  */
+"location_detail.action.beacon.hint" = "Dubbeltik om een audiobaken op deze locatie in te stellen";
+
+
+/*  */
+"location_detail.action.beacon.hint.disabled" = "Een nieuw audiobaken instellen is uitgeschakeld wanneer navigatie actief is";
+
+
+/*  */
+"location_detail.action.save.hint" = "Dubbeltik om deze locatie als een markering op te slaan";
+
+
+/*  */
+"location_detail.action.edit.hint" = "Dubbeltik om markering te bewerken";
+
+
+/*  */
+"location_detail.action.share.hint" = "Dubbeltik om deze locatie te delen";
+
+
+/*  */
+"location_detail.action.preview.hint" = "Dubbeltik om een voorbeeld van deze locatie te starten";
+
+
+/*  */
+"location_detail.action.preview.hint.disabled" = "Street Preview is uitgeschakeld als navigatie actief is";
+
+
+/*  */
+"location_detail.action.directions.hint" = "Dubbeltik om deze locatie te openen in een externe kaarten-app";
+
+
+/*  */
+"location_detail.default.address" = "Adres onbekend";
+
+
+/*  */
+"location_detail.default.annotation" = "Geen annotatie voor markering";
+
+
+/*  */
+"location.select.hint" = "Dubbeltik om deze locatie te selecteren";
+
+
+/*  */
+"location_detail.disabled.save" = "U kunt momenteel geen markering opslaan op deze locatie";
+
+
+/*  */
+"location_detail.disabled.share" = "U kunt deze locatie momenteel niet delen";
+
+
+/*  */
+"location_detail.disabled.generic" = "Deze locatie is momenteel niet beschikbaar";
+
+
+/*  */
+"location_detail.map.view.title" = "Geselecteerde locatie";
+
+
+/*  */
+"location_detail.map.view.hint" = "Bewerk om een nieuwe locatie te selecteren";
+
+
+/*  */
+"location_detail.map.edit.title" = "Locatie bewerken";
+
+
+/*  */
+"location_detail.map.edit.hint" = "Verplaats de kaart naar de correcte locatie";
+
+
+/*  */
+"location_detail.map.edit.accessibility_label" = "Markering verplaatsen";
+
+
+/*  */
+"location_detail.map.edit.compass.accessibility_hint" = "Dubbeltik om de markering te verplaatsen in de richting waarin uw telefoon wijst. Gebruik acties om te verplaatsen in een andere richting.";
+
+
+/*  */
+"location_detail.map.edit.north.accessibility_hint" = "Dubbeltik om de markering naar het noorden te verplaatsen. Gebruik acties om te verplaatsen in een andere richting.";
+
+
+/*  */
+"location_detail.map.edit.south.accessibility_hint" = "Dubbeltik om de markering naar het zuiden te verplaatsen. Gebruik acties om te verplaatsen in een andere richting.";
+
+
+/*  */
+"location_detail.map.edit.east.accessibility_hint" = "Dubbeltik om de markering naar het oosten te verplaatsen. Gebruik acties om te verplaatsen in een andere richting.";
+
+
+/*  */
+"location_detail.map.edit.west.accessibility_hint" = "Dubbeltik om de markering naar het westen te verplaatsen. Gebruik acties om te verplaatsen in een andere richting.";
+
+
+/*  */
+"location_detail.map.edit.accessibility_annoucement" = "Bezig met verplaatsen, %@ van oorspronkelijke locatie";
+
+
+/*  */
+"location_detail.map.edit.accessibility_action.compass" = "Verplaatsen in richting van telefoon";
+
+
+/*  */
+"location_detail.map.edit.accessibility_action.north" = "Verplaatsen naar het noorden";
+
+
+/*  */
+"location_detail.map.edit.accessibility_action.south" = "Verplaatsen naar het zuiden";
+
+
+/*  */
+"location_detail.map.edit.accessibility_action.east" = "Verplaatsen naar het oosten";
+
+
+/*  */
+"location_detail.map.edit.accessibility_action.west" = "Verplaatsen naar het westen";
+
+
+/*  */
+"location_detail.map.edit.accessibility_action.current_location" = "Verplaatsen naar huidige locatie";
+
+
+/*  */
+"location_detail.map.edit.accessibility.beacon.callout" = "Baken wordt gestart om markeringslocatie te volgen. Bezig met verplaatsen, %@ van oorspronkelijke locatie.";
+
+
+/*  */
+"location_detail.waypoint" = "Routepunt %@";
+
+
+/*  */
+"location_detail.add_waypoint.existing.hint" = "Dubbeltik om deze markering te verwijderen uit uw route.";
+
+
+/*  */
+"location_detail.add_waypoint.new.hint" = "Dubbeltik om deze markering toe te voegen aan uw route.";
+
+
+/*  */
+"location_detail.add_waypoint.marker.hint" = "Dubbeltik om een markering te maken en deze toe te voegen als een routepunt";
+
+
+/*  */
+"route_detail.action.start_route" = "Route starten";
+
+
+/*  */
+"route_detail.action.stop_route" = "Route stoppen";
+
+
+/*  */
+"route_detail.action.start_event" = "Activiteit starten";
+
+
+/*  */
+"route_detail.action.stop_event" = "Activiteit stoppen";
+
+
+/*  */
+"route_detail.action.edit" = "Route bewerken";
+
+
+/*  */
+"route_detail.action.start_route.hint" = "Dubbeltik om deze route te starten";
+
+
+/*  */
+"route_detail.action.start_route.disabled.hint" = "Voeg routepunten toe voordat u de route start";
+
+
+/*  */
+"route_detail.action.stop_route.hint" = "Dubbeltik om deze route te stoppen";
+
+
+/*  */
+"route_detail.action.start_event.hint" = "Dubbeltik om deze activiteit te starten";
+
+
+/*  */
+"route_detail.action.stop_event.hint" = "Dubbeltik om deze activiteit te stoppen en uw voortgang op te slaan";
+
+
+/*  */
+"route_detail.action.reset.hint" = "Dubbeltik om deze activiteit opnieuw in te stellen en beschikbare updates te downloaden";
+
+
+/*  */
+"route_detail.action.share.hint" = "Dubbeltik om deze route te delen";
+
+
+/*  */
+"route_detail.action.edit.hint" = "Dubbeltik om deze route te bewerken";
+
+
+/*  */
+"route_detail.action.create" = "Nieuwe route";
+
+
+/*  */
+"route_detail.action.create.hint" = "Dubbeltik om een nieuwe route te maken";
+
+
+/*  */
+"route_detail.waypoint.current_beacon" = "Routepunt %@. Huidig baken.";
+
+
+/*  */
+"route_detail.name.default" = "Route";
+
+
+/*  */
+"route.title.time" = "%@ voorbij";
+
+
+/*  */
+"route.title" = "%1$@・Routepunt %2$@ van %3$@";
+
+
+/*  */
+"route.waypoint.progress" = "%@ routepunten resterend";
+
+
+/*  */
+"route.waypoint.progress.complete.elapsed" = "Voltooid in %@";
+
+
+/*  */
+"route.waypoint.progress.complete" = "Voltooid!";
+
+
+/*  */
+"route.end.completed" = "Route voltooid!・%@";
+
+
+/*  */
+"route.end.completed.accessibility" = "Route voltooid! %@";
+
+
+/*  */
+"route.end.not_completed" = "Route gestopt・%@";
+
+
+/*  */
+"route.end.not_completed.accessibility" = "Route gestopt, %@";
+
+
+/*  */
+"route.end.completed.summary" = "%@ routepunten bereikt・Laatste routepunt in de buurt";
+
+
+/*  */
+"route.end.completed.summary.accessibility" = "%@ routepunten bereikt, laatste routepunt in de buurt";
+
+
+/*  */
+"route.end.not_completed.summary" = "%1$@ van %2$@ routepunten bereikt・%3$@ over";
+
+
+/*  */
+"route.end.not_completed.summary.accessibility" = "%1$@ van %2$@ routepunten bereikt, %3$@ over";
+
+
+/*  */
+"route.title.accessibility_label" = "%1$@, routepunt %2$@ van %3$@";
+
+
+/*  */
+"route_detail.action.previous" = "Vorige routepunt";
+
+
+/*  */
+"route_detail.action.previous.hint" = "Dubbeltik om het baken op het vorige routepunt in te stellen";
+
+
+/*  */
+"route_detail.action.next" = "Volgende routepunt";
+
+
+/*  */
+"route_detail.action.next.hint" = "Dubbeltik om het baken op het volgende routepunt in te stellen";
+
+
+/*  */
+"waypoint_detail.annotation.cluster.title" = "%@,...";
+
+
+/*  */
+"route_detail.edit.description" = "Beschrijving";
+
+
+/*  */
+"route_detail.edit.description.default" = "Een beschrijving van uw route toevoegen";
+
+
+/*  */
+"route_detail.edit.waypoints_button" = "Routepunten toevoegen";
+
+
+/*  */
+"route_detail.edit.waypoints_label" = "Routepunten";
+
+
+/*  */
+"route_detail.edit.delete" = "Route verwijderen";
+
+
+/*  */
+"route_detail.edit.delete.title" = "Weet u zeker dat u deze route wilt verwijderen?";
+
+
+/*  */
+"route_detail.edit.delete.message" = "Deze actie kan niet ongedaan worden gemaakt";
+
+
+/*  */
+"route_detail.edit.cancel.title" = "Niet-opgeslagen wijzigingen";
+
+
+/*  */
+"route_detail.edit.cancel.message" = "Wilt u uw wijzigingen niet opslaan?";
+
+
+/*  */
+"route_detail.beacon.title" = "Begeleide route";
+
+
+/*  */
+"route_detail.orienteering.title" = "Oriëntatielopen";
+
+
+/*  */
+"route_detail.beacon.stop" = "Route beëindigen";
+
+
+/*  */
+"route.update.success.title" = "Update voltooid!";
+
+
+/*  */
+"route.update.success.message" = "Uw recreatie-activiteit is bijgewerkt";
+
+
+/*  */
+"route.update.fail.title" = "Bijwerken mislukt";
+
+
+/*  */
+"route.update.fail.message" = "Er is een fout opgetreden bij het bijwerken van uw recreatie-activiteit";
+
+
+/*  */
+"route.update.unavailable.title" = "U kunt van start!";
+
+
+/*  */
+"route.update.unavailable.message" = "Uw recreatie-activiteit is al bijgewerkt";
+
+
+/*  */
+"tour_detail.beacon.title" = "Begeleide rondleiding";
+
+
+/*  */
+"tour_detail.beacon.stop" = "Rondleiding beëindigen";
+
+
+/*  */
+"waypoint.title" = "Routepunt";
+
+
+/*  */
+"waypoint.callout" = "Routepunt, %@";
+
+
+/*  */
+"tour.progress.elapsed_distance.accessibility" = "Baken ingesteld op %1$@. %2$@. %3$@ verstreken. %4$@ routepunten resterend";
+
+
+/*  */
+"tour.progress.distance.accessibility" = "Baken ingesteld op %1$@. %2$@, %3$@ routepunten resterend";
+
+
+/*  */
+"tour.progress.elapsed.accessibility" = "Baken ingesteld op %1$@. %2$@ verstreken. %3$@ routepunten resterend";
+
+
+/*  */
+"tour.progress.accessibility" = "Baken ingesteld op %1$@. %2$@ routepunten resterend";
+
+
+/*  */
+"tour.progress.elapsed_distance.accessibility.singular" = "Baken ingesteld op %1$@. %2$@. %3$@ verstreken. 1 routepunt resterend";
+
+
+/*  */
+"tour.progress.distance.accessibility.singular" = "Baken ingesteld op %1$@. %2$@, 1 routepunt resterend";
+
+
+/*  */
+"tour.progress.elapsed.accessibility.singular" = "Baken ingesteld op %1$@. %2$@ verstreken. 1 routepunt resterend";
+
+
+/*  */
+"tour.progress.accessibility.singular" = "Baken ingesteld op %@. 1 routepunt resterend";
+
+
+/*  */
+"waypoint.audio_available" = "Audio beschikbaar";
+
+
+/*  */
+"waypoint.images_available" = "Afbeeldingen beschikbaar";
+
+
+/*  */
+"waypoint.audio_images_available" = "Afbeeldingen en audio beschikbaar.";
+
+
+/*  */
+"waypoint.callout.button.title" = "Waarschuwen voor routepunt";
+
+
+/*  */
+"waypoint.callout.button.hint" = "Dubbeltik om extra details te horen";
+
+
+/*  */
+"recommender.view.title" = "Suggestie";
+
+
+/*  */
+"first_use_experience.share.alert.title" = "Delen in Soundscape";
+
+
+/*  */
+"first_use_experience.share.alert.message" = "Wanneer u een Soundscape-markering of -route deelt, deelt u de locaties die zijn gekoppeld aan die markering of route. Deel alleen met personen die u vertrouwt.";
+
+
+/*  */
+"universal_links.alert.error.title" = "Er is iets misgegaan.";
+
+
+/*  */
+"universal_links.alert.import_error.message" = "De koppeling is waarschijnlijk ongeldig.";
+
+
+/*  */
+"universal_links.alert.share_error.message" = "De inhoud kan niet worden gedeeld.";
+
+
+/*  */
+"universal_links.alert.action.marker" = "Opslaan als markering";
+
+
+/*  */
+"universal_links.alert.action.beacon" = "Een baken instellen";
+
+
+/*  */
+"universal_links.marker.alert.title" = "U hebt een markering ontvangen: \"%@\"";
+
+
+/*  */
+"universal_links.marker.alert.message" = "Gebruik alleen markeringen van iemand die u vertrouwt.";
+
+
+/*  */
+"universal_links.marker_existing.alert.title" = "Markering bestaat al";
+
+
+/*  */
+"universal_links.marker_existing.alert.message" = "Er bestaat al een markering voor die locatie. Wilt u deze vervangen?";
+
+
+/*  */
+"universal_links.marker.share.message" = "Ik heb een Soundscape-markering met u gedeeld. \"%@\"";
+
+
+/*  */
+"siri_shortcuts.title" = "Siri-opdrachten";
+
+
+/*  */
+"siri_shortcuts.title.beta" = "Siri-opdrachten (bèta)";
+
+
+/*  */
+"siri_shortcuts.description" = "Nadat u Siri-opdrachten hebt toegevoegd, kunt u uw stem gebruiken om ze te activeren ook wanneer Soundscape niet actief is.";
+
+
+/*  */
+"user_activity.my_location.title" = "Wat is mijn locatie?";
+
+
+/*  */
+"user_activity.around_me.title" = "Wat is er om me heen?";
+
+
+/*  */
+"user_activity.ahead_of_me.title" = "Wat is er voor me?";
+
+
+/*  */
+"user_activity.nearby_markers.title" = "Markeringen in de buurt horen";
+
+
+/*  */
+"user_activity.search.title" = "Zoeken in Soundscape";
+
+
+/*  */
+"user_activity.save_marker.title" = "Markering opslaan";
+
+
+/*  */
+"user_activity.street_preview.title" = "Street Preview starten";
+
+
+/*  */
+"url_resource.alert.route.share.message" = "Ik heb een Soundscape-route met u gedeeld. \"%@\"";
+
+
+/*  */
+"url_resource.alert.route.import.title" = "U hebt een route ontvangen: \"%@\"";
+
+
+/*  */
+"url_resource.alert.route.import.message" = "Gebruik alleen routes van iemand die u vertrouwt. Routes worden niet gemaakt, gedeeld of gecontroleerd door Soundscape Community en kunnen fouten bevatten.";
+
+
+/*  */
+"url_resource.alert.route.import_existing.title" = "Route bestaat al";
+
+
+/*  */
+"url_resource.alert.route.import_existing.message" = "Wilt u deze vervangen? Als u deze route vervangt, worden ook de markeringen in deze route vervangen.";
+
+
+/*  */
+"url_resource.alert.route.import.save" = "Route opslaan";
+
+
+/*  */
+"url_resource.alert.route.import_error.message" = "De inhoud is waarschijnlijk ongeldig.";
+
+
+/*  */
+"routes.title" = "Routes";
+
+
+/*  */
+"routes.action.deleted" = "Route verwijderd";
+
+
+/*  */
+"routes.action.deleted_error" = "We kunnen deze route nu niet verwijderen. Probeer het later opnieuw.";
+
+
+/*  */
+"routes.no_routes.title" = "Aan de slag met routepunten";
+
+
+/*  */
+"routes.no_routes.hint.1" = "Maak een route voor uzelf of voor iemand anders door een set markeringen als routepunten samen te stellen.";
+
+
+/*  */
+"routes.no_routes.hint.2" = "Terwijl u onderweg bent met Soundscape, hoort u informatie als u bij een routepunt aankomt en gaat het audiobaken automatisch naar het volgende routepunt.";
+
+
+/*  */
+"route.no_waypoints.hint.1" = "Geef uw route een naam en voeg een optionele beschrijving toe. Voeg onderweg routepunten toe of selecteer ze uit uw lijst met markeringen.";
+
+
+/*  */
+"route.no_waypoints.hint.2" = "U kunt de volgorde van routepunten langs een route op elke gewenst moment aanpassen door de route te bewerken.";
+
+
+/*  */
+"routes.tutorial.title" = "De routepunten van uw reis horen";
+
+
+/*  */
+"routes.tutorial.details" = "U gaat nu terug naar de startpagina van Soundscape en er wordt een audiobaken op uw eerste routepunt geplaatst. Wanneer u arriveert bij het routepunt, wordt het baken verplaatst naar het volgende routepunt.";
+
+
+/*  */
+"routes.callout.complete" = "Route voltooid";
+
+
+/*  */
+"routes.sort.by_name" = "Sorteren op naam";
+
+
+/*  */
+"routes.sort.by_name.hint" = "Dubbeltik om te sorteren op naam";
+
+
+/*  */
+"routes.sort.by_distance" = "Sorteren op afstand";
+
+
+/*  */
+"routes.sort.by_distance.hint" = "Dubbeltik om te sorteren op afstand";
+
+
+/*  */
+"routes.import.alert.title" = "Fout in route";
+
+
+/*  */
+"routes.import.alert.message" = "Gegevens van routepunt ontbreken voor een of meer routes. Bekijk de volgende routes en voeg, indien nodig, opnieuw routepunten toe.";
+
+
+/*  */
+"markers.title" = "Markeringen";
+
+
+/*  */
+"markers.action.delete" = "Markering verwijderen";
+
+
+/*  */
+"markers.action.deleted" = "Markering verwijderd";
+
+
+/*  */
+"markers.action.deleted_error" = "We kunnen deze markering nu niet verwijderen. Probeer het later opnieuw.";
+
+
+/*  */
+"markers.action.update_error" = "We kunnen deze markering nu niet bijwerken. Probeer het later opnieuw.";
+
+
+/*  */
+"markers.action.add_to_markers" = "Toevoegen aan markeringen";
+
+
+/*  */
+"markers.sort_button.sort_by_name" = "Naam";
+
+
+/*  */
+"markers.sort_button.sort_by_name.voiceover" = "Gesorteerd op naam";
+
+
+/*  */
+"markers.sort_button.sort_by_distance" = "Afstand";
+
+
+/*  */
+"markers.sort_button.sort_by_distance.voiceover" = "Gesorteerd op afstand";
+
+
+/*  */
+"markers.no_markers.title" = "Aan de slag met markeringen";
+
+
+/*  */
+"markers.no_markers.hint.1" = "Maak markeringen voor uw favoriete bestemmingen, routepunten of locaties waarvoor u een beschrijving wilt horen. Kies een locatie in het startscherm, bijvoorbeeld uw huidige locatie, en selecteer Opslaan als markering.";
+
+
+/*  */
+"markers.no_markers.hint.2" = "Probeer uw huis te markeren, de toegang tot uw werkplek of uw favoriete plek in het park.";
+
+
+/*  */
+"markers.edit_screen.title.save" = "Markering opslaan";
+
+
+/*  */
+"markers.edit_screen.title.edit" = "Markering bewerken";
+
+
+/*  */
+"markers.edit_screen.done_button.acc_hint" = "Dubbeltik om deze markering op te slaan";
+
+
+/*  */
+"markers.edit_screen.route" = "Opslaan in route: %@";
+
+
+/*  */
+"markers.generic_name" = "Markering";
+
+
+/*  */
+"markers.marker_with_name" = "Markering. %@";
+
+
+/*  */
+"markers.marker_created" = "Markering gemaakt";
+
+
+/*  */
+"markers.marker_created_on" = "Markering gemaakt op %@";
+
+
+/*  */
+"markers.marker_distance_from_poi" = "Markering %1$@ vanaf %2$@";
+
+
+/*  */
+"markers.marker_at" = "Markering op %@";
+
+
+/*  */
+"markers.marker_along" = "Markering langs %@";
+
+
+/*  */
+"markers.new_badge.acc_label" = "Nieuw. %@";
+
+
+/*  */
+"markers.destructive_delete_message" = "Weet u zeker dat u deze markering wilt verwijderen?";
+
+
+/*  */
+"markers.destructive_delete_message.routes" = "Deze markering is onderdeel van de volgende routes:\n%@";
+
+
+/*  */
+"markers.annotation" = "Annotatie";
+
+
+/*  */
+"search.no_results_found_with_action" = "Geen resultaten gevonden. Bewerk de tekst of druk op Zoeken voor meer.";
+
+
+/*  */
+"search.no_results_found_with_hint" = "Geen resultaten gevonden. Probeer uw zoekwoord te wijzigen.";
+
+
+/*  */
+"searching.no_results_found_title" = "Helaas, geen resultaten gevonden";
+
+
+/*  */
+"searching.no_results_found_message" = "Als u naar een specifieke plaats zoekt, kunt u ook proberen te zoeken op naam of adres.";
+
+
+/*  */
+"searching.offline" = "Zoeken is uitgeschakeld als u offline bent";
+
+
+/*  */
+"search.search_for" = "Zoeken naar \"%@\"";
+
+
+/*  */
+"search.searching" = "Zoeken";
+
+
+/*  */
+"search.searching_with_punctuation" = "Zoeken...";
+
+
+/*  */
+"search.choose_destination" = "Bestemming kiezen";
+
+
+/*  */
+"search.results_found_first_result" = "%@ resultaten gevonden. Eerste resultaat: %@";
+
+
+/*  */
+"search.no_results_found_error" = "Het ziet ernaar uit dat er geen plaatsen in de buurt zijn. Als u een specifieke plaats zoekt, kunt u zoeken op naam of adres.";
+
+
+/*  */
+"search.use_current_location" = "Huidige locatie";
+
+
+/*  */
+"search.nearby.screen_title" = "Plaatsen in de buurt";
+
+
+/*  */
+"search.view_markers" = "Markeringen en routes";
+
+
+/*  */
+"search.button.markers.accessibility_hint" = "Dubbeltik om opgeslagen markeringen te selecteren of te bewerken";
+
+
+/*  */
+"search.button.nearby.accessibility_hint" = "Dubbeltik om in de omgeving te zoeken naar restaurants, haltes van het openbaar vervoer en meer";
+
+
+/*  */
+"search.button.current_location.accessibility_hint" = "Dubbeltik om een voorbeeld te zien van uw huidige locatie, en om deze te markeren of te delen met een vriend";
+
+
+/*  */
+"filter.alert_title" = "Plaatsen filteren op categorie";
+
+
+/*  */
+"filter.set" = "Filter instellen";
+
+
+/*  */
+"filter.clear.capital" = "Filter wissen";
+
+
+/*  */
+"filter.clear.hint" = "Dubbeltik om het geselecteerde filter te wissen";
+
+
+/*  */
+"filter.double_tap_places_category" = "Dubbeltik om plaatsen te filteren op categorie.";
+
+
+/*  */
+"filter.all" = "Alle plaatsen";
+
+
+/*  */
+"filter.transit" = "Openbaar vervoer";
+
+
+/*  */
+"filter.food_drink" = "Eten en drinken";
+
+
+/*  */
+"filter.things_to_do" = "Dingen om te doen";
+
+
+/*  */
+"filter.groceries" = "Supermarkten en buurtwinkels";
+
+
+/*  */
+"filter.banks" = "Banken en geldautomaten";
+
+
+/*  */
+"filter.selected" = "%@ (geselecteerd)";
+
+
+/*  */
+"filter.not_available" = "Sommige categoriefilters zijn niet beschikbaar. U kunt wel zoeken naar plaatsen in de buurt door \"%@\" te selecteren";
+
+
+/*  */
+"callouts.panel.title" = "Luisteren naar mijn omgeving";
+
+
+/*  */
+"callouts.turn_on_off" = "Alle waarschuwingen in- of uitschakelen";
+
+
+/*  */
+"callouts.callouts_on" = "Waarschuwingen aan";
+
+
+/*  */
+"callouts.callouts_off" = "Waarschuwingen uit";
+
+
+/*  */
+"callouts.allow_callouts" = "Waarschuwingen toestaan";
+
+
+/*  */
+"callouts.places_and_landmarks" = "Plaatsen en herkenningspunten";
+
+
+/*  */
+"callouts.places_and_landmarks.info" = "Plaatsen in de buurt zoals winkels of restaurants";
+
+
+/*  */
+"callouts.mobility" = "Mobiliteit";
+
+
+/*  */
+"callouts.mobility.info" = "Informatie over kruispunt en vervoer";
+
+
+/*  */
+"callouts.audio_beacon" = "Afstand tot audiobaken";
+
+
+/*  */
+"callouts.audio_beacon.info" = "Updates voor de afstand tot het audiobaken wanneer het is ingesteld";
+
+
+/*  */
+"callouts.automatic_callouts" = "Automatische waarschuwingen";
+
+
+/*  */
+"callouts.intersection_callout" = "Waarschuwing voor kruispunt";
+
+
+/*  */
+"callouts.ahead_of_you" = "Vóór u";
+
+
+/*  */
+"callouts.around_you" = "Om u heen";
+
+
+/*  */
+"callouts.marked_points" = "Gemarkeerde punten";
+
+
+/*  */
+"callouts.nothing_to_call_out_now" = "Er is momenteel niets om voor te waarschuwen";
+
+
+/*  */
+"callouts.nearby_markers" = "Markeringen in de buurt";
+
+
+/*  */
+"callouts.no_nearby_markers_to_call_out_now" = "Er zijn op dit moment geen markeringen in de buurt om voor te waarschuwen.";
+
+
+/*  */
+"callouts.action.repeat" = "Herhalen";
+
+
+/*  */
+"callouts.action.more_info" = "Meer info";
+
+
+/*  */
+"callouts.hardware.low_battery" = "%1$@ heeft slechts %2$@ procent batterijlading over.";
+
+
+/*  */
+"callouts.departure" = "Waarschuwing voor vertrek";
+
+
+/*  */
+"callouts.arrival" = "Waarschuwing voor aankomst";
+
+
+/*  */
+"sleep.snoozing" = "Sluimerstand";
+
+
+/*  */
+"sleep.sleep" = "Slapen";
+
+
+/*  */
+"sleep.sleeping" = "Slaapstand";
+
+
+/*  */
+"sleep.snoozing.message" = "Soundscape staat momenteel in de sluimerstand. Wanneer u uw huidige locatie verlaat, wordt Soundscape automatisch geactiveerd. Locatievoorzieningen gebruikt minder voeding om de batterij van uw telefoon te sparen. Tik op de knop hieronder om nu te activeren.";
+
+
+/*  */
+"sleep.sleeping.message" = "Soundscape staat momenteel in de slaapstand. Soundscape kan nu niet gebruikmaken van Locatievoorzieningen en geen gegevens downloaden. Dit bespaart batterijvoeding wanneer u Soundscape niet gebruikt. Tik op de knop hieronder om Soundscape te activeren.";
+
+
+/*  */
+"sleep.sleep.acc_hint" = "Dubbeltik om Soundscape in de slaapstand te zetten";
+
+
+/*  */
+"sleep.wake_up_when_i_leave" = "Activeren wanneer ik vertrek";
+
+
+/*  */
+"sleep.wake_up_now" = "Nu activeren";
+
+
+/*  */
+"sleep.ui.wake_on_leave" = "Activeren aan\nVertrek";
+
+
+/*  */
+"sleep.ui.wake_up_now" = "Activeren\nNu";
+
+
+/*  */
+"intersection.approaching_intersection" = "U nadert een kruispunt";
+
+
+/*  */
+"directions.intersection_with_name_distance_direction" = "Kruispunt met %1$@ %2$@ %3$@";
+
+
+/*  */
+"directions.intersection_with_name_distance" = "Kruispunt met op %1$@ %2$@ afstand";
+
+
+/*  */
+"directions.intersection_with_name_direction" = "Kruispunt met %1$@ %2$@";
+
+
+/*  */
+"directions.intersection_with_name" = "Kruispunt met %@ dichtbij";
+
+
+/*  */
+"directions.intersection_with_name_was_distance_direction" = "Kruispunt met %1$@ was %2$@ %3$@";
+
+
+/*  */
+"intersection.named_intersection" = "Kruispunt %@";
+
+
+/*  */
+"directions.at_poi" = "Bij %@";
+
+
+/*  */
+"directions.along_road" = "Langs %@.";
+
+
+/*  */
+"directions.my_location" = "Mijn locatie";
+
+
+/*  */
+"directions.near_address" = "Bij adres %@";
+
+
+/*  */
+"directions.intersects_with_in" = "Kruist met %1$@ over %2$@";
+
+
+/*  */
+"directions.near_name" = "Bij %@";
+
+
+/*  */
+"directions.unknown_address" = "Adres is onbekend";
+
+
+/*  */
+"directions.unknown_road" = "Onbekende weg";
+
+
+/*  */
+"directions.previous_location" = "Vorige locatie";
+
+
+/*  */
+"directions.previous_location_along" = "Vorige locatie, langs %@";
+
+
+/*  */
+"directions.amenity.entrance_list" = "Ingangslijst";
+
+
+/*  */
+"directions.nearest_road_name_is_distance_direction" = "Dichtstbijzijnde weg, %1$@, is %2$@ %3$@";
+
+
+/*  */
+"directions.nearest_road_name_is_distance" = "Dichtstbijzijnde weg, %1$@, op %2$@ afstand";
+
+
+/*  */
+"directions.nearest_road_name_was_distance_direction" = "Dichtstbijzijnde weg, %1$@, was %2$@ %3$@";
+
+
+/*  */
+"directions.poi_name_is_distance_direction" = "%1$@ is %2$@ %3$@";
+
+
+/*  */
+"directions.poi_name_is_distance" = "%1$@ is %2$@ weg";
+
+
+/*  */
+"directions.poi_name_was_distance_direction" = "%1$@ was %2$@ %3$@";
+
+
+/*  */
+"directions.roundabout_with_exits_distance_direction" = "Rotonde met %1$@ afslagen %2$@ %3$@";
+
+
+/*  */
+"directions.roundabout_with_exits_distance" = "Rotonde met %1$@ afslagen op %2$@ afstand";
+
+
+/*  */
+"directions.roundabout_with_exits_was_distance_direction" = "Rotonde met %1$@ afslagen was %2$@ %3$@";
+
+
+/*  */
+"directions.roundabout_with_exits_direction" = "Rotonde met %1$@ afslagen %2$@";
+
+
+/*  */
+"directions.roundabout_with_exits" = "Rotonde met %1$@ afslagen dichtbij";
+
+
+/*  */
+"directions.approaching_name" = "U nadert %@";
+
+
+/*  */
+"directions.approaching_roundabout" = "U nadert rotonde";
+
+
+/*  */
+"directions.approaching_name_roundabout" = "U nadert rotonde %@";
+
+
+/*  */
+"directions.name_roundabout" = "%@ rotonde";
+
+
+/*  */
+"directions.approaching_name_roundabout_with_exits" = "U nadert rotonde %1$@ met %2$@ afslagen";
+
+
+/*  */
+"directions.approaching_name_with_exits" = "U nadert %1$@ met %2$@ afslagen";
+
+
+/*  */
+"directions.name_roundabout_with_exits" = "Rotonde %1$@ met %2$@ afslagen";
+
+
+/*  */
+"directions.name_with_exits" = "%1$@ met %2$@ afslagen";
+
+
+/*  */
+"directions.name_goes_left" = "%@, gaat naar links";
+
+
+/*  */
+"directions.name_goes_left.roundabout" = "%@, gaat naar links bij de rotonde";
+
+
+/*  */
+"directions.name_goes_right" = "%@, gaat naar rechts";
+
+
+/*  */
+"directions.name_goes_right.roundabout" = "%@, gaat naar rechts bij de rotonde";
+
+
+/*  */
+"directions.name_continues_ahead" = "%@, gaat rechtdoor";
+
+
+/*  */
+"directions.name_continues_ahead.roundabout" = "%@, gaat rechtdoor over de rotonde";
+
+
+/*  */
+"directions.direction.ahead" = "vóór u";
+
+
+/*  */
+"directions.direction.ahead_to_the_right" = "vóór u naar rechts";
+
+
+/*  */
+"directions.direction.to_the_right" = "naar rechts";
+
+
+/*  */
+"directions.direction.behind_to_the_right" = "achter u naar rechts";
+
+
+/*  */
+"directions.direction.behind" = "achter u";
+
+
+/*  */
+"directions.direction.behind_to_the_left" = "achter u naar links";
+
+
+/*  */
+"directions.direction.to_the_left" = "naar links";
+
+
+/*  */
+"directions.direction.ahead_to_the_left" = "vóór u naar links";
+
+
+/*  */
+"directions.direction.away" = "afstand tot";
+
+
+/*  */
+"directions.name_close_by" = "%@ dichtbij";
+
+
+/*  */
+"directions.name_about_distance" = "%1$@ circa %2$@";
+
+
+/*  */
+"directions.name_around_distance" = "%1$@ ongeveer %2$@";
+
+
+/*  */
+"directions.name_is_nearby_street_address" = "%1$@ is dichtbij. Adres is %2$@.";
+
+
+/*  */
+"directions.name_is_currently_street_address" = "%1$@ is nu %2$@. Adres is %3$@.";
+
+
+/*  */
+"directions.name_street_address" = "%1$@. Adres is %2$@. Afstand onbekend.";
+
+
+/*  */
+"directions.traveling.n" = "U rijdt naar het noorden";
+
+
+/*  */
+"directions.traveling.ne" = "U rijdt naar het noordoosten";
+
+
+/*  */
+"directions.traveling.e" = "U rijdt naar het oosten";
+
+
+/*  */
+"directions.traveling.se" = "U rijdt naar het zuidoosten";
+
+
+/*  */
+"directions.traveling.s" = "U rijdt naar het zuiden";
+
+
+/*  */
+"directions.traveling.sw" = "U rijdt naar het zuidwesten";
+
+
+/*  */
+"directions.traveling.w" = "U rijdt naar het westen";
+
+
+/*  */
+"directions.traveling.nw" = "U rijdt naar het noordwesten";
+
+
+/*  */
+"directions.facing.n" = "U kijkt naar het noorden";
+
+
+/*  */
+"directions.facing.ne" = "U kijkt naar het noordoosten";
+
+
+/*  */
+"directions.facing.e" = "U kijkt naar het oosten";
+
+
+/*  */
+"directions.facing.se" = "U kijkt naar het zuidoosten";
+
+
+/*  */
+"directions.facing.s" = "U kijkt naar het zuiden";
+
+
+/*  */
+"directions.facing.sw" = "U kijkt naar het zuidwesten";
+
+
+/*  */
+"directions.facing.w" = "U kijkt naar het westen";
+
+
+/*  */
+"directions.facing.nw" = "U kijkt naar het noordwesten";
+
+
+/*  */
+"directions.heading.n" = "U loopt naar het noorden";
+
+
+/*  */
+"directions.heading.ne" = "U loopt naar het noordoosten";
+
+
+/*  */
+"directions.heading.e" = "U loopt naar het oosten";
+
+
+/*  */
+"directions.heading.se" = "U loopt naar het zuidoosten";
+
+
+/*  */
+"directions.heading.s" = "U loopt naar het zuiden";
+
+
+/*  */
+"directions.heading.sw" = "U loopt naar het zuidwesten";
+
+
+/*  */
+"directions.heading.w" = "U loopt naar het westen";
+
+
+/*  */
+"directions.heading.nw" = "U loopt naar het noordwesten";
+
+
+/*  */
+"directions.along.traveling.n" = "U rijdt naar het noorden langs %@";
+
+
+/*  */
+"directions.along.traveling.ne" = "U rijdt naar het noordoosten langs %@";
+
+
+/*  */
+"directions.along.traveling.e" = "U rijdt naar het oosten langs %@";
+
+
+/*  */
+"directions.along.traveling.se" = "U rijdt naar het zuidoosten langs %@";
+
+
+/*  */
+"directions.along.traveling.s" = "U rijdt naar het zuiden langs %@";
+
+
+/*  */
+"directions.along.traveling.sw" = "U rijdt naar het zuidwesten langs %@";
+
+
+/*  */
+"directions.along.traveling.w" = "U rijdt naar het westen langs %@";
+
+
+/*  */
+"directions.along.traveling.nw" = "U rijdt naar het noordwesten langs %@";
+
+
+/*  */
+"directions.along.facing.n" = "U kijkt naar het noorden langs %@";
+
+
+/*  */
+"directions.along.facing.ne" = "U kijkt naar het noordoosten langs %@";
+
+
+/*  */
+"directions.along.facing.e" = "U kijkt naar het oosten langs %@";
+
+
+/*  */
+"directions.along.facing.se" = "U kijkt naar het zuidoosten langs %@";
+
+
+/*  */
+"directions.along.facing.s" = "U kijkt naar het zuiden langs %@";
+
+
+/*  */
+"directions.along.facing.sw" = "U kijkt naar het zuidwesten langs %@";
+
+
+/*  */
+"directions.along.facing.w" = "U kijkt naar het westen langs %@";
+
+
+/*  */
+"directions.along.facing.nw" = "U kijkt naar het noordwesten langs %@";
+
+
+/*  */
+"directions.along.heading.n" = "U loopt naar het noorden langs %@";
+
+
+/*  */
+"directions.along.heading.ne" = "U loopt naar het noordoosten langs %@";
+
+
+/*  */
+"directions.along.heading.e" = "U loopt naar het oosten langs %@";
+
+
+/*  */
+"directions.along.heading.se" = "U loopt naar het zuidoosten langs %@";
+
+
+/*  */
+"directions.along.heading.s" = "U loopt naar het zuiden langs %@";
+
+
+/*  */
+"directions.along.heading.sw" = "U loopt naar het zuidwesten langs %@";
+
+
+/*  */
+"directions.along.heading.w" = "U loopt naar het westen langs %@";
+
+
+/*  */
+"directions.along.heading.nw" = "U loopt naar het noordwesten langs %@";
+
+
+/*  */
+"directions.cardinal.north" = "Noorden";
+
+
+/*  */
+"directions.cardinal.north_east" = "Noordoosten";
+
+
+/*  */
+"directions.cardinal.east" = "Oosten";
+
+
+/*  */
+"directions.cardinal.south_east" = "Zuidoosten";
+
+
+/*  */
+"directions.cardinal.south" = "Zuiden";
+
+
+/*  */
+"directions.cardinal.south_west" = "Zuidwesten";
+
+
+/*  */
+"directions.cardinal.west" = "Westen";
+
+
+/*  */
+"directions.cardinal.north_west" = "Noordwesten";
+
+
+/*  */
+"directions.cardinal.north.abb" = "N";
+
+
+/*  */
+"directions.cardinal.north_east.abb" = "NO";
+
+
+/*  */
+"directions.cardinal.east.abb" = "O";
+
+
+/*  */
+"directions.cardinal.south_east.abb" = "ZO";
+
+
+/*  */
+"directions.cardinal.south.abb" = "Z";
+
+
+/*  */
+"directions.cardinal.south_west.abb" = "ZW";
+
+
+/*  */
+"directions.cardinal.west.abb" = "W";
+
+
+/*  */
+"directions.cardinal.north_west.abb" = "NW";
+
+
+/*  */
+"directions.name_distance" = "%1$@, %2$@";
+
+
+/*  */
+"distance.format.m" = "%@ m";
+
+
+/*  */
+"distance.format.meter" = "%@ meter";
+
+
+/*  */
+"distance.format.meters" = "%@ meter";
+
+
+/*  */
+"distance.format.km" = "%@ km";
+
+
+/*  */
+"distance.format.kilometer" = "%@ kilometer";
+
+
+/*  */
+"distance.format.kilometers" = "%@ kilometer";
+
+
+/*  */
+"distance.format.ft" = "%@ ft";
+
+
+/*  */
+"distance.format.foot" = "%@ voet";
+
+
+/*  */
+"distance.format.feet" = "%@ voet";
+
+
+/*  */
+"distance.format.mi" = "%@ mi";
+
+
+/*  */
+"distance.format.mile" = "%@ mijl";
+
+
+/*  */
+"distance.format.miles" = "%@ mijl";
+
+
+/*  */
+"ui.action_button.my_location" = "Mijn\nlocatie";
+
+
+/*  */
+"ui.action_button.my_location.acc_hint" = "Dubbeltik voor informatie over uw huidige locatie";
+
+
+/*  */
+"ui.action_button.nearby_markers" = "Marker.\nvlakbij";
+
+
+/*  */
+"ui.action_button.nearby_markers.acc_hint" = "Dubbeltik voor informatie over plaatsen in de buurt die u hebt gemarkeerd";
+
+
+/*  */
+"ui.action_button.around_me" = "Om me\nheen";
+
+
+/*  */
+"ui.action_button.around_me.acc_hint" = "Dubbeltik voor informatie over plaatsen in de vier kwadranten om u heen";
+
+
+/*  */
+"ui.action_button.ahead_of_me" = "Vóór\nme";
+
+
+/*  */
+"ui.action_button.ahead_of_me.acc_hint" = "Dubbeltik voor informatie over plaatsen vóór u";
+
+
+/*  */
+"ui.menu" = "Menu";
+
+
+/*  */
+"ui.menu.hint" = "Dubbeltik om het menu te openen";
+
+
+/*  */
+"ui.menu.close" = "Menu sluiten";
+
+
+/*  */
+"ui.continue" = "Doorgaan";
+
+
+/*  */
+"menu.events" = "Recreatie-activiteiten";
+
+
+/*  */
+"menu.devices" = "Head tracking-koptelefoon";
+
+
+/*  */
+"menu.manage_callouts" = "Waarschuwingen beheren";
+
+
+/*  */
+"menu.help_and_tutorials" = "Help en zelfstudies";
+
+
+/*  */
+"menu.send_feedback" = "Feedback verzenden";
+
+
+/*  */
+"menu.rate" = "Beoordelen";
+
+
+/*  */
+"menu.learning_resources" = "Soundscape-blog";
+
+
+/*  */
+"ui.back_button.title" = "Vorige";
+
+
+/*  */
+"bar_icon.external_GPS.acc_label" = "Pictogram Externe GPS-verbinding";
+
+
+/*  */
+"history_view.item_of" = "Item %1$@ van %2$@";
+
+
+/*  */
+"history_view.item_of.no_callouts_yet" = "Nog geen waarschuwingen";
+
+
+/*  */
+"poi_screen.screen_title.select_a_location" = "Een locatie selecteren";
+
+
+/*  */
+"poi_screen.loading_title.loading" = "Plaatsen in de buurt vinden";
+
+
+/*  */
+"poi_screen.loading_title.finding_error" = "We kunnen geen plaatsen in de buurt vinden. Probeer het later opnieuw.";
+
+
+/*  */
+"poi_screen.loading_title.no_places_matching" = "Er zijn geen plaatsen die overeenkomen met %@. Probeer een ander filter";
+
+
+/*  */
+"poi_screen.section_header.nearby" = "In de buurt";
+
+
+/*  */
+"poi_cell.accessibility_label.suggested_search" = "Voorgestelde zoekopdracht: %@";
+
+
+/*  */
+"poi_cell.accessibility_hint.suggested_search" = "Dubbeltik om te zoeken naar: %@";
+
+
+/*  */
+"poi_screen.header.recent.callouts" = "Recente waarschuwingen";
+
+
+/*  */
+"location_callout_cell.marked_location" = "Gemarkeerde locatie";
+
+
+/*  */
+"location_callout_cell.nearest_road" = "Dichtstbijzijnde weg, %@.";
+
+
+/*  */
+"location_callout_cell.nearest_road.beacon_set_on" = "Dichtstbijzijnde weg, %1$@. Baken is ingesteld op %2$@.";
+
+
+/*  */
+"location_callout_cell.nearest_road.nearest_poi" = "Dichtstbijzijnde weg, %1$@. Dichtstbijzijnd referentiepunt, %2$@.";
+
+
+/*  */
+"devices.airpods.supported_versions" = "Apple AirPods met ruimtelijke audio";
+
+
+/*  */
+"devices.title.pair_audio" = "Audio van koptelefoon koppelen";
+
+
+/*  */
+"devices.title.first_connection" = "Koptelefoon verbonden";
+
+
+/*  */
+"devices.title.calibrate" = "Koptelefoon kalibreren";
+
+
+/*  */
+"devices.title.completed_connection" = "Koptelefoon gereed";
+
+
+/*  */
+"devices.explain_ar.disconnected" = "'Head tracking'-koptelefoons zijn Bluetooth-koptelefoons met sensoren die aan Soundscape doorgeven in welke richting u kijkt. Zo kan Soundscape uw audiobeleving verbeteren en kunt u zich gemakkelijker verplaatsen.\n\nTik op de knop hieronder om een apparaat te verbinden.";
+
+
+/*  */
+"devices.explain_ar.connected.airpods" = "Uw AirPods zijn gereed voor gebruik. Plaats uw telefoon in uw zak en ga op weg. Soundscape volgt nu de kijkrichting van uw hoofd zodat u de telefoon niet in uw hand hoeft te houden.";
+
+
+/*  */
+"devices.explain_ar.paired" = "Soundscape is momenteel niet verbonden met uw %@. Controleer of uw koptelefoon is ingeschakeld en zich in de buurt van uw telefoon bevindt.";
+
+
+/*  */
+"devices.explain_ar.connecting" = "Soundscape maakt verbinding met uw %@. Even wachten...";
+
+
+/*  */
+"devices.connect_headset" = "Koptelefoon verbinden";
+
+
+/*  */
+"devices.connect_headset.calibrate.button" = "Kalibratie starten";
+
+
+/*  */
+"devices.connect_headset.calibrate.explanation" = "Uw koptelefoon is verbonden met Soundscape maar moet worden gekalibreerd voor gebruik. Soundscape laat het weten wanneer de koptelefoon moet worden gekalibreerd, bijvoorbeeld elke keer wanneer u deze aanzet.";
+
+
+/*  */
+"devices.connect_headset.error_title" = "Kan geen verbinding maken";
+
+
+/*  */
+"devices.connect_headset.unsupported_firmware" = "Uw AR Headphones moet worden bijgewerkt voordat u deze verbinding kan maken met Soundscape. Ga naar de Cortana-app om uw koptelefoon bij te werken.";
+
+
+/*  */
+"devices.connect_headset.failed" = "Soundscape kan geen verbinding maken met uw koptelefoon. Probeer het later opnieuw.";
+
+
+/*  */
+"devices.connect_headset.unavailable" = "Het geselecteerde apparaat is niet beschikbaar voor verbinding. Probeer het later opnieuw.";
+
+
+/*  */
+"devices.connect_headset.explanation" = "Selecteer het type koptelefoon uit de lijst met ondersteunde koptelefoons hieronder.";
+
+
+/*  */
+"devices.connect_headset.audio" = "Voordat u uw koptelefoon verbindt met Soundscape, moet deze zijn gekoppeld met uw telefoon. Als dat nog niet is gebeurd, gaat u naar de sectie Bluetooth in de app Instellingen iOS om uw apparaat te koppelen en gaat u vervolgens terug naar Soundscape.";
+
+
+/*  */
+"devices.connect_headset.calibrate" = "Uw koptelefoon moet worden gekalibreerd. Zet de koptelefoon af, schud er circa 10 seconden voorzichtig mee in alle richtingen en zet de koptelefoon weer op. Dit moet worden herhaald als het kalibratiesignaal weer wordt afgespeeld.";
+
+
+/*  */
+"devices.connect_headset.calibrate.in_ear" = "Uw koptelefoon moet worden gekalibreerd. Schud circa 10 seconden voorzichtig met uw hoofd in alle richtingen. Dit moet worden herhaald als het kalibratiesignaal weer wordt afgespeeld.";
+
+
+/*  */
+"devices.connect_headset.completed.airpods" = "Gefeliciteerd! Uw AirPods zijn gereed voor gebruik. Plaats uw telefoon in uw zak en ga op weg. Soundscape volgt nu de kijkrichting van uw hoofd zodat u de telefoon niet in uw hand hoeft te houden. Met één tik op de koptelefoonknop dempt u het baken of heft u het dempen op, met twee keer tikken hoort u een waarschuwing voor uw locatie en met drie keer tikken wordt de laatste waarschuwing herhaald.";
+
+
+/*  */
+"devices.connect_headset.completed.test" = "Uw koptelefoon controleren";
+
+
+/*  */
+"devices.connect_headset.completed.test.hint" = "Dubbeltik om uw %@ te controleren";
+
+
+/*  */
+"devices.test_headset.title" = "Koptelefoon controleren";
+
+
+/*  */
+"devices.test_headset.explanation" = "We hebben rechts van u een audiobaken geplaatst. Luister waar het zich bevindt en draai uw hoofd in die richting. U kunt dit ook doen terwijl uw telefoon in uw zak zit. Als u klaar bent, tikt u op de knop hieronder om terug te gaan naar Soundscape. Geniet van uw wandeling met uw nieuwe head tracking-koptelefoon.";
+
+
+/*  */
+"devices.test_headset.continue" = "Terug naar Soundscape";
+
+
+/*  */
+"devices.test_headset.callout" = "We hebben rechts van u een audiobaken geplaatst. Luister waar het zich bevindt en draai uw hoofd in die richting... U kunt dit ook doen terwijl uw telefoon in uw zak zit.";
+
+
+/*  */
+"devices.forget_headset.prompt.forget" = "Weet u zeker dat u deze koptelefoon wilt verwijderen?";
+
+
+/*  */
+"devices.forget_headset.prompt.explanation" = "Hierdoor wordt de verbinding van uw koptelefoon met Soundscape verbroken. U kunt in de toekomst weer verbinden met Soundscape vanaf hier.";
+
+
+/*  */
+"devices.callouts.connected" = "%@ verbonden.";
+
+
+/*  */
+"devices.callouts.needs_calibration" = "Uw koptelefoon moet worden gekalibreerd. Zet de koptelefoon af en schud er voorzichtig mee in alle richtingen.";
+
+
+/*  */
+"devices.callouts.needs_calibration.in_ear" = "Uw koptelefoon moet worden gekalibreerd. Schud voorzichtig met uw hoofd in alle richtingen.";
+
+
+/*  */
+"devices.callouts.calibrated" = "Kalibratie voltooid";
+
+
+/*  */
+"devices.callouts.disconnected" = "%@ niet verbonden.";
+
+
+/*  */
+"devices.callouts.check_audio.default" = "'Head tracking'-koptelefoon is niet verbonden.";
+
+
+/*  */
+"devices.callouts.check_audio.airpods" = "Apple AirPods verbonden.";
+
+
+/*  */
+"devices.callouts.check_audio.airpods.disconnected" = "Soundscape zoekt naar uw AirPods. Controleer of ze verbinding hebben met de telefoon.";
+
+
+/*  */
+"devices.troubleshoot.reconnect" = "Opnieuw verbinden";
+
+
+/*  */
+"devices.airpods_unavailable.alert.description" = "Dit apparaat ondersteunt niet het volgen van de kijkrichting met Apple AirPods. Controleer of uw apparaat een iPhone 7 of hoger is en werkt met iOS 14.4 of hoger.";
+
+
+/*  */
+"devices.reachability.alert.title" = "Kijkrichting volgen inschakelen met %@";
+
+
+/*  */
+"devices.reachability.alert.description" = "Uw %@ geeft aan Soundscape door in welke richting u kijkt. Daarmee kan Soundscape uw audiobeleving verbeteren. U kunt het volgen van de kijkrichting inschakelen in de instellingen voor Head tracking-koptelefoon.";
+
+
+/*  */
+"behavior.experiences.events_list_nav_title" = "Activiteiten";
+
+
+/*  */
+"behavior.experiences.event_nav_title" = "Activiteitendetails";
+
+
+/*  */
+"behavior.experiences.route_nav_title" = "Routedetails";
+
+
+/*  */
+"behavior.experiences.more_actions" = "Meer acties";
+
+
+/*  */
+"behavior.experiences.download_failed.title" = "Kan activiteit niet downloaden";
+
+
+/*  */
+"behavior.experiences.download_failed.error" = "Pogingen om de activiteit te downloaden zijn mislukt. Probeer het later opnieuw. Gebruik de functie Feedback verzenden of neem contact op met de maker van de activiteit als dit probleem zich blijft voordoen.";
+
+
+/*  */
+"behavior.experiences.reset.title" = "Deze activiteit opnieuw instellen?";
+
+
+/*  */
+"behavior.experiences.reset_action" = "Activiteit opnieuw instellen";
+
+
+/*  */
+"behavior.experiences.reset_and_update_action" = "Op updates controleren";
+
+
+/*  */
+"behavior.experiences.reset.prompt" = "Als u deze activiteit opnieuw instelt, wordt de huidige voortgang verwijderd en kunt u deze activiteit helemaal opnieuw starten. Controleer bij het opnieuw instellen van deze activiteit ook of er updates zijn. Dan downloadt u bijgewerkte informatie voor deze activiteit als er updates beschikbaar zijn.";
+
+
+/*  */
+"behavior.experiences.updates.prompt" = "Als er updates beschikbaar zijn, wordt deze activiteit hiermee opnieuw ingesteld en worden de updates gedownload.";
+
+
+/*  */
+"behavior.experiences.reset.confirmation" = "Activiteit opnieuw instellen";
+
+
+/*  */
+"behavior.experiences.delete_action" = "Activiteit verwijderen";
+
+
+/*  */
+"behavior.experience.delete.title" = "Deze activiteit verwijderen?";
+
+
+/*  */
+"behavior.experience.delete.explanation" = "Als u deze activiteit verwijdert, wordt deze ook verwijderd van uw telefoon.";
+
+
+/*  */
+"behavior.experiences.delete.confirmation" = "Activiteit verwijderd";
+
+
+/*  */
+"behavior.experiences.no_events.title" = "Recreatie-activiteiten met Soundscape (bèta)";
+
+
+/*  */
+"behavior.experiences.no_events.caption.1" = "Non-profitorganisaties, bedrijven en lokale overheden kunnen hun eigen Soundscape-toepassingen creëren. Zoals bijvoorbeeld aangepaste sportprogramma's en evenementen, schatzoekactiviteiten, wandeltochten met beschrijving, stadsgidsen enzovoort.";
+
+
+/*  */
+"behavior.experiences.no_events.caption.2" = "Als u meer wilt weten of als uw organisatie belangstelling heeft voor het creëren van eigen Soundscape-ervaringen, laat ons dat dan weten op email@address.com";
+
+
+/*  */
+"behavior.scavenger_hunt.media_player_title" = "%1$@: %2$@";
+
+
+/*  */
+"behavior.scavenger_hunt.by_line" = "Van %@";
+
+
+/*  */
+"behavior.scavenger_hunt.callout.nearby_with_name" = "%@ is in de buurt";
+
+
+/*  */
+"behavior.scavenger_hunt.callout.complete" = "Activiteit voltooid. Gefeliciteerd!";
+
+
+/*  */
+"behavior.scavenger_hunt.callout.pausing_hunt" = "Teruggaan naar de normale Soundscape-beleving.";
+
+
+/*  */
+"behavior.scavenger_hunt.callout.next_flag" = "Baken ingesteld op %1$@, op %2$@ afstand, %3$@ van %4$@";
+
+
+/*  */
+"behavior.scavenger_hunt.callout.next_flag.no_distance" = "Baken ingesteld op %1$@, %2$@ van %3$@";
+
+
+/*  */
+"behavior.scavenger_hunt.callout.started" = "Activiteit gestart.";
+
+
+/*  */
+"behavior.experience.badges.active" = "Actief";
+
+
+/*  */
+"behavior.experience.badges.complete" = "Voltooid";
+
+
+/*  */
+"behavior.experience.badges.not_complete" = "Niet voltooid";
+
+
+/*  */
+"time.just_now" = "Zonet";
+
+
+/*  */
+"time.one_minute_ago" = "1 minuut geleden";
+
+
+/*  */
+"time.num_minutes_ago" = "%@ minuten geleden";
+
+
+/*  */
+"time.one_hour_ago" = "1 uur geleden";
+
+
+/*  */
+"time.over_one_hour_ago" = "Meer dan 1 uur geleden";
+
+
+/*  */
+"announced_name" = "%@ aangekondigd.";
+
+
+/*  */
+"announced_name.named" = "%1$@, %2$@ aangekondigd.";
+
+
+/*  */
+"announced_name_distance_away.named" = "%1$@, %2$@ aangekondigd, op %3$@ afstand.";
+
+
+/*  */
+"previous_location.announced_name" = "Vorige locatie. %@ aangekondigd.";
+
+
+/*  */
+"previous_location.announced_name_distance" = "Vorige locatie. %1$@ aangekondigd, nu op %2$@ afstand.";
+
+
+/*  */
+"beacon_distance_update.announced_name" = "Afstand tot baken gewijzigd. %@ aangekondigd.";
+
+
+/*  */
+"beacon_distance_update.announced_name_distance" = "Afstand tot baken aangepast. %1$@ aangekondigd, nog %2$@ tot baken.";
+
+
+/*  */
+"intersection_callout.announced_name" = "Waarschuwing voor kruispunt. %@ aangekondigd.";
+
+
+/*  */
+"intersection_callout.announced_name_distance" = "Waarschuwing voor kruispunt. %1$@ aangekondigd, afstand tot kruispunt is nu %2$@.";
+
+
+/*  */
+"third_party_apps.general.maps" = "Openen in externe kaarten-app";
+
+
+/*  */
+"icloud.kv_store.quota_violation_alert.title" = "Soundscape iCloud-opslag vol";
+
+
+/*  */
+"icloud.kv_store.quota_violation_alert.message" = "iCloud-opslag voor deze app is vol. Als u een nieuwe markering wilt maken, moet u ruimte vrij maken door een aantal bestaande markeringen te verwijderen.";
+
+
+/*  */
+"poi.unknown" = "Onbekend";
+
+
+/*  */
+"poi.unknown_place" = "Onbekende plek";
+
+
+/*  */
+"audio_player.action.play_again" = "Opnieuw afspelen";
+
+
+/*  */
+"text.coming_soon" = "Binnenkort beschikbaar...";
+
+
+/*  */
+"text.cleaning_things" = "Alles opschonen...…";
+
+
+/*  */
+"action.double_tap_to_repeat" = "Dubbeltik om te herhalen";
+
+
+/*  */
+"location" = "Locatie";
+
+
+/*  */
+"text.oops" = "Oeps!";
+
+
+/*  */
+"tutorial.title.plural" = "Zelfstudies";
+
+
+/*  */
+"tutorial.exit" = "Zelfstudie afsluiten";
+
+
+/*  */
+"tutorial.skip" = "Zelfstudie overslaan";
+
+
+/*  */
+"tutorial.exit.alert_title" = "Weet u zeker dat u de zelfstudie wilt afsluiten?";
+
+
+/*  */
+"tutorial.markers.getting_started" = "Aan de slag met markeringen";
+
+
+/*  */
+"tutorial.markers.mark_your_world" = "De wereld om u heen markeren";
+
+
+/*  */
+"tutorial.markers.experience_your_world" = "De wereld om u heen ervaren";
+
+
+/*  */
+"tutorial.markers.add_marker" = "Markering toevoegen";
+
+
+/*  */
+"tutorial.markers.your_marker" = "uw markering";
+
+
+/*  */
+"tutorial.markers.mark_location.acc_hint" = "Dubbeltik om deze locatie te markeren";
+
+
+/*  */
+"tutorial.markers.text.Intro" = "Met Soundscape kunt u om u heen objecten markeren die u belangrijk vindt. U kunt bijvoorbeeld een markering opgeven voor uw huis, de bushalte of gewoon de plek waar u zich bevindt.\nProbeer het maar eens. Druk op de knop Markering toevoegen en selecteer een plaats of een adres in de buurt om als voorbeeld te markeren.";
+
+
+/*  */
+"tutorial.markers.text.EditMarker" = "Heel goed! U hebt @!marker_name!! geselecteerd als markering. U hoort een waarschuwing van Soundscape wanneer u in de buurt komt.\nOp het volgende scherm kunt u desgewenst de naam veranderen.";
+
+
+/*  */
+"tutorial.markers.text.NearbyMarkers" = "Uitstekend! U hebt een nieuwe markering met de naam @!marker_name!!.\nDruk nu op de knop Markeringen in de buurt om te horen waar uw markering is. U vindt deze knop onder aan het startscherm.\nProbeer het nu.";
+
+
+/*  */
+"tutorial.markers.text.AudioBeacon" = "U kunt ook een audiobaken instellen op uw markering.\nU gaat dat proberen. Hier is het baken op @!marker_name!!.\nLuister goed waar het is, houd uw telefoon horizontaal en draai ernaartoe.";
+
+
+/*  */
+"tutorial.markers.text.WrapUp" = "Perfect, u kijkt nu naar uw markering, @!marker_name!!.\nHet ziet ernaar uit dat u het begrijpt!\nU kunt uw lijst met markeringen beheren door Markeringen beheren te selecteren in het menu.\nOok kunt u naar de pagina Help en Zelfstudies gaan om de zelfstudie nogmaals te volgen of uitgebreide instructies door te nemen over wat u kunt doen met markeringen. Het baken dat u voor deze zelfstudie hebt ingesteld, wordt nu gewist en u gaat terug naar het vorige scherm.";
+
+
+/*  */
+"tutorial.beacon.getting_started" = "Aan de slag met bakens";
+
+
+/*  */
+"tutorial.beacon.set_a_beacon.acc_hint" = "Dubbeltik om een lijst met plaatsen te laden waarvoor u het baken kunt instellen. Kies een plaats uit de lijst om de zelfstudie te starten.";
+
+
+/*  */
+"tutorial.beacon.getting_started.text" = "Wanneer u een baken instelt op een locatie, speelt Soundscape een geluid af uit de richting van die locatie. Deze zelfstudie bevat de stappen voor het instellen en gebruiken van een baken.\n\nDruk op de knop Audiobaken starten hieronder om een lijst met plaatsen in de buurt te openen. Kies een locatie uit de lijst en de zelfstudie begint.";
+
+
+/*  */
+"tutorial.beacon.your_destination" = "uw bestemming";
+
+
+/*  */
+"tutorial.beacon.mark_location.acc_hint" = "Dubbeltik om deze locatie te gebruiken voor de bakenzelfstudie";
+
+
+/*  */
+"tutorial.beacon.poi_selected" = "U hebt %@ geselecteerd als de locatie voor het baken.";
+
+
+/*  */
+"tutorial.beacon.the_audio_beacon" = "Het audiobaken";
+
+
+/*  */
+"tutorial.beacon.the_audio_beacon.text" = "U hebt %@ geselecteerd als de locatie voor uw audiobaken.";
+
+
+/*  */
+"tutorial.beacon.found_the_beacon" = "U hebt uw baken gevonden. Goed zo!";
+
+
+/*  */
+"tutorial.beacon.need_some_silence" = "Op zoek naar stilte?";
+
+
+/*  */
+"tutorial.beacons.text.IntroPart1" = "Wanneer u een baken instelt op een locatie, wordt door Soundscape een geluid afgespeeld dat komt uit de richting van die locatie. In deze zelfstudie wordt stapsgewijs uitgelegd hoe u een baken instelt en dit gebruikt.";
+
+
+/*  */
+"tutorial.beacons.text.IntroPart2" = "Druk op de knop Audiobaken starten hieronder om een lijst met plaatsen in de buurt te openen. Kies een locatie uit de lijst en de zelfstudie begint.";
+
+
+/*  */
+"tutorial.beacons.text.OrientationIsFlat" = "U houdt uw telefoon nu vlak met het scherm naar de hemel gericht. Zorg dat de bovenkant van de telefoon recht voor u uit wijst.";
+
+
+/*  */
+"tutorial.beacons.text.OrientationIsNotFlat" = "Houd om te beginnen uw telefoon vlak in uw hand met het scherm naar de hemel gericht. Zorg dat de bovenkant van de telefoon recht voor u uit wijst.";
+
+
+/*  */
+"tutorial.beacons.text.OrientationAirPods" = "Uw AirPods zijn verbonden met Soundscape. Wanneer uw AirPods zijn verbonden met Soundscape, maakt het niet uit hoe u uw telefoon vasthoudt. U kunt deze ook in uw zak of een tas stoppen.";
+
+
+/*  */
+"tutorial.beacons.text.OrientationRepeat" = "Om verder te gaan houdt u uw telefoon vlak in uw hand met het scherm naar de hemel gericht";
+
+
+/*  */
+"tutorial.beacons.text.HoldingPhone" = "U houdt uw telefoon alleen op deze manier horizontaal wanneer u stilstaat. Doe de telefoon tijdens het wandelen in een makkelijk te bereiken tas of zak.";
+
+
+/*  */
+"tutorial.beacons.text.HoldingPhone.great" = "Geweldig! U houdt uw telefoon alleen op deze manier horizontaal wanneer u stilstaat. Doe de telefoon tijdens het wandelen in een tas of zak binnen handbereik.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconInitial" = "Nu u een baken hebt ingesteld op @!destination!!, wordt door Soundscape een geluid afgespeeld dat uit de richting van die locatie komt. Hier komt het audiobaken.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconOutOfBounds" = "Als u goed luistert, hoort u dat het geluid uit een bepaalde richting komt.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconOutOfBoundsRotate" = "Houd nu de telefoon nog steeds horizontaal en draai langzaam in de richting van baken. U hoort een beltoon wanneer u recht naar het baken kijkt.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconOutOfBoundsRotate.ar_headset" = "Draai nu langzaam naar de richting van het baken. U hoort een beltoon wanneer u er recht naar kijkt.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconOutOfBoundsRepeat" = "Draai langzaam tot u de beltoon hoort die aangeeft dat u in de richting van het baken kijkt.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconOutOfBoundsConfirmation" = "Perfect, u kijkt nu in de richting van @!destination!!.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconInBounds" = "Als u goed luistert, hoort u dat het geluid aan de rechterkant vóór u wordt afgespeeld en dat er een beltoon klinkt samen met het normale bakengeluid. Dit komt doordat u recht naar uw @!destination!! kijkt.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconInBoundsRotate" = "Probeer nu langzaam weg te draaien uit de richting van het baken, terwijl u uw telefoon nog steeds horizontaal houdt. De beltoon stopt en het baken blijft aangeven waar uw @!destination!! is. Probeer het nu.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconInBoundsRotate.ar_headset" = "Probeer nu langzaam weg te draaien uit de richting van het baken. De beltoon stopt en het baken blijft aangeven waar uw @!destination!! is. Probeer het nu.";
+
+
+/*  */
+"tutorial.beacons.text.BeaconInBoundsRepeat" = "Draai langzaam weg van de richting van het baken.";
+
+
+/*  */
+"tutorial.beacons.text.MobilitySkills" = "Het baken wijst altijd rechtstreeks naar de door u geselecteerde locatie. Het geeft geen route aan en meldt niet welke richting u moet volgen om er te komen. Gebruik dit baken als een hulpmiddel om te bepalen hoe u op uw bestemming komt.";
+
+
+/*  */
+"tutorial.beacons.text.AutomaticCallout" = "Tijdens uw tocht geeft Soundscape met een waarschuwing als deze af en toe updates over de afstand tot de locatie die door het baken wordt gemarkeerd.";
+
+
+/*  */
+"tutorial.beacons.text.HomeScreen" = "Informatie over de afstand wordt ook weergegeven op het startscherm samen met het adres van de bakenlocatie, als dat beschikbaar is. Soundscape geeft een melding wanneer u in de buurt bent van de bakenlocatie. Daarna stopt het audiobaken.";
+
+
+/*  */
+"tutorial.beacons.text.Mute" = "Als u wilt dat de app om een of andere reden geen geluid maakt, gebruikt u de knop Baken dempen of Slapen op het startscherm. Of dubbeltik met twee vingers op een willekeurige plek op het scherm. Met dubbeltikken met twee vingers worden huidige waarschuwingen gestopt en het audiobaken gedempt. Probeer het nu.";
+
+
+/*  */
+"tutorial.beacons.text.MuteRepeat" = "Dubbeltik met twee vingers op een willekeurige plek op het scherm";
+
+
+/*  */
+"tutorial.beacons.text.WrapUp" = "Het lijkt erop dat u het onder de knie hebt! U kunt deze zelfstudie herhalen via het scherm Help en zelfstudies. Het baken dat u voor deze zelfstudie hebt ingesteld, wordt nu gewist en u gaat terug naar het vorige scherm.";
+
+
+/*  */
+"settings.help.title" = "Help";
+
+
+/*  */
+"help.configuration.section.title" = "Soundscape configureren";
+
+
+/*  */
+"help.using_headsets.airpods.title" = "Apple AirPods gebruiken";
+
+
+/*  */
+"settings.help.section.beacons_and_pois" = "Bakens en waarschuwingen";
+
+
+/*  */
+"help.offline.section_title" = "Soundscape offline gebruiken";
+
+
+/*  */
+"settings.help.section.home_screen_buttons" = "Startschermknoppen";
+
+
+/*  */
+"help.config.voices.content" = "Soundscape kan de stemmen gebruiken die u hebt gedownload in de iOS Instellingen-app met uitzondering van de Siri-stemmen die niet beschikbaar zijn in Soundscape. U kunt het beste een van de verbeterde stemmen kiezen omdat deze een veel betere spraakkwaliteit hebben. Om dat te doen moet u echter eerst een verbeterde stem downloaden. Download stemmen in de iOS Instellingen-app via Toegankelijkheid > Gesproken materiaal > Stemmen en tik op een stem. In Soundscape kunt u de gewenste stem selecteren door naar Instellingen in het hoofdmenu te gaan en Stem te selecteren.";
+
+
+/*  */
+"help.offline.page_title" = "Waarom werkt Soundscape offline?";
+
+
+/*  */
+"help.offline.description" = "Als er geen internetverbinding is of een storing in de Soundscape-services, gaat Soundscape naar de offline modus. Soundscape blijft wel werken maar bepaalde functies zijn beperkt.";
+
+
+/*  */
+"help.offline.limitations_heading" = "Beperkingen";
+
+
+/*  */
+"help.offline.limitations_description" = "Waarschuwingen blijven werken als u zich bevindt in een omgeving waar u al eerder hebt gelopen en die is opgeslagen in uw geschiedenis. Ook kunt u een audiobaken plaatsen of een markering maken op plaatsen die zijn opgeslagen in uw waarschuwingengeschiedenis";
+
+
+/*  */
+"help.offline.troubleshooting_heading" = "Wat kunt u doen?";
+
+
+/*  */
+"help.offline.troubleshooting_description" = "Soundscape probeert de normale werking te hervatten wanneer uw telefoon is verbonden met Wi-Fi of wanneer mobiele gegevens zijn ingeschakeld en u zich bevindt in een gebied met een goed signaal. Als uw telefoon een goede internetverbinding heeft, maar Soundscape niet de normale werking hervat, is er mogelijk sprake van een storing in de Soundscape-services.";
+
+
+/*  */
+"help.orient.page_title" = "Om me heen";
+
+
+/*  */
+"help.explore.page_title" = "Vóór me";
+
+
+/*  */
+"help.creating_markers.page_title" = "Markeringen maken";
+
+
+/*  */
+"help.edit_markers.page_title" = "Markeringen aanpassen";
+
+
+/*  */
+"help.remote.page_title" = "Mediaregelaars gebruiken";
+
+
+/*  */
+"help.tutorial.footer.disabled" = "Zelfstudies zijn uitgeschakeld als navigatie actief is";
+
+
+/*  */
+"help.text.section_title.what" = "Wat is het?";
+
+
+/*  */
+"help.text.section_title.when" = "Wanneer zou ik het moeten gebruiken?";
+
+
+/*  */
+"help.text.section_title.how" = "Hoe werkt het?";
+
+
+/*  */
+"help.more_help.section_title" = "Meer Help";
+
+
+/*  */
+"help.support" = "Soundscape Community-ondersteuning";
+
+
+/*  */
+"terms_of_use.title" = "Gebruiksvoorwaarden";
+
+
+/*  */
+"terms_of_use.message" = "Op uw gebruik van Soundscape zijn de voorwaarden van %@ van toepassing en de hieronder beschreven voorwaarden (samen de \"Gebruiksvoorwaarden\").";
+
+
+/*  */
+"terms_of_use.message.prompt" = "Selecteer het vakje hieronder om akkoord te gaan en verder te gaan.";
+
+
+/*  */
+"terms_of_use.service_agreement" = "Soundscape Community-serviceovereenkomst";
+
+
+/*  */
+"terms_of_use.accept_checkbox.acc_label" = "Gebruiksvoorwaarden accepteren";
+
+
+/*  */
+"terms_of_use.accept_checkbox.on.acc_hint" = "Dubbeltik om het selectievakje Gebruiksvoorwaarden accepteren in te schakelen";
+
+
+/*  */
+"terms_of_use.accept_checkbox.off.acc_hint" = "Dubbeltik om het selectievakje Gebruiksvoorwaarden accepteren uit te schakelen";
+
+
+/*  */
+"terms_of_use.accept_checkbox.on.acc_value" = "Ingeschakeld";
+
+
+/*  */
+"terms_of_use.accept_checkbox.off.acc_value" = "Uitgeschakeld";
+
+
+/*  */
+"terms_of_use.medical_safety_disclaimer" = "U erkent dat Soundscape (1) niet is ontworpen, bedoeld of beschikbaar is gesteld als een medisch apparaat, en (2) niet is ontworpen of bedoeld als vervanging voor professionele medische adviezen, diagnoses, behandelingen of beoordelingen en niet moeten worden gebruikt als vervanging of substitutie voor professionele medische adviezen, diagnoses, behandelingen of beoordelingen.\n\nVeiligheidsverklaring\nSoundscape is een navigatiehulpmiddel en moet niet worden gebruikt ter vervanging van mobiele vaardigheden, bewustzijn van uw omgeving en gezond verstand. Wees voorzichtig bij het navigeren in uw omgeving omdat de kaartgegevens in Soundscape zijn overgenomen uit een programma van derden. Daarom kunnen er beperkingen zijn in de nauwkeurigheid van de gepresenteerde informatie.";
+
+
+/*  */
+"terms_of_use.accept.new_features" = "Accepteren";
+
+
+/*  */
+"terms_of_use.accept.new_features.accessibility_hint" = "Dubbeltik om aankondigingen te accepteren en te sluiten";
+
+
+/*  */
+"first_launch.get_started_button.off.acc_hint" = "Schakel het selectievakje Gebruiksvoorwaarden accepteren in voordat u op deze knop drukt";
+
+
+/*  */
+"first_launch.welcome_text" = "Welkom! Voordat u kunt beginnen, moet u wat instellingen opgeven en machtigingen toestaan. Druk op Volgende om te beginnen.";
+
+
+/*  */
+"first_launch.welcome_audio_text" = "Welkom! Met Soundscape blijft u zich gemakkelijker bewust van waar u bent en waar u naartoe gaat door een unieke audiohulp en door het beschrijven van wegen, kruispunten en plaatsen als u deze nadert. Druk op Volgende om te beginnen.";
+
+
+/*  */
+"first_launch.permission_required" = "Deze toestemming is verplicht.";
+
+
+/*  */
+"first_launch.soundscape_language" = "Taal in Soundscape";
+
+
+/*  */
+"first_launch.soundscape_language.text" = "Selecteer de taal waarin u Soundscape wilt gebruiken. U kunt uw keuze altijd wijzigen in de appinstellingen.";
+
+
+/*  */
+"first_launch.location.text" = "Soundscape is een op locatie gebaseerde app. We gebruiken uw locatie om dingen om u heen te zoeken en te beschrijven.";
+
+
+/*  */
+"first_launch.location.enable_location" = "Locatie inschakelen";
+
+
+/*  */
+"first_launch.device_motion" = "Apparaatbeweging";
+
+
+/*  */
+"first_launch.device_motion.text" = "Hiermee kan Soundscape uw ervaring verbeteren op basis van het feit of u loopt, in een auto rijdt of stilstaat.";
+
+
+/*  */
+"first_launch.lighting_way_with_sound" = "Uw route verlichten met geluid";
+
+
+/*  */
+"first_launch.lighting_way_with_sound.text_alt" = "Soundscape gebruikt 3D-geluid om u te laten weten wat er in de buurt is. Als uw bestemming zich bijvoorbeeld rechts bevindt, hoort u geluid vanuit die richting of als er links een café is, hoort u een waarschuwing uit die richting.";
+
+
+/*  */
+"first_launch.heading_somewhere" = "Onderweg naar iets?";
+
+
+/*  */
+"first_launch.heading_somewhere.text" = "Plaats een audiobaken op uw bestemming en Soundscape zal u op de hoogte houden van de locatie en uw omgeving onderweg. Gebruik Soundscape samen met uw navigatievaardigheden en uw favoriete navigatie-app om de weg naar bestemming te vinden.";
+
+
+/*  */
+"first_launch.setting_off_way" = "Gaat u op pad?";
+
+
+/*  */
+"first_launch.setting_off_way.text" = "Stop uw telefoon weg en ga lopen. Soundscape helpt u om u bewust te blijven van waar u bent door de straten, kruispunten en herkenningspunten die u nadert te beschrijven. Waarschuwingen kunnen worden aangepast in de instellingen.";
+
+
+/*  */
+"first_launch.find_things_nearby" = "Wilt u meer dingen in de buurt ontdekken?";
+
+
+/*  */
+"first_launch.find_things_nearby.text" = "Houd de telefoon vlak in uw hand en gebruik de knoppen om wegen en komende kruispunten te vinden, en u te oriënteren aan de hand van bekende en nieuwe herkenningspunten om u heen en voor u uit.";
+
+
+/*  */
+"first_launch.welcome.title" = "Welkom";
+
+
+/*  */
+"first_launch.welcome.title.accessibility_label" = "Welkom bij Soundscape!";
+
+
+/*  */
+"first_launch.welcome.description" = "Vol vertrouwen navigeren met de ruimtelijke audio van Soundscape";
+
+
+/*  */
+"first_launch.welcome.button" = "Aan de slag";
+
+
+/*  */
+"first_launch.headphones.title" = "Luisteren naar Soundscape";
+
+
+/*  */
+"first_launch.headphones.message.1" = "Soundscape werkt geweldig met een koptelefoon. Als u een koptelefoon wilt gebruiken, zet die dan nu op.";
+
+
+/*  */
+"first_launch.headphones.message.2" = "Als u geen koptelefoon hebt of die niet wil gebruiken, geen probleem! Soundscape werkt ook met de speakers op uw telefoon.";
+
+
+/*  */
+"first_launch.callouts.title" = "Luisteren naar uw omgeving";
+
+
+/*  */
+"first_launch.callouts.message" = "Met Soundscape bent u zich steeds bewust van waar u bent en waarheen u loopt doordat straten, kruispunten en referentiepunten worden aangekondigd als u ze nadert.";
+
+
+/*  */
+"first_launch.callouts.listen" = "Luister naar een voorbeeld van wat Soundscape kan aankondigen op uw volgende wandeling";
+
+
+/*  */
+"first_launch.callouts.listen.accessibility_label" = "Luisteren";
+
+
+/*  */
+"first_launch.callouts.listen.accessibility_hint" = "Dubbeltik om te luisteren naar een voorbeeld van wat Soundscape kan aankondigen op uw volgende wandeling";
+
+
+/*  */
+"first_launch.callouts.example.1" = "Café";
+
+
+/*  */
+"first_launch.callouts.example.3" = "Hoofdstraat gaat naar links";
+
+
+/*  */
+"first_launch.callouts.example.4" = "Hoofdstraat gaat naar rechts";
+
+
+/*  */
+"first_launch.permissions.title" = "Navigeren met Soundscape";
+
+
+/*  */
+"first_launch.permissions.message" = "Wanneer u navigeert met Soundscape, wordt u begeleid door een audiobaken. Als u dat wilt gebruiken, moet u de volgende machtigingen in Soundscape inschakelen:";
+
+
+/*  */
+"first_launch.permissions.location" = "Locatievoorzieningen met exacte locatie";
+
+
+/*  */
+"first_launch.permissions.motion" = "Beweging & Conditie";
+
+
+/*  */
+"first_launch.permissions.required" = "Deze toestemming is verplicht";
+
+
+/*  */
+"first_launch.beacon.title" = "Een audiobaken kiezen";
+
+
+/*  */
+"first_launch.beacon.message.1" = "Wanneer u navigeert met Soundscape, hoort u het audiobaken in de richting van uw bestemming. Als u het geluid volgt, weet u altijd in welke richting u moet lopen.";
+
+
+/*  */
+"first_launch.beacon.message.2" = "Luister naar de beschikbare audiobakens en selecteer uw voorkeur.";
+
+
+/*  */
+"first_launch.beacon.message.3" = "Dit kan later worden gewijzigd in de app-instellingen.";
+
+
+/*  */
+"first_launch.select_beacon" = "Baken selecteren";
+
+
+/*  */
+"first_launch.beacon.audio.title" = "Ruimtelijk audiobaken";
+
+
+/*  */
+"first_launch.beacon.audio.message" = "Het baken volgt de beweging van uw telefoon en gebruikt ruimtelijke audio zodat u zich altijd bewust bent van de locatie.";
+
+
+/*  */
+"first_launch.beacon.callout.standard" = "Baken wordt rechts van u geplaatst. Draai uw telefoon om het geluid te volgen en ervaar de ruimtelijke audio van het baken.";
+
+
+/*  */
+"first_launch.beacon.callout.haptic" = "Baken wordt voor u geplaatst. Draai uw telefoon naar links en rechts om de haptische feedback van het baken te ervaren.";
+
+
+/*  */
+"first_launch.beacon.callout.headtracking.standard" = "Baken wordt rechts van u geplaatst. Draai om het geluid te volgen en ervaar de ruimtelijke audio van het baken.";
+
+
+/*  */
+"first_launch.beacon.callout.headtracking.haptic" = "Baken wordt voor u geplaatst. Draai naar links en rechts om de haptische feedback van het baken te ervaren.";
+
+
+/*  */
+"first_launch.beacon.callout.ahead" = "Baken voor u";
+
+
+/*  */
+"first_launch.beacon.callout.behind" = "Baken achter u";
+
+
+/*  */
+"first_launch.prompt.title" = "U kunt van start!";
+
+
+/*  */
+"first_launch.prompt.message" = "U bent klaar voor uw eerste wandeling met Soundscape. Als u het nu wilt proberen, kiest u een bestemming in de buurt en start u het audiobaken. U hoort het dan in de richting van uw bestemming.";
+
+
+/*  */
+"first_launch.prompt.button" = "Voltooien";
+
+
+/*  */
+"first_launch.help.title" = "App-instellingen";
+
+
+/*  */
+"help.text.destination_beacons.what" = "Als u een baken instelt op een locatie in de buurt kan Soundscape u op de hoogte houden door een audiobaken te laten klinken vanuit de richting van die locatie. Dit baken kan al dan niet worden gedempt op het hoofdscherm. Bovendien geeft Soundscape informatie over de locatie weer op het hoofdscherm met de afstand en het adres, indien bekend.";
+
+
+/*  */
+"help.text.destination_beacons.when" = "Het instellen van een baken is handig wanneer u een herkenningspunt wilt volgen bij het verkennen van een nieuw gebied of wanneer u ergens naartoe gaat en onderweg informatie wilt horen over de omgeving. De bakenfunctie geeft geen routebeschrijving maar een voortdurend hoorbaar geluid dat de richting van het baken aangeeft in relatie tot de plek waar u zich bevindt. Met het audiobaken, uw eigen navigatievaardigheden en desgewenst uw favoriete navigatie-app, kunt u zelf kiezen hoe u zich naar locaties in de buurt begeeft.";
+
+
+/*  */
+"help.text.destination_beacons.how.1" = "<b>Een baken instellen</b>:<br/> Geef eerst de details voor een locatie weer door naar de plaats te zoeken met de zoekbalk of door te tikken op een van de knoppen Plaatsen in de buurt, Opgeslagen markeringen of Huidige locatie. Selecteer vervolgens een locatie. Selecteer op het scherm met locatiedetails de knop Audiobaken starten. Als u erop tikt, gaat u terug naar het startscherm en wordt een audiobaken ingeschakeld vanuit de richting van de door u geselecteerde plaats. De naam van de geselecteerde plaats, de afstand ernaartoe en het fysieke adres, indien beschikbaar, worden nu weergegeven op het hoofdscherm van de app.";
+
+
+/*  */
+"help.text.destination_beacons.how.2" = "<b>Het huidige baken verwijderen</b>:<br/> Druk op de knop Baken verwijderen op het hoofdscherm.";
+
+
+/*  */
+"help.text.destination_beacons.how.3" = "<b>Het audiobaken dempen</b>:<br/> Tik op de knop Baken dempen onder de knop Baken verwijderen op het hoofdscherm.";
+
+
+/*  */
+"help.text.automatic_callouts.what" = "Soundscape geeft ook informatie over de dingen om u heen als u ze nadert. U hoort de naam uit de richting waarin het object zich bevindt. De app doet dit automatisch voor objecten als bedrijven, bushaltes en zelfs kruispunten. U kunt de automatische waarschuwingen configureren in het gedeelte Waarschuwingen beheren van het scherm Instellingen en u kunt alle waarschuwingen uitzetten wanneer u de app op stil wilt zetten.";
+
+
+/*  */
+"help.text.automatic_callouts.when.1" = "<b>Een nieuw gebied verkennen</b>:<br/> Schakel automatische waarschuwingen in en loop rond om informatie te horen over verschillende winkels, restaurants en andere punten die u passeert.";
+
+
+/*  */
+"help.text.automatic_callouts.when.2" = "<b>Lopen naar een specifieke locatie</b>:<br/> Als u onderweg bent naar een bepaalde locatie, zijn automatische waarschuwingen voor kruispunten heel handig. Waarschuwingen voor kruispunten geven de indeling van het kruispunt aan terwijl u ernaartoe loopt en bevestigen op welke weg u bent, wanneer u het kruispunt verlaat.";
+
+
+/*  */
+"help.text.automatic_callouts.when.3" = "<b>Wanneer u stilte wilt</b>:<br/> Wanneer u een weg wilt oversteken of wilt dat de app stil is, kunt u de waarschuwingen uitzetten. Wanneer waarschuwingen uit zijn, geeft de app alleen informatie door als u handmatig tikt op de knoppen <em>Mijn locatie</em>, <em>Markeringen in de buurt</em>, <em>Om me heen</em> of <em>Vóór me</em>.";
+
+
+/*  */
+"help.text.automatic_callouts.how.1" = "<b>Waarschuwingen in- of uitschakelen</b>:<br/> Als u waarschuwingen uitzet, wordt het geluid van de app gedempt. U kunt waarschuwingen in- of uitschakelen in de sectie Waarschuwingen beheren van het scherm Instellingen. Tik op de wisselknop Waarschuwingen toestaan om waarschuwingen uit of aan te zetten. U kunt waarschuwingen ook in- of uitschakelen met de opdracht Vooruitspringen (dubbeltikken en vasthouden) als uw koptelefoon mediaregelaars heeft. Of gebruik de knop Slapen rechtsboven in het startscherm om waarschuwingen te stoppen totdat u Soundscape weer activeert.";
+
+
+/*  */
+"help.text.automatic_callouts.how.2" = "<b>Beheren welke waarschuwingen u hoort</b>:<br/> Als u wilt bepalen voor welke dingen Soundscape automatisch een waarschuwing geeft, gaat u naar het scherm Instellingen via het menu op het startscherm. De sectie Waarschuwingen beheren van het scherm Instellingen bevat een lijst met items waarvoor u een waarschuwing kunt ontvangen. Elk item heeft een wisselknop die u kunt in- of uitschakelen. Als u alle waarschuwingen wilt uitschakelen, tikt u op de wisselknop Waarschuwingen toestaan boven aan de lijst.";
+
+
+/*  */
+"help.text.my_location.what" = "De knop <em>Mijn locatie</em> geeft snel informatie over de omgeving zodat u kunt achterhalen waar u zich bevindt. <em>Mijn locatie</em> geeft informatie over uw huidige locatie, de richting waarin u kijkt, en waar naburige wegen, kruispunten en referentiepunten zijn.";
+
+
+/*  */
+"help.text.my_location.when" = "<em>Mijn locatie</em> is handig wanneer u wilt weten waar u bent of wat de hoofdrichting is waarin u loopt.";
+
+
+/*  */
+"help.text.my_location.how" = "Net als met de vier knoppen onderaan het hoofdscherm houdt u de telefoon met het scherm horizontaal en met de bovenkant in de richting waarin u loopt, voordat u op <em>Mijn locatie</em> drukt. Dit werkt als een kompas en geeft aan de app door in welke richting u kijkt. Tik op de knop <em>Mijn locatie</em> en luister.";
+
+
+/*  */
+"help.text.nearby_markers.what" = "Met de knop <em>Markeringen in de buurt</em> hoort u maximaal vier markeringen die het dichtst bij u zijn. Met <em>Markeringen in de buurt</em> kunt u zich gemakkelijker oriënteren met behulp van plaatsen die u al kent.";
+
+
+/*  */
+"help.text.nearby_markers.when" = "Wanneer u probeert om uw positie te ontdekken en u te oriënteren in uw omgeving, gebruikt u <em>Markeringen in de buurt</em> om meer te horen over de locaties die u kent.";
+
+
+/*  */
+"help.text.nearby_markers.how" = "Net als met de vier knoppen onderaan het hoofdscherm houdt u de telefoon met het scherm horizontaal en met de bovenkant in de richting waarin u loopt, voordat u op <em>Markeringen in de buurt</em> drukt. Dit werkt als een kompas en geeft aan de app door in welke richting u kijkt. Tik op de knop <em>Markeringen in de buurt</em> en u hoort maximaal vier markeringen vlakbij u.";
+
+
+/*  */
+"help.text.around_me.what" = "Met de knop <em>Om me heen</em> hoort u informatie over één ding in elk van de vier kwadranten om u heen (vóór, rechts, achter en links van u). <em>Om me heen</em> is bedoeld om u te helpen bij het oriënteren in uw omgeving.";
+
+
+/*  */
+"help.text.around_me.when" = "Wanneer u probeert om uw positie te ontdekken en u te oriënteren in uw omgeving, gebruikt u <em>Om me heen</em> om meer te horen over de dingen om u heen.";
+
+
+/*  */
+"help.text.around_me.how" = "Net als met de vier knoppen onderaan het hoofdscherm houdt u de telefoon met het scherm horizontaal en met de bovenkant in de richting waarin u loopt, voordat u op <em>Om me heen</em> drukt. Dit werkt als een kompas en geeft aan de app door in welke richting u kijkt. Tik op de knop <em>Om me heen</em> en u hoort de referentiepunten die zich om u heen bevinden.";
+
+
+/*  */
+"help.text.ahead_of_me.what" = "Met <em>Vóór me</em> hoort u informatie over de punten voor u. <em>Vóór me</em> is bedoeld om de komende route te verkennen wanneer u zich in een nieuwe omgeving bevindt.";
+
+
+/*  */
+"help.text.ahead_of_me.when" = "Wanneer u door de straat loopt, kunt u met <em>Vóór me</em> de plaatsen en dingen ontdekken die voor u aan beide kanten van de straat verschijnen.";
+
+
+/*  */
+"help.text.ahead_of_me.how" = "Net als met de vier knoppen onderaan het hoofdscherm houdt u de telefoon met het scherm horizontaal en met de bovenkant in de richting waarin u loopt, voordat u op <em>Vóór me</em> drukt. Dit werkt als een kompas en geeft aan de app door in welke richting u kijkt. Tik op de knop <em>Vóór me</em> en u hoort de referentiepunten die zich voor u bevinden.";
+
+
+/*  */
+"help.text.remote_control.what" = "U hebt toegang tot bepaalde functies in Soundscape met de mediaregelknoppen op uw koptelefoon. Deze functionaliteit werkt alle vaste en Bluetooth-koptelefoons met mediaregelknoppen als Afspelen, Pauzeren, Volgende, Vorige en andere. Verschillende koptelefoons hebben mogelijk andere knoppen dus kijk in de onderstaande lijst met acties om te bepalen welke beschikbaar zijn op uw koptelefoon.<br>Houd er ook rekening mee dat deze functie alleen werkt op koptelefoons die mediaregelknoppen van Apple ondersteunen (zoals afspelen en pauzeren).";
+
+
+/*  */
+"help.text.remote_control.when" = "Mediaregelaars op de koptelefoon kunnen worden gebruikt terwijl Soundscape actief is. Dit geldt wanneer u in Soundscape bent of terwijl Soundscape in de achtergrond werkt en zelfs wanneer uw apparaat is vergrendeld. Mediaregelknoppen werken echter niet met Soundscape als u met een andere app audio afspeelt zoals muziek, podcasts of video's.";
+
+
+/*  */
+"help.text.remote_control.how" = "<p>U hebt toegang tot de volgende functies in Soundscape met de mediaregelknoppen op uw koptelefoon:<p><br>&#x23EF Afspelen/pauzeren: demp huidige waarschuwingen en schakel het bakengeluid aan of uit als een audiobaken is ingesteld. </p><p>&#x23ED Volgende: waarschuwing <em>Mijn locatie</em>.</p><p>&#x23EE Vorige: Laatste waarschuwing herhalen.</p><p>&#x23E9 Vooruitspringen: waarschuwingen in- en uitschakelen.</p><p>&#x23EA Terugspringen: waarschuwing <em>Om me heen</em>.</p>";
+
+
+/*  */
+"help.text.markers.content.1" = "Met Soundscape kunt u uw wereld en dingen die u belangrijk vindt, herkenbaar maken.";
+
+
+/*  */
+"help.text.markers.content.2" = "U kunt persoonlijke dingen markeren en plaatsen die belangrijk zijn zoals uw huis, uw werkplek en uw favoriete supermarkt. U kunt een plaats of een adres markeren, maar u kunt ook dingen markeren die gewoonlijk niet op kaarten staan. Gebruik als referentie onder het lopen bijvoorbeeld de ingang van een gebouw of park, stoplichten, oversteekplaatsen of bruggen, bushaltes of zelfs de favoriete boom van uw hond.";
+
+
+/*  */
+"help.text.markers.content.3" = "Soundscape geeft automatisch een melding als u langs gemarkeerde plaatsen loopt of deze nadert. Ook kunt u de knop Markeringen in de buurt gebruiken onder aan het startscherm van Soundscape om een ruimtelijke waarschuwing te horen over gemarkeerde plaatsen om u heen. Bovendien kunt u een audiobaken instellen voor een gemarkeerde plaats. Wanneer u dat doet, hoort u het opgegeven Soundscape-audiobaken en kunt u het gebruiken zoals u gewend bent.";
+
+
+/*  */
+"help.text.creating_markers.content.1" = "U kunt markeringen op drie manieren maken: zoeken naar de plaats die u wilt opslaan met de zoekbalk, een plek vinden met de knop Plaatsen in de buurt of met de knop Huidige locatie gebruiken. U vindt deze op het startscherm van Soundscape. Als u de gewenste plaats hebt gevonden en geselecteerd, gaat u naar de pagina Locatiedetails. Op deze pagina selecteert u de knop Markering opslaan.";
+
+
+/*  */
+"help.text.creating_markers.content.2" = "Nu hebt u de optie om deze markering aan te passen. Deze stap is optioneel. Als u dat wilt, kunt u de naam van de markering wijzigen en ook een aantekening toevoegen die bij de markering wordt vermeld als extra informatie. Als u klaar bent, selecteert u de knop Gereed om uw markering op te slaan. ";
+
+
+/*  */
+"help.text.customizing_markers.content.1" = "Als u de naam van de eerder gemaakte markering wilt wijzigen of een aantekening wilt toevoegen, kunt u dat doen door eerst de markering te selecteren op het tabblad Markeringen van de pagina Markeringen en routes, en vervolgens de knop Markering bewerken. Geef de markering een beschrijvende of handige bijnaam. Met het aantekeningenveld kunt u ook een langere beschrijving geven.";
+
+
+/*  */
+"help.text.customizing_markers.content.2" = "In het scherm Bewerken kunt u een markering die u niet meer nodig hebt, ook verwijderen.";
+
+
+/*  */
+"help.text.routes.content.what" = "Routes zijn een reeks routepunten. U krijgt een melding als u bij een routepunt arriveert en het audiobaken gaat automatisch naar het volgende routepunt.";
+
+
+/*  */
+"help.text.routes.content.when" = "Mogelijk wilt u een route maken en gebruiken in een bekende omgeving om te zorgen dat u op schema ligt of u wilt een route gebruiken ter ondersteuning op een nieuw traject.";
+
+
+/*  */
+"help.text.routes.content.how.1" = "<b>Een route maken</b>:<br/> Ga eerst naar Markeringen en routes, selecteer het tabblad Routes en de knop Nieuwe route. Geef de route een naam en een optionele beschrijving, voeg vervolgens routepunten toe of selecteer ze uit uw lijst met Markeringen. U kunt de volgorde van de routepunten op een route altijd wijzigen door de route te bewerken.";
+
+
+/*  */
+"help.text.routes.content.how.2" = "<b>Een route bewerken</b>:<br/> Selecteer uw route op de pagina Markeringen en routes en selecteer Route bewerken. Nu kunt u routepunten toevoegen en verwijderen, of de naam en de beschrijving van de route aanpassen.";
+
+
+/*  */
+"help.text.routes.content.how.3" = "<b>Een route delen</b>:<br/> Selecteer uw route op de pagina Markeringen en routes en selecteer vervolgens een van de opties voor Delen.";
+
+
+/*  */
+"help.using_headsets.airpods.what" = "Soundscape ondersteunt ruimtelijke audio met de dynamische hoofdvolgfunctie als u AirPods gebruikt. Als ze zijn verbonden met Soundscape, geven sensoren in de AirPods aan Soundscape door in welke richting u kijkt. Zo kan Soundscape uw geluidsbeleving natuurlijker maken terwijl u zich verplaatst. Als u Soundscape gebruikt met AirPods, hoeft u de telefoon niet in uw hand te houden voor een correcte werking van Soundscape.";
+
+
+/*  */
+"help.using_headsets.airpods.when" = "Gebruik AirPods altijd met Soundscape als u Soundscape gebruikt. Met AirPods krijgt u geluid van hoge kwaliteit en kunt u Soundscape gemakkelijker handsfree gebruiken.";
+
+
+/*  */
+"help.using_headsets.airpods.how.1" = "<b>Een apparaat verbinden</b>:<br/> Ga naar het item 'Head tracking'-koptelefoons in het menu Soundscape om verbinding te maken met uw AirPods en volg de instructies op het scherm. U moet uw AirPods koppelen met uw telefoon in de Bluetooth-instellingen voordat u ze verbindt in Soundscape.";
+
+
+/*  */
+"help.using_headsets.airpods.how.2" = "<b>Mediaregelaars op uw koptelefoon gebruiken</b>:<br/> Wanneer mediaregelaars zijn ingeschakeld in de Soundscape-instellingen, kunt u met de mediaregelaars op uw AirPods het baken dempen of het dempen opheffen, uw locatie laten beschrijven of de laatste waarschuwing laten herhalen. Meer informatie vindt u in de Help-sectie \"Mediaregelaars gebruiken\".";
+
+
+/*  */
+"osm.tag.crossing" = "Zebrapad";
+
+
+/*  */
+"osm.tag.construction" = "Bouwplaats";
+
+
+/*  */
+"osm.tag.dangerous_area" = "Gevaarlijk gebied";
+
+
+/*  */
+"osm.tag.townhall" = "Gemeentehuis";
+
+
+/*  */
+"osm.tag.steps" = "Trap";
+
+
+/*  */
+"osm.tag.elevator" = "Lift";
+
+
+/*  */
+"osm.tag.walking_path" = "Voetpad";
+
+
+/*  */
+"osm.tag.pedestrian_street" = "Voetgangersgebied";
+
+
+/*  */
+"osm.tag.bicycle_path" = "Fietspad";
+
+
+/*  */
+"osm.tag.residential_street" = "Straat in woonwijk";
+
+
+/*  */
+"osm.tag.service_road" = "Vluchtstrook";
+
+
+/*  */
+"osm.tag.road" = "Weg";
+
+
+/*  */
+"osm.tag.highway" = "Snelweg";
+
+
+/*  */
+"osm.tag.highway.named" = "Snelweg van %@";
+
+
+/*  */
+"osm.tag.highway.refed" = "Snelweg %@";
+
+
+/*  */
+"osm.tag.intersection" = "Kruispunt";
+
+
+/*  */
+"osm.tag.roundabout" = "Rotonde";
+
+
+/*  */
+"osm.tag.highway_ramp" = "Oprit naar snelweg";
+
+
+/*  */
+"osm.tag.merging_lane" = "Invoegstrook";
+
+
+/*  */
+"osm.tag.office_building" = "Kantoorgebouw";
+
+
+/*  */
+"osm.tag.school_building" = "Schoolgebouw";
+
+
+/*  */
+"osm.tag.covered_pavilion" = "Overdekt paviljoen";
+
+
+/*  */
+"osm.tag.convenience_store" = "Supermarkt";
+
+
+/*  */
+"osm.tag.building_entrance" = "Ingang van gebouw";
+
+
+/*  */
+"osm.tag.assembly_point" = "Verzamelpunt";
+
+
+/*  */
+"osm.tag.cycle_barrier" = "Versmalde doorgang fietspad";
+
+
+/*  */
+"osm.tag.turnstile" = "Tourniquet";
+
+
+/*  */
+"osm.tag.cattle_grid" = "Veerooster";
+
+
+/*  */
+"osm.tag.gate" = "Hek";
+
+
+/*  */
+"osm.tag.restroom" = "Toilet";
+
+
+/*  */
+"osm.tag.parking_lot" = "Parkeerterrein";
+
+
+/*  */
+"osm.tag.parking_entrance" = "Ingang parkeerterrein";
+
+
+/*  */
+"osm.tag.bench" = "Bank";
+
+
+/*  */
+"osm.tag.taxi_waiting_area" = "Taxistandplaats";
+
+
+/*  */
+"osm.tag.post_office" = "Postkantoor";
+
+
+/*  */
+"osm.tag.post_box" = "Brievenbus";
+
+
+/*  */
+"osm.tag.waste_basket" = "Prullenbak";
+
+
+/*  */
+"osm.tag.shower" = "Douche";
+
+
+/*  */
+"osm.tag.bike_parking" = "Fietsenstalling";
+
+
+/*  */
+"osm.tag.cafe" = "Café";
+
+
+/*  */
+"osm.tag.restaurant" = "Restaurant";
+
+
+/*  */
+"osm.tag.telephone" = "Telefoon";
+
+
+/*  */
+"osm.tag.gas_station" = "Benzinepomp";
+
+
+/*  */
+"osm.tag.bank" = "Bank";
+
+
+/*  */
+"osm.tag.atm" = "Geldautomaat";
+
+
+/*  */
+"osm.tag.atm.named" = "Geldautomaat van %@";
+
+
+/*  */
+"osm.tag.atm.refed" = "Geldautomaat %@";
+
+
+/*  */
+"osm.tag.bus_stop" = "Bushalte";
+
+
+/*  */
+"osm.tag.bus_stop.named" = "Bushalte van %@";
+
+
+/*  */
+"osm.tag.bus_stop.refed" = "Bushalte %@";
+
+
+/*  */
+"osm.tag.recycling_bin" = "Vuilnisbak";
+
+
+/*  */
+"osm.tag.fountain" = "Fontein";
+
+
+/*  */
+"osm.tag.place_of_worship" = "Gebedshuis";
+
+
+/*  */
+"osm.tag.water_fountain" = "Waterfontein";
+
+
+/*  */
+"osm.tag.car_wash" = "Autowasstraat";
+
+
+/*  */
+"osm.tag.vending_machine" = "Automaat";
+
+
+/*  */
+"osm.tag.playground" = "Speeltuin";
+
+
+/*  */
+"osm.tag.sports_field" = "Sportveld";
+
+
+/*  */
+"osm.tag.swimming_pool" = "Zwembad";
+
+
+/*  */
+"osm.tag.garden" = "Tuin";
+
+
+/*  */
+"osm.tag.park" = "Park";
+
+
+/*  */
+"osm.tag.picnic_table" = "Picknicktafel";
+
+
+/*  */
+"osm.tag.picnic_area" = "Picknickgebied";
+
+
+/*  */
+"banner.custom_behavior.scavenger_hunt" = "Speurtocht is actief.";
+
+
+/*  */
+"banner.custom_behavior.scavenger_hunt.hint" = "Dubbeltik om te lezen over de speurtocht of deze te onderbreken.";
+
+
+/*  */
+"banner.offline_default.message" = "Soundscape werkt offline. Meer informatie";
+
+
+/*  */
+"banner.offline_help.message" = "Soundscape werkt offline.";
+
+
+/*  */
+"banner.offline_search.message" = "Soundscape werkt offline. Locaties zijn beperkt tot plaatsen waar u eerder langs bent gelopen of die u al hebt gemarkeerd. Meer informatie";
+
+
+/*  */
+"banner.online.message" = "Soundscape is weer online";
+
+
+/*  */
+"share.title" = "Delen";
+
+
+/*  */
+"share.prompt.title" = "Gebruikt u Soundscape graag?";
+
+
+/*  */
+"share.prompt.message" = "Vertel vrienden en familie over Soundscape";
+
+
+/*  */
+"share.action.message" = "Probeer Soundscape, mijn favoriete app voor navigatie met 3D-geluid:";
+
+
+/*  */
+"push.local.home.title" = "Probeer Soundscape thuis";
+
+
+/*  */
+"push.local.home.body" = "Kies een bestemming in de buurt, start het baken en u hoort het in de richting van uw bestemming.";
+
+
+/*  */
+"push.local.walk.title" = "Probeer Soundscape op uw volgende wandeling";
+
+
+/*  */
+"push.local.walk.body" = "Start de app en geniet van de ervaring. U hoeft niet eens een bestemming te kiezen.";
+
+
+/*  */
+"voice.apple.additional" = "U kunt extra stemmen, waaronder stemmen met een verbeterde kwaliteit, downloaden uit de sectie Gesproken materiaal van de iOS-toegankelijkheidsinstellingen.";
+
+
+/*  */
+"faq.title" = "Veelgestelde vragen";
+
+
+/*  */
+"faq.title.abbreviated" = "Veelgestelde vragen";
+
+
+/*  */
+"faq.tips.title" = "Tips";
+
+
+/*  */
+"faq.section.what_is_soundscape" = "Wat is Soundscape en hoe moet ik het gebruiken?";
+
+
+/*  */
+"faq.when_to_use_soundscape.question" = "Wanneer kan ik Soundscape het beste gebruiken?";
+
+
+/*  */
+"faq.when_to_use_soundscape.answer" = "Soundscape heeft voorzieningen en voordelen voor allerlei verschillende scenario’s en momenten. Bovendien kan de waarde van Soundscape voor u in de loop der tijd veranderen doordat u het over drie maanden misschien anders gebruikt dan nu. Mensen proberen vaak te bedenken \"waarvoor kan deze app goed worden gebruikt?\" U kunt Soundscape incidenteel gebruiken, wanneer u specifieke informatie zoekt, zoals het bijhouden van de voortgang naar uw bestemming, voor oriëntatie als u uit de metro komt, het bepalen van uw positie wanneer u uit de auto stapt, het zoeken naar straatnamen of het bepalen van de afstand tot het volgende kruispunt. Soundscape is echter gebaseerd op de filosofie \"de wereld verlichten met geluid \", en ontworpen voor wanneer u onderweg bent, om u meer bewust te maken van uw omgeving, zoals de namen van de straat waarin u loopt, de richting waarin u gaat en de namen van de bedrijven die u passeert. Gebruikers beschrijven deze toepassing van Soundscape als volgt: \"fijne companion-app\" met \"meerwaarde\", om \"lacunes op te vullen in mijn mentale voorstelling\" en om met \"extra zelfvertrouwen te lopen\". Hier zijn nog een paar voorbeelden van hoe gebruikers Soundscape toepassen:\n\n\"Soundscape hielp me om de juiste route terug te vinden toen ik na het uitstappen uit de bus de verkeerde kant op liep.\\n\n\Zelfs in de stad waar ik al 3 jaar woon, heb ik [met Soundscape] een beter beeld gekregen van wat er Om me heen is.\\n\n\Het 3D-geluid geeft een betere beleving bij het lopen en ik voel meer verbinding met mijn omgeving… Ik zal met deze app nu eerder een nieuwe route uitproberen.\\n\n\Als je gewoon rondloopt, weet je veel dingen niet en mis je van alles. Met Soundscape hoef je geen moeite te doen om van alles te horen over je omgeving. De relationele informatie is nuttig en het is een geweldige app om je bewust te worden van je situatie en het ontdekken van winkelstraten.\"\n\n\"[Ik heb Soundscape gebruikt] om een pub te zoeken midden in York. Met allerlei opties heb ik eerst de pub geselecteerd en daarna de route gevolgd. De app bracht me tot 3 meter voor de deur. Geweldig!\"";
+
+
+/*  */
+"faq.markers_function.question" = "Wat zijn markeringen en hoe kan ik die het beste gebruiken?";
+
+
+/*  */
+"faq.markers_function.answer" = "Markeringen zijn plaatsen die u hebt opgeslagen. Dit kunnen plaatsen zijn die u kunt detecteren met de app of geheel nieuwe plaatsen die u zelf hebt toegevoegd. U kunt uw huidige locatie opslaan als een markering door op de knop Huidige locatie gebruiken op het startscherm te drukken en vervolgens Opslaan als markering te selecteren. U kunt andere locaties opslaan als een markering door naar de plaats die u wilt opslaan te zoeken met de zoekbalk, of door op de knop Plaatsen in de buurt te tikken. Beide opties bevinden zich op het startscherm van Soundscape. Als u de gewenste plaats hebt gevonden en deze selecteert, gaat u naar de pagina Locatiedetails. Selecteer op deze pagina de knop Opslaan als een markering.";
+
+
+/*  */
+"faq.section.getting_the_best_experience" = "Hoe maak ik optimaal gebruik van Soundscape?";
+
+
+/*  */
+"faq.what_can_I_set.question" = "Wat kan ik instellen als een baken?";
+
+
+/*  */
+"faq.what_can_I_set.answer" = "U kunt een audiobaken instellen voor bedrijven, plaatsen, referentiepunten, adressen of kruispunten zolang ze voorkomen in Bing-kaartgegevens of als u een markering hebt toegevoegd. Er zijn een paar manieren waarop u een locatie kunt toevoegen als een markering. Geef eerst de details van een locatie weer door de zoekbalk te gebruiken om naar een plaats te zoeken of tik op een van de knoppen Plaatsen in de buurt, Opgeslagen markeringen of Huidige locatie en selecteer een locatie. In het scherm met de locatiedetails kunt u de knop Audiobaken starten selecteren. Als u erop tikt, gaat u terug naar het startscherm en wordt een audiobaken ingeschakeld vanuit de richting van de door u geselecteerde plaats. De naam van de geselecteerde plaats, de afstand ernaartoe en het fysieke adres, indien beschikbaar, worden nu weergegeven op het hoofdscherm van de app.";
+
+
+/*  */
+"faq.how_to_use_beacon.question" = "Hoe maak ik optimaal gebruik van het baken?";
+
+
+/*  */
+"faq.how_to_use_beacon.answer" = "U kunt het audiobaken zien als een soort 'vuurtoren' voor uw oren. Het meldt waar uw bestemming zich bevindt, hemelsbreed ten opzichte van uw locatie. Net als een vuurtoren vertelt de app niet hoe u er komt, maar moet u zelf onderweg veel navigatiekeuzes maken en net als een zeilboot uw koers strategisch aanpassen om dichterbij uw bestemming te komen. Het continue ritmische geluid van het audiobaken wordt uitgezonden vanuit de richting van uw bestemming en zorgt dat u zich bewust blijft van de locatie van de bestemming ten opzichte van waar u loopt. Wanneer u rechtstreeks naar de bestemming loopt of uw telefoon naar de bestemming richt, hoort u een hogere beltoon. Zo kunt u de richting precies bepalen omdat de richting van het ritmische geluid soms moeilijk waar te nemen is in lawaaierige omgevingen. Als u de hogere beltoon wilt horen, moet u de telefoon vlak houden en er langzaam mee zwaaien. Draai uw hoofd in dezelfde richting als de telefoon zodat u de beste ruimtelijke geluidservaring krijgt.\n\nDe metafoor met de vuurtoren voor het bakenontwerp heeft een aantal natuurlijke implicaties:\n\n1. Er is geen 'juiste' richting om te reizen met het baken. Met Soundscape kiest u zelf hoe u er komt.\n2. De hogere beltoon helpt u alleen om de richting van de bestemming te lokaliseren. Het is geen aanduiding voor hoe u er komt.\n3. Als u min of meer weet hoe u bij uw bestemming komt, kunt u het baken het grootste deel van uw reis uitzetten en alleen inschakelen als u dicht bij uw bestemming komt.";
+
+
+/*  */
+"faq.why_does_beacon_disappear.question" = "Waarom verdwijnt het audiobaken soms?";
+
+
+/*  */
+"faq.why_does_beacon_disappear.answer" = "Het audiobaken van Soundscape is met name een richtingaanwijzing, zodat u weet waar uw bestemming is in relatie tot de richting waarin u kijkt. Wanneer Soundscape niet zeker weet in welke richting u kijkt, wordt het volume van het baken verlaagd. Dit gebeurt het vaakst wanneer de telefoon in een tas of zak zit en u stopt met lopen, bijvoorbeeld om over te steken. Het baken wordt luider wanneer u weer gaat lopen of als u de telefoon vlak houdt en in de richting wijst waarin u kijkt.";
+
+
+/*  */
+"faq.beacon_on_address.question" = "Kan ik een baken instellen op een adres?";
+
+
+/*  */
+"faq.beacon_on_address.answer" = "Ja, dat kan. Adressen worden niet standaard vermeld, maar kunnen worden gevonden via het zoekveld. Als u het adres wilt opslaan zodat u het de volgende keer niet meer hoeft op te zoeken, kunt u het via het startscherm als markering toevoegen met de knop Toevoegen aan markeringen of met de VoiceOver-acties van het baken op het startscherm.";
+
+
+/*  */
+"faq.beacon_on_home.question" = "Hoe stel ik een baken in op mijn huis?";
+
+
+/*  */
+"faq.beacon_on_home.answer" = "Soundscape ondersteunt het instellen van bakens op adressen. Als u een baken wilt instellen op uw huis of op een ander adres, zoekt u naar een locatie vanuit het Soundscape-hoofdscherm. Tik op het scherm Locatiedetails op de knop Audiobaken starten.";
+
+
+/*  */
+"faq.how_close_to_destination.question" = "Wanneer ik een baken instel op een bestemming, hoe dicht bij de bestemming brengt Soundscape me dan? ";
+
+
+/*  */
+"faq.how_close_to_destination.answer" = "Soundscape kan de locatie van uw bestemming binnen een paar meter bepalen, maar niet minder. Wanneer Soundscape vaststelt dat u dichtbij uw bestemming bent, hoort u een laatste waarschuwing dat uw bestemming dichtbij is en wordt het baken uitgeschakeld.";
+
+
+/*  */
+"faq.turn_beacon_back_on.question" = "Kan ik het baken weer aanzetten als ik dicht bij mij bestemming bent?";
+
+
+/*  */
+"faq.turn_beacon_back_on.answer" = "Ja, u kunt het baken weer aanzetten nadat het door Soundscape is uitgezet met de knop Baken dempen opheffen. Omdat Locatievoorzieningen tot op circa 10 meter nauwkeurig werkt, kunnen we het gedrag van het baken niet garanderen als u slechts op een paar meter afstand van uw bestemming bent.";
+
+
+/*  */
+"faq.road_names.question" = "Waarom noemt Soundscape wegnamen twee keer wanneer ik een kruispunt nader?";
+
+
+/*  */
+"faq.road_names.answer" = "Voor de verschillende kruispuntconfiguraties gebruikt Soundscape beschrijvingen waarin kruispunten segmenten zijn van wegen die beginnen op een gemeenschappelijk punt. Soundscape gebruikt ruimtelijke audio om achtereenvolgens de namen aan te geven van de weg naar links, de weg die rechtdoor gaat en de weg die naar rechts gaat. Als de beschrijving van het kruispunt begint met de weg waarop u zich bevindt in plaats van de weg naar links, gaat het om een T-splitsing en gaat de weg waarop u bent, rechtdoor met een afslag naar rechts. Als de beschrijving alleen een weg naar links en een weg naar rechts bevat, weet u dat de weg waarop u zich bevindt, eindigt bij de komende T-splitsing. Deze methode voor het beschrijven van kruispunten wordt ook gebruikt als een weg van naam verandert bij een kruispunt.";
+
+
+/*  */
+"faq.why_not_every_business.question" = "Waarom geeft Soundscape niet bij elk bedrijf dat ik passeer, een aankondiging?";
+
+
+/*  */
+"faq.why_not_every_business.answer" = "Soundscape is ontworpen om veel tekst te produceren. Het werkt met Open Street Map als achterliggende gegevensbron. Open Street Map (OSM, https://www.openstreetmap.org/) is een door de community ontwikkelde en bewerkte kaart van de wereld, die steunt op individuen die gegevens invoeren en beheren. Als een bedrijf of referentiepunt niet door Soundscape wordt aangekondigd, komt dat waarschijnlijk doordat het bedrijf nog niet is toegevoegd of bijgewerkt door een lid van de OSM-community.";
+
+
+/*  */
+"faq.callouts_stopping_in_vehicle.question" = "Waarom hoor ik bepaalde waarschuwingen niet meer wanneer ik in een auto rijd?";
+
+
+/*  */
+"faq.callouts_stopping_in_vehicle.answer" = "Om te voorkomen dat er te veel waarschuwingen worden weergegeven, worden bepaalde categorieën, zoals kruispunten, niet automatisch aangekondigd wanneer u met een auto reist.";
+
+
+/*  */
+"faq.miss_a_callout.question" = "Wat moet ik doen als ik een waarschuwing niet begrijp of niet hoor vanwege omgevingsgeluid";
+
+
+/*  */
+"faq.miss_a_callout.answer" = "Soundscape bevat een lijst met uw recente waarschuwingen zodat u deze kunt bekijken als u ze hebt gemist. Tik hiervoor op de zoekbalk op het startscherm van Soundscape. Onderaan deze pagina ziet u de sectie Recente waarschuwingen waarin de waarschuwing die u hebt gemist, wordt vermeld.";
+
+
+/*  */
+"faq.section.how_soundscape_works" = "Hoe werkt Soundscape?";
+
+
+/*  */
+"faq.supported_phones.question" = "Op welke telefoon werkt Soundscape?";
+
+
+/*  */
+"faq.supported_phones.answer" = "Soundscape is momenteel beschikbaar voor Apple iOS, en werkt op iPhone SE, iPhone 6S en later.";
+
+
+/*  */
+"faq.supported_headsets.question" = "Welke koptelefoon kan ik het beste gebruiken met with Soundscape?";
+
+
+/*  */
+"faq.supported_headsets.answer" = "Welke koptelefoon u het beste met Soundscape kunt gebruiken, is een kwestie van persoonlijke voorkeur en elke keuze heeft voor- en nadelen. De enige specifieke vereiste is dat u een stereokoptelefoon kiest zodat u de ruimtelijke 3D-audiowaarschuwingen van Soundscape hoort.";
+
+
+/*  */
+"faq.battery_impact.question" = "Wat is de impact van Soundscape op de batterij van mijn iPhone?";
+
+
+/*  */
+"faq.battery_impact.answer" = "De levensduur van batterijen varieert aanzienlijk op basis van het model en de leeftijd van uw iPhone. Als het scherm is ingeschakeld, wordt het meeste voeding verbruikt. Als u de levensduur van uw batterij wilt optimaliseren, moet u het scherm steeds vergrendelen. Om de impact op de batterij van uw iPhone te minimaliseren, beschikt Soundscape nu over een slaapstand en een sluimerstand. Als u de hoeveelheid verbruikte batterijvoeding nog verder wilt verminderen, kunt u Soundscape het beste sluiten via de Appwisselaar van uw iPhone, wanneer u de app niet gebruikt. ";
+
+
+/*  */
+"faq.sleep_mode_battery.question" = "Hoe gebruik ik de slaapstand om het gebruik van de batterij van mijn telefoon door Soundscape te minimaliseren?";
+
+
+/*  */
+"faq.sleep_mode_battery.answer" = "Als u Soundscape in de slaapstand wilt zetten, selecteert u de knop Slapen rechtsboven in het scherm. Vervolgens stopt Soundscape met het gebruiken van de Locatievoorzieningen en mobiele gegevens totdat u de app weer activeert.";
+
+
+/*  */
+"faq.snooze_mode_battery.question" = "Hoe gebruik ik de sluimerstand om het gebruik van de batterij van mijn telefoon door Soundscape te minimaliseren?";
+
+
+/*  */
+"faq.snooze_mode_battery.answer" = "Als u Soundscape in de sluimerstand wilt zetten, selecteert u de knop Slapen rechtsboven in het scherm. Als Soundscape in de slaapstand staat, selecteert u de knop Activeren wanneer ik vertrek. Soundscape verbruikt dan weinig batterijvoeding totdat u uw huidige locatie verlaat.";
+
+
+/*  */
+"faq.headset_battery_impact.question" = "Wat betekent mijn keuze van koptelefoon voor de levensduur van de batterij van mijn telefoon?";
+
+
+/*  */
+"faq.headset_battery_impact.answer" = "In onze testen was het batterijverbruik van Bluetooth-koptelefoons vergelijkbaar met dat van vaste koptelefoons. Dit zou geen doorslaggevende factor moeten zijn bij het kiezen van een koptelefoon. Zowel voor oortjes als koptelefoons met botgeleiding zijn er vaste en draadloze modellen verkrijgbaar.";
+
+
+/*  */
+"faq.background_battery_impact.question" = "Wat is de invloed van het op de achtergrond uitvoeren van Soundscape op de levensduur van de batterij van mijn telefoon?";
+
+
+/*  */
+"faq.background_battery_impact.answer" = "Soundscape is een op locatie gebaseerde app die gebruikmaakt van Locatievoorzieningen om uw locatie vast te stellen. Uit onze testen blijkt dat Soundscape niet meer batterijvoeding verbruikt dan andere kaarttoepassingen. Als u echter batterijverbruik belangrijk vindt bij het gebruiken van uw telefoon, volgen hier een paar tips om uw verbruik te reduceren:\n\n1. Schakel het scherm zoveel mogelijk uit wanneer u niet met de app werkt.\n2. Sluit de app als u deze niet gebruikt. Soundscape maakt doorlopend gebruik van locatievoorzieningen als de app actief is. Daardoor weet de app altijd uw locatie, ook wanneer u niet in beweging bent. Vergeet niet om de app weer te starten wanneer u uw reis voortzet.\n3. Zorg bij koud weer dat uw telefoon warm blijft, omdat de batterijen slecht werken bij lagere temperaturen.";
+
+
+/*  */
+"faq.mobile_data_use.question" = "Hoeveel mobiele gegevens gebruikt Soundscape?";
+
+
+/*  */
+"faq.mobile_data_use.answer" = "Hoeveel mobiele gegevens worden gebruikt, hangt af van hoe u Soundscape gebruikt. Soundscape is zo opgezet dat u slechts weinig gegevens gebruikt wanneer u rondloopt en plaatsen opslaat zodat u ze niet elke keer hoeft te downloaden als u teruggaat naar een plaats waar u al bent geweest. Als u het gegevensgebruik wilt verminderen, maakt u waar mogelijk gebruik van Wi-Fi, met name om de app te downloaden. Wanneer u Soundscape niet gebruikt, kunt u Soundscape het beste in de slaapstand zetten met de knop Slapen of de app sluiten.";
+
+
+/*  */
+"faq.difference_from_map_apps.question" = "Waarin verschilt Soundscape van andere kaarttoepassingen?";
+
+
+/*  */
+"faq.difference_from_map_apps.answer" = "Soundscape geeft een uitgebreide beschrijving van uw omgeving om u te helpen deze te verkennen en uw route te vinden. Met ruimtelijke audio geeft Soundscape, terwijl u loopt, meldingen over referentiepunten, parken, wegen en kruispunten vanuit de richting waarin deze zich fysiek bevinden in uw directe omgeving. Als u bijvoorbeeld een winkel passeert aan uw rechterhand, hoort u de naam van de winkel vanaf de rechterkant. Als u een kruispunt nadert, hoort u alle straatnamen vanuit de richting waarin ze lopen: naar links, rechtdoor en naar rechts.\n\nIn plaats van richtingaanwijzingen zoals in andere kaarttoepassingen hoort u in Soundscape een audiobaken in de richting van uw bestemming, zodat u uw weg daarnaartoe op uw eigen manier kunt vinden met een verhoogde bewustwording van uw omgeving en van de locatie van uw bestemming. Soundscape is ontworpen om te worden uitgevoerd in de achtergrond, zodat u de app kunt gebruiken voor een routebeschrijving, terwijl u zich bewust wordt van uw omgeving op weg naar uw bestemming.";
+
+
+/*  */
+"faq.use_with_wayfinding_apps.question" = "Hoe gebruik ik Soundscape samen met een navigatie-app?";
+
+
+/*  */
+"faq.use_with_wayfinding_apps.answer" = "Soundscape is ontworpen als een hulpmiddel om u bewuster te maken van details in uw omgeving. Het is niet ontworpen als een navigatie-app met routebeschrijvingen. Het kan wel samen met dergelijke apps worden gebruikt om aanvullende informatie te geven. Als u Soundscape met deze apps wilt gebruiken, start u eerst uw navigatie-app. Dan gaat u naar Soundscape en stelt u een baken in op dezelfde bestemming als de navigatie-app. Nu werken beide apps tegelijk en hoort u een routebeschrijving van uw navigatie-app, terwijl u van Soundscape informatie krijgt over referentiepunten, kruispunten en de afstand tot uw bestemming.";
+
+
+/*  */
+"faq.controlling_what_you_hear.question" = "Hoe bepaal ik wat ik hoor en wanneer ik het hoor in Soundscape?";
+
+
+/*  */
+"faq.controlling_what_you_hear.answer" = "Soundscape heeft verschillende manieren om te bepalen wat u hoort en wanneer:\n\n1. Meteen alle audio stoppen: dubbeltik op het scherm met twee vingers om meteen alle audio uit te schakelen, met inbegrip van waarschuwingen die momenteel worden afgespeeld en van het baken als het is ingeschakeld. De waarschuwingen worden automatisch hervat wanneer u het volgende kruispunt of referentiepunt nadert, maar het audiobaken niet. Selecteer de knop Baken dempen opheffen op het hoofdscherm als u het baken weer wilt horen.\n2. Automatische waarschuwingen stoppen: wanneer u niet rijdt of een bestemming hebt bereikt, is het waarschijnlijk niet meer nodig dat Soundscape meldingen blijft geven over uw omgeving. In plaats van de app af te sluiten kunt u Soundscape in de sluimerstand zetten. De app wordt dan geactiveerd wanneer u weer vertrekt. Ook kunt u Soundscape in de slaapstand zetten waardoor de app uitgeschakeld blijft tot u deze weer inschakelt. Of selecteer Instellingen in het menu en schakel alle waarschuwingen uit in de sectie Waarschuwingen beheren.\n3. Het baken stoppen: er zijn verschillende scenario's waarin u wel een bestemming wilt instellen maar geen hoorbaar baken nodig hebt. U weet bijvoorbeeld precies hoe u bij uw bestemming komt maar u wilt automatische updates krijgen over hoe ver het nog is. Of u weet ongeveer hoe u de bestemming vindt en u hebt het audiobaken pas nodig als u er bijna bent. In beide gevallen kunt u het audiobaken in- of uitschakelen met de knop Baken dempen/Baken dempen opheffen op het hoofdscherm.";
+
+
+/*  */
+"faq.holding_phone_flat.question" = "Moet ik de telefoon steeds in mijn hand houden?";
+
+
+/*  */
+"faq.holding_phone_flat.answer" = "Nee, tijdens het lopen kunt u de telefoon in een tas of een zak stoppen of op een andere handige plek. Soundscape gebruikt de richting waarin u loopt om te bepalen welke waarschuwingen voor links en rechts worden aangekondigd. Als u stopt met bewegen, weet Soundscape niet in welke richting u kijkt. Als het audiobaken is ingeschakeld, merkt u dat dit stil is tot u weer verdergaat. U kunt op elk gewenst moment uw telefoon tevoorschijn halen en op de locatie- en verkenningsknoppen onderaan het scherm drukken. Zorg er wel altijd voor dat de bovenkant van de telefoon in de richting wijst waar u naartoe gaat en dat het scherm naar boven is gericht. In deze horizontale positie gebruikt Soundscape het kompas van de telefoon om te bepalen in welke richting u kijkt en om ruimtelijke waarschuwingen te geven. Als het baken is ingeschakeld, merkt u ook dat het teruggaat naar het volledige volume.";
+
+
+/*  */
+"faq.personalize_experience.question" = "Op welke manieren kan ik mijn Soundscape-ervaring aanpassen aan mijn wensen?";
+
+
+/*  */
+"faq.personalize_experience.answer" = "In Soundscape kunt u de drie belangrijkste aspecten aanpassen van de waarschuwingen die u hoort tijdens het lopen:\n\n1. Stem: kies een van de beschikbare stemmen in iOS voor gebruik in Soundscape, en kies ook de snelheid waarmee de waarschuwingen worden uitgesproken. Selecteer in het Menu de opties Instellingen en Stem om de spreeksnelheid en de steminstellingen te bepalen. U kunt andere stemmen en stemmen met een hogere spraakkwaliteit downloaden in de app iOS-instellingen via Instellingen > Toegankelijkheid > Gesproken materiaal > Stemmen. \n2. Meeteenheid voor afstand: u kunt de afstanden in Soundscape laten melden in voeten of meters. Selecteer Instellingen in het Menu. In de sectie Meeteenheden kunt u afwisselen tussen twee opties: Imperial (voet) en Metrisch (meter).\n3. Markeringen: u kunt in uw omgeving markeringen aanbrengen voor persoonlijke en relevante zaken die u belangrijk vindt, zoals uw huis, kantoor of uw favoriete supermarkt. Soundscape geeft dan automatisch een melding over de gemarkeerde plaatsen als u erlangs loopt of ze nadert. Met de knop Markeringen in de buurt onder aan het startscherm van Soundscape krijgt u een ruimtelijke waarschuwing te horen voor gemarkeerde plaatsen om u heen. Deze markeringen zijn persoonlijk en niet beschikbaar voor anderen.\n\nBovendien kunt u met de instellingen voor VoiceOver bepalen hoe Soundscape werkt:\n\n1. VoiceOver-tips: als VoiceOver-tips zijn ingeschakeld, hoort u meer informatie over alle knoppen op het primaire Soundscape-scherm. Schakel VoiceOver-tips in via de app iOS-instellingen en de opties Toegankelijkheid > VoiceOver > Detailniveau. Schakel vervolgens de instelling Spreek hints uit in.\n2. Audioducking: Soundscape werkt standaard met Audioducking uitgeschakeld. Wanneer Audioducking is ingeschakeld, zijn automatische waarschuwingen moeilijker te horen als tegelijkertijd VoiceOver wordt gebruikt. We raden aan om Audioducking uit te schakelen zodat u beter alle automatische waarschuwingen kunt horen terwijl u de telefoon gebruikt. Zet Audioducking uit in VoiceOver-instellingen of via de VoiceOver-rotor.\n3. Touch ID of Face ID om te ontgrendelen: als u uw telefoon instelt op ontgrendelen met Touch ID of Face ID, gaat het ontgrendelen snel en gemakkelijk en hebt u onderweg snel toegang tot de knoppen Mijn locatie, Om me heen en Vóór me. Ontgrendelen met Touch ID of Face ID stelt u in via de app iOS-instellingen.";
+
+
+/*  */
+"faq.what_is_osm.question" = "Wat is Open Street Map en waarom gebruiken we dit voor Soundscape?";
+
+
+/*  */
+"faq.what_is_osm.answer" = "Soundscape maakt gebruik van geografische kaartgegevens voor de informatieve waarschuwingen in de app. De primaire bron voor de kaarten die we gebruiken, is Open Street Map (www.openstreetmap.org). Dit is een uitgebreid door de community gegenereerd kaartenplatform, waarmee organisaties en individuele personen de kwaliteit en de gedetailleerdheid van de verstrekte informatie en de toegankelijkheid van hun locaties kunnen verbeteren met de hulpmiddelen van Open Street Map voor het maken van kaarten.";
+
+
+/*  */
+"faq.tip.beacon_quiet" = "Als u uw telefoon in uw zak houdt en niet verder loopt, stopt het bakengeluid omdat Soundscape niet kan bepalen in welke richting u kijkt. Los dit op door weer te gaan lopen, of door uw telefoon tevoorschijn te halen en horizontaal voor u uit te houden.";
+
+
+/*  */
+"faq.tip.setting_beacon_on_address" = "U kunt op elk adres een baken instellen. Zoek op het hoofdscherm van Soundscape naar het adres. Nadat u het adres hebt geselecteerd in de zoekresultaten, verschijnt het scherm Locatiedetails met de optie Audiobaken starten voor het adres. Zo kunt u een baken instellen voor bedrijven, plaatsen, referentiepunten en gebouwen die niet op Open Street Map staan.";
+
+
+/*  */
+"faq.tip.finding_bus_stops" = "U vindt bushaltes in de buurt door het filter Openbaar vervoer te selecteren in de lijst Plaatsen in de buurt.";
+
+
+/*  */
+"faq.tip.turning_beacon_off" = "U kunt het ritmische geluid van het baken uitzetten met de knop Dempen op het hoofdscherm. Als het baken is gedempt, krijgt u om de circa 50 meter nog wel updates over de afstand tot uw bestemming.";
+
+
+/*  */
+"faq.tip.turning_off_auto_callouts" = "Als u wel met Soundscape wilt werken, maar niet de automatische waarschuwingen wilt horen, kunt u waarschuwingen uitzetten via de sectie Waarschuwingen beheren van de pagina Instellingen in het menu. Ook kunt u Soundscape in de slaap- of sluimerstand zetten met de knop Slapen op het hoofdscherm, als u de app niet wilt gebruiken.";
+
+
+/*  */
+"faq.tip.hold_phone_flat" = "Soundscape werkt het beste als u de telefoon vlak houdt met het scherm naar boven en de bovenkant van de telefoon van u af wijzend.";
+
+
+/*  */
+"faq.tip.create_marker_at_bus_stop" = "Als u geregeld een bepaalde busroute neemt, stelt u de begin- en eindhaltes in als Markeringen. Ze worden dan opgeslagen en u kunt ze eenvoudig terugvinden in de lijst bij de optie Markeringen beheren in het menu. Stel een baken in zodat u periodieke updates krijgt over hoe dicht u bij de eindhalte bent. Opmerking: u kunt het ritmische geluid uitzetten en onderweg meldingen over de afstand ontvangen.";
+
+
+/*  */
+"faq.tip.two_finger_double_tap" = "Dubbeltik met twee vingers op het scherm om actieve waarschuwingen op stil te zetten.";
+
+
+
+"mail.yahoo" = "Yahoo Mail";
+"mail.dispatch" = "Dispatch";
+"osm.tag.fast_food" = "Fastfood";
+"osm.tag.bar" = "kroeg";
+"osm.tag.ice_cream" = "IJssalon";
+"osm.tag.pub" = "Café";
+"osm.tag.coffee_shop" = "Koffiebar";
+"osm.tag.monument" = "Monument";
+"osm.tag.statue" = "Standbeeld";
+"osm.tag.museum" = "Museum";
+"osm.tag.historic" = "Historisch";
+"osm.tag.cathedral" = "Kathedraal";
+"osm.tag.nature_reserve" = "Natuurreservaat";
+"osm.tag.botanical_garden" = "Botanische tuin";
+"osm.tag.field" = "Veld";
+"osm.tag.reserve" = "Reservaat";
+"osm.tag.recreation_area" = "Recreatiegebied";
+"whats_new.1_2_0.0.description" = "Je kunt nu je apparaat schudden om de laatste aankondiging te herhalen. Schakel hiervoor de \"Herhaal aankondigingen\" optie in bij instellingen.";
+"whats_new.1_2_0.1.title" = "Instelling om de nabijheid van bakens aan te passen";
+"whats_new.1_2_0.2.title" = "Categorieën bij plaatsen in de buurt";
+"whats_new.1_2_0.2.description" = "Je kunt nu de lijst met plaatsen in de buurt filteren op categorieën zoals openbaar vervoer, eten & drinken, enz.";
+"settings.about.title.copyright" = "Auteursrechten";
+"filter.parks" = "Parken";
+"callouts.shake_callouts" = "Aankondigingen herhalen";
+"callouts.shake_callouts.info" = "Schud het apparaat om de laatste aankondiging te herhalen";
+"osm.tag.landmark" = "Oriëntatiepunt";
+"beacon.settings.vicinity" = "Voer nabijheidsafstand in";
+"osm.tag.public_garden" = "Publiek toegankelijke tuin";
+"osm.tag.green_space" = "Groen";
+"whats_new.1_2_0.0.title" = "Schud om de laatste melding te herhalen";
+"whats_new.1_2_0.1.description" = "Je kunt nu de afstand aanpassen waarop het baken automatisch wordt gedempt wanneer je nadert. Je kunt deze instelling aanpassen in de Audiobaken-instellingen.\n\nWe zijn vooral benieuwd naar je feedback over je ervaring met het instellen van verschillende afstanden (0, 5 en 10 meter) voor het uitschakelen van het Audio Baken. Tijdens onze interne tests zien we enkele inconsistenties in het gedrag, en we zijn erg geïnteresseerd in feedback van een bredere groep gebruikers.";
+"mail.airmail" = "Airmail";
+"mail.default" = "Standaard";
+"mail.gmail" = "gmail";
+"mail.msoutlook" = "Microsoft Outlook";
+"mail.fastmail" = "Fastmail";
+"mail.protonmail" = "Proton Mail";
+"mail.spark" = "Spark";
