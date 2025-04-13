@@ -1,0 +1,28 @@
+{
+  "name": "hackabull",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyYao7/hackabull.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyYao7/hackabull/issues"
+  },
+  "homepage": "https://github.com/AnthonyYao7/hackabull#readme",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^0.8.0",
+    "axios": "^1.8.4",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0"
+  }
+}
