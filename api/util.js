@@ -23,12 +23,6 @@ export function generateFileId(filename) {
 }
 
 
-const myfile = await ai.files.upload({
-  file: "upload/sond2.mp3",
-  config: { mimeType: "audio/mp3" },
-});
-
-
 export async function extract_location_name(filename) {
   console.log(`In filename: ${filename}`)
   const myfile = await ai.files.upload({
