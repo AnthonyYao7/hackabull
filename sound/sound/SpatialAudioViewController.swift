@@ -4,22 +4,12 @@ import AVFoundation
 import CoreHaptics
 import CoreMotion
 
-
-// MARK: - SwiftUI Container View
-struct ARSpatialAudioView: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> SpatialAudioViewController {
-        return SpatialAudioViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: SpatialAudioViewController, context: Context) {
-        // No updates needed
-    }
-}
-
-class SpatialAudioViewController: UIViewController, ARSessionDelegate {
+// MARK: - Background Spatial Audio Service
+class SpatialAudioService: NSObject, ARSessionDelegate {
     
     // MARK: - Properties
-    var session = ARSession()
+    private var session = ARSession()
+    private var isRunning = false
     
     // Audio engine components
     private let audioEngine = AVAudioEngine()
@@ -29,12 +19,11 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
     
     private var beepBuffer: AVAudioPCMBuffer?
 
-    /// We’ll keep track of the last time we played a beep.
+    /// We'll keep track of the last time we played a beep.
     private var lastBeepTime: CFTimeInterval = 0.0
     
     // Parameters
     private let maxDistance: Float = 10.0
-    private let debugLabel = UILabel()
     
     // Grid Configuration
     private let gridCountX = 5
@@ -51,17 +40,13 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         return c
     }()
     
-    // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .black
+    // MARK: - Initialization
+    override init() {
+        super.init()
         
-        setupDebugUI()
         setupARSession()
         setupHaptics()
-        
         setupAudioEngine()
-        startAudioEngine()
         
         if headphoneMotionManager.isDeviceMotionAvailable {
             headphoneMotionManager.startDeviceMotionUpdates()
@@ -69,24 +54,36 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
             print("Headphone motion not available – falling back to ARCamera orientation")
         }
         
-        // Tap gesture to restart audio if needed
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        view.addGestureRecognizer(tapGesture)
+        print("SpatialAudioService initialized")
+    }
+    
+    deinit {
+        stop()
+    }
+    
+    // MARK: - Public Control Methods
+    func start() {
+        guard !isRunning else { return }
         
-        print("SpatialAudioViewController loaded")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         configureAudioSession()
-        startAudioEngine()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.startAudioEngine()
+        }
         session.run(lidarConfig)
+        isRunning = true
+        print("Spatial audio service started")
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    func stop() {
+        guard isRunning else { return }
+        
         session.pause()
         audioEngine.stop()
+        if let player = audioPlayerNode {
+            player.stop()
+        }
+        isRunning = false
+        print("Spatial audio service stopped")
     }
     
     // MARK: - Audio Session Configuration
@@ -97,7 +94,7 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
             try audioSession.setCategory(
                 .playback,
                 mode: .spokenAudio,
-                options: [.mixWithOthers, .allowBluetoothA2DP, .duckOthers]
+                options: [.mixWithOthers, .duckOthers]
             )
             
             // Enable head tracking with AirPods Pro
@@ -112,30 +109,9 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         }
     }
     
-    // MARK: - UI Setup
-    private func setupDebugUI() {
-        debugLabel.frame = CGRect(x: 20, y: 50, width: view.bounds.width - 40, height: 100)
-        debugLabel.numberOfLines = 0
-        debugLabel.textColor = .white
-        debugLabel.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        debugLabel.textAlignment = .center
-        debugLabel.font = UIFont.systemFont(ofSize: 16)
-        view.addSubview(debugLabel)
-    }
-    
-    @objc private func handleTap() {
-        // Restart audio if needed
-        if let player = audioPlayerNode, !player.isPlaying {
-            player.play()
-        }
-        
-        debugLabel.text = "Audio engine running: \(audioEngine.isRunning)"
-    }
-    
     // MARK: - AR Session Setup
     private func setupARSession() {
         session.delegate = self
-        session.run(lidarConfig)
     }
     
     // MARK: - Haptics Setup
@@ -158,8 +134,7 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         }
         audioEngine.reset()
         
-        // Set up environment node with spatial audio properties
-        environmentNode.renderingAlgorithm = .HRTFHQ // Critical for spatial audio
+        environmentNode.renderingAlgorithm = .HRTFHQ
         
         // Distance attenuation - how volume changes with distance
         environmentNode.distanceAttenuationParameters.distanceAttenuationModel = .exponential
@@ -181,8 +156,8 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
     private func startAudioEngine() {
         do {
             try audioEngine.start()
-            if let player = audioPlayerNode {
-                player.play()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                self?.audioPlayerNode?.play()
             }
             print("Audio engine started successfully")
         } catch {
@@ -279,24 +254,6 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
             return 1.0 - (dt / decay)
         }
         return 1.0
-    }
-    
-    // MARK: - ARSession Delegate Methods
-    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        // Process frames at about 10Hz to reduce CPU load
-        if frame.timestamp.truncatingRemainder(dividingBy: 0.1) < 0.02 {
-            // Update the listener position based on device position
-            updateAudioListener(using: frame.camera)
-                        
-            if let sceneDepth = frame.sceneDepth {
-                print(frame.sceneDepth)
-                updateSoundSourceFromDepthMap(depthMap: sceneDepth.depthMap, camera: frame.camera)
-            }
-        }
-    }
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        print("AR session failed: \(error.localizedDescription)")
     }
     
     // MARK: - Audio Positioning Logic
@@ -403,8 +360,6 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
             
             mixer3D.pointSourceInHeadMode = .mono
             mixer3D.renderingAlgorithm = .HRTFHQ
-            
-            print("Sound source position: (\(audioSourcePosition.x), \(audioSourcePosition.y), \(audioSourcePosition.z))")
         }
         
         let beepInterval = mapDistanceToInterval(minDistance,
@@ -414,15 +369,6 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         let beepVolume = 1.0 - mapDistanceToInterval(minDistance, minInterval: 0.2, maxInterval: 0.8)
         
         scheduleBeepIfNeeded(interval: beepInterval, volume: Float(beepVolume))
-        
-        DispatchQueue.main.async {
-            self.debugLabel.text = String(
-                format: "Object: %.2fm\nAudio: (%.1f, %.1f, %.1f)\nYaw: %.1f°",
-                minDistance,
-                audioSourcePosition.x, audioSourcePosition.y, audioSourcePosition.z,
-                self.environmentNode.listenerAngularOrientation.yaw
-            )
-        }
     }
     
     private func mapDistanceToInterval(_ distance: Float, minInterval: Double, maxInterval: Double) -> Double {
@@ -430,7 +376,6 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         return Double(d / maxDistance) * (maxInterval - minInterval) + minInterval
     }
     
-    // Modify your scheduleBeepIfNeeded function
     private func scheduleBeepIfNeeded(interval: Double, volume: Float) {
         guard let player = audioPlayerNode,
               let buffer = beepBuffer else {
@@ -441,16 +386,18 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         let now = CACurrentMediaTime()
         if now - lastBeepTime >= interval {
             lastBeepTime = now
+            provideHapticFeedback(intensity: volume)
             
-            // Stop any currently playing audio before scheduling new buffer
-            player.stop()
+            // Don't stop the player here, just adjust volume
             player.volume = volume
             
-            // Make sure to set the output format correctly
+            // Schedule buffer without stopping first
             player.scheduleBuffer(buffer, at: nil)
             
-            // Make sure the player is in "play" state
-            player.play()
+            // Only call play() if player is not already playing
+            if !player.isPlaying {
+                player.play()
+            }
         }
     }
     
@@ -491,19 +438,12 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
             pitch: pitch,
             roll: roll
         )
-        
-        // (Optional) For debugging purposes, you could print the updated orientation:
-        print("Updated listener orientation – Yaw: \(yaw)°, Pitch: \(pitch)°, Roll: \(roll)°")
     }
-
     
     // MARK: - Haptic Feedback
-    private func provideHapticFeedback(for distance: Float) {
+    private func provideHapticFeedback(intensity: Float) {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics,
               let engine = hapticEngine else { return }
-        
-        // Intensity increases as object gets closer
-        let intensity = min(1.0, max(0, 1.0 - (distance / 1.0)))
         
         do {
             let intensityParameter = CHHapticEventParameter(
@@ -528,5 +468,24 @@ class SpatialAudioViewController: UIViewController, ARSessionDelegate {
         } catch {
             print("Haptic error: \(error)")
         }
+    }
+}
+
+// MARK: - ARSession Delegate Extension
+extension SpatialAudioService {
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        // Process frames at about 10Hz to reduce CPU load
+        if frame.timestamp.truncatingRemainder(dividingBy: 0.1) < 0.02 {
+            // Update the listener position based on device position
+            updateAudioListener(using: frame.camera)
+                        
+            if let sceneDepth = frame.sceneDepth {
+                updateSoundSourceFromDepthMap(depthMap: sceneDepth.depthMap, camera: frame.camera)
+            }
+        }
+    }
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        print("AR session failed: \(error.localizedDescription)")
     }
 }

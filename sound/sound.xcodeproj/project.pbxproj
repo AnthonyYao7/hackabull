@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72A329452DAB4A720049A5D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A329442DAB4A720049A5D8 /* ContentView.swift */; };
 		72DFFA512DAB27CC009C15B1 /* SpatialAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA502DAB27CC009C15B1 /* SpatialAudioViewController.swift */; };
 		72DFFA532DAB27DA009C15B1 /* soundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA522DAB27DA009C15B1 /* soundApp.swift */; };
-		72DFFA552DAB27E2009C15B1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA542DAB27E2009C15B1 /* Item.swift */; };
-		72DFFA572DAB27EB009C15B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA562DAB27EB009C15B1 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		729D0CB32DAA34E800438DCD /* sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A329442DAB4A720049A5D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = sound/ContentView.swift; sourceTree = "<group>"; };
 		72DFFA502DAB27CC009C15B1 /* SpatialAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpatialAudioViewController.swift; path = sound/SpatialAudioViewController.swift; sourceTree = "<group>"; };
 		72DFFA522DAB27DA009C15B1 /* soundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = soundApp.swift; path = sound/soundApp.swift; sourceTree = "<group>"; };
-		72DFFA542DAB27E2009C15B1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = sound/Item.swift; sourceTree = "<group>"; };
-		72DFFA562DAB27EB009C15B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = sound/ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,8 +33,7 @@
 		729D0CAA2DAA34E800438DCD = {
 			isa = PBXGroup;
 			children = (
-				72DFFA562DAB27EB009C15B1 /* ContentView.swift */,
-				72DFFA542DAB27E2009C15B1 /* Item.swift */,
+				72A329442DAB4A720049A5D8 /* ContentView.swift */,
 				72DFFA522DAB27DA009C15B1 /* soundApp.swift */,
 				72DFFA502DAB27CC009C15B1 /* SpatialAudioViewController.swift */,
 				729D0CB42DAA34E800438DCD /* Products */,
@@ -122,8 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72DFFA572DAB27EB009C15B1 /* ContentView.swift in Sources */,
-				72DFFA552DAB27E2009C15B1 /* Item.swift in Sources */,
+				72A329452DAB4A720049A5D8 /* ContentView.swift in Sources */,
 				72DFFA532DAB27DA009C15B1 /* soundApp.swift in Sources */,
 				72DFFA512DAB27CC009C15B1 /* SpatialAudioViewController.swift in Sources */,
 			);
@@ -264,6 +260,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = LiDAR;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For voice commands";
 				INFOPLIST_KEY_NSMotionUsageDescription = Motion;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -295,6 +292,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = LiDAR;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For voice commands";
 				INFOPLIST_KEY_NSMotionUsageDescription = Motion;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
