@@ -19,6 +19,7 @@
 		D1284D662DAB7E2600B710F1 /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = D1284D602DAB7E2600B710F1 /* package-lock.json */; };
 		D1284D672DAB7E2600B710F1 /* mock.py in Resources */ = {isa = PBXBuildFile; fileRef = D1284D5B2DAB7E2600B710F1 /* mock.py */; };
 		D1284D682DAB7E2600B710F1 /* util.js in Resources */ = {isa = PBXBuildFile; fileRef = D1284D612DAB7E2600B710F1 /* util.js */; };
+		D1284D6C2DAB7E6E00B710F1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D1284D6B2DAB7E6900B710F1 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D1284D5F2DAB7E2600B710F1 /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		D1284D602DAB7E2600B710F1 /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
 		D1284D612DAB7E2600B710F1 /* util.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = util.js; sourceTree = "<group>"; };
+		D1284D6B2DAB7E6900B710F1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -67,6 +69,7 @@
 				D1284D362DAB58EA00B710F1 /* Model */,
 				72A329442DAB4A720049A5D8 /* MicrophoneView.swift */,
 				D1284D572DAB698D00B710F1 /* AudioUploadService.swift */,
+				D1284D6B2DAB7E6900B710F1 /* .gitignore */,
 				D1284D622DAB7E2600B710F1 /* api */,
 				D1284D592DAB7B9800B710F1 /* HTTPRequest.swift */,
 				D1284D552DAB680B00B710F1 /* SpatialAudioView.swift */,
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1284D632DAB7E2600B710F1 /* .env in Resources */,
+				D1284D6C2DAB7E6E00B710F1 /* .gitignore in Resources */,
 				D1284D642DAB7E2600B710F1 /* index.js in Resources */,
 				D1284D652DAB7E2600B710F1 /* package.json in Resources */,
 				D1284D662DAB7E2600B710F1 /* package-lock.json in Resources */,
