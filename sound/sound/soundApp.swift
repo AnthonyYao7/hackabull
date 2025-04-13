@@ -21,10 +21,18 @@ struct soundApp: App {
 }
 
 struct PathView: View {
+    @State private var audioService = SpatialAudioService()
+    
     var body: some View {
         NavigationView {
             PathNavigationView()
                 .navigationTitle("Navigation")
+        }
+        .onAppear {
+            audioService.start()
+        }
+        .onDisappear {
+            audioService.stop()
         }
     }
 }
