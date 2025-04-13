@@ -1,0 +1,55 @@
+# Xcode
+*.xcworkspace
+!default.xcworkspace
+*.xccheckout
+*.moved-aside
+DerivedData/
+.idea/
+*.hmap
+*.ipa
+*.xcuserstate
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Xcode temporary files
+*.swp
+*.lock
+*.tmp
+
+# macOS specific files
+**./DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Xcode Archives
+*.xcarchive
+
+
