@@ -62,10 +62,8 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         if headphoneMotionManager.isDeviceMotionAvailable {
             headphoneMotionManager.startDeviceMotionUpdates()
         } else {
-            print("Headphone motion not available – falling back to ARCamera orientation")
+            speakMessage("Headphone motion not available – falling back to ARCamera orientation")
         }
-        
-        print("SpatialAudioService initialized")
     }
     
     deinit {
@@ -121,9 +119,9 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
             }
             
             try audioSession.setActive(true)
-            print("Audio session activated with spatial audio support: \(audioSession.currentRoute)")
+            // print("Audio session activated with spatial audio support: \(audioSession.currentRoute)")
         } catch {
-            print("Failed to set up audio session: \(error)")
+            speakMessage("Failed to set up audio session: \(error)")
         }
     }
     
@@ -140,7 +138,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
             hapticEngine = try CHHapticEngine()
             try hapticEngine?.start()
         } catch {
-            print("Haptic engine error: \(error)")
+            speakMessage("Haptic engine error: \(error)")
         }
     }
     
@@ -207,7 +205,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         let frameCount = AVAudioFrameCount(sampleRate * duration)
         
         guard let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frameCount) else {
-            print("Failed to create beacon buffer")
+            speakMessage("Failed to create beacon buffer")
             return
         }
         buffer.frameLength = frameCount
@@ -239,9 +237,8 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
                 self?.audioPlayerNode?.play()
                 self?.beaconPlayerNode?.play()
             }
-            print("Audio engine started successfully")
         } catch {
-            print("Failed to start audio engine: \(error)")
+            speakMessage("Failed to start audio engine: \(error)")
         }
     }
     
@@ -294,7 +291,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         let frameCount = AVAudioFrameCount(sampleRate * duration)
         
         guard let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frameCount) else {
-            print("Failed to create beep buffer")
+            speakMessage("Failed to create beep buffer")
             return
         }
         
@@ -460,7 +457,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
     private func scheduleBeepIfNeeded(interval: Double, volume: Float) {
         guard let player = audioPlayerNode,
               let buffer = beepBuffer else {
-            print("Missing player or buffer")
+            speakMessage("Missing player or buffer")
             return
         }
         
@@ -569,7 +566,7 @@ extension SpatialAudioService {
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
-        print("AR session failed: \(error.localizedDescription)")
+        speakMessage("AR session failed: \(error.localizedDescription)")
     }
 }
 
@@ -588,7 +585,7 @@ extension SpatialAudioService {
         
         let calibratedBearing = Float(geographicBearing) - Float(applicationState.headphone_calibration?.trueHeading ?? 0.0)
         
-        print(applicationState.headphone_calibration?.trueHeading ?? 0.0)
+        // print(applicationState.headphone_calibration?.trueHeading ?? 0.0)
         
         // Get the listener position from camera
         let listenerPos = simd_float3(

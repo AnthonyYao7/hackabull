@@ -9,7 +9,7 @@ var applicationState = ApplicationState()
 var speechSynthesizer = AVSpeechSynthesizer()
 
 
-func speakMessage(text: String) {
+func speakMessage(_ text: String) {
     let utterance = AVSpeechUtterance(string: text)
     utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Siri_female_en-US")
     utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
@@ -23,7 +23,7 @@ struct soundApp: App {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
-            print("Fail to enable session")
+            speakMessage("Fail to enable session")
         }
         
         locationService.startMonitoring()

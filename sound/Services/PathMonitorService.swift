@@ -48,9 +48,9 @@ class PathMonitorService: ObservableObject {
                                    longitude: wp.coordinate.longitude)
             let dtn = location.distance(from: wpLoc)
             path.distanceToNextWaypoint = dtn
-            print("distance to next waypoint: \(dtn)")
+            // print("distance to next waypoint: \(dtn)")
             if dtn <= wp.requiredProximity {
-                print("moving to next waypoint")
+                // print("moving to next waypoint")
                 path.moveToNextWaypoint()
                 let dfp = path.calculateDistanceFromPath(location: location)
                 path.distanceFromPath = dfp
@@ -61,6 +61,6 @@ class PathMonitorService: ObservableObject {
     }
     
     private func handlePathCompletion() {
-        print("Path completed!")
+        speakMessage("Path completed!")
     }
 }
