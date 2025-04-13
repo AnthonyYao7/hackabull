@@ -31,7 +31,7 @@ fastlane/test_output
 *.tmp
 
 # macOS specific files
-.DS_Store
+**./DS_Store
 .AppleDouble
 .LSOverride
 
