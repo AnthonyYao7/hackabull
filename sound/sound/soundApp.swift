@@ -1,7 +1,14 @@
 import SwiftUI
 
+let httpClient: HTTPClient = DefaultHTTPClient()
+let locationService = LocationService()
+
 @main
 struct soundApp: App {
+    init() {
+        locationService.startMonitoring()
+    }
+    
     var body: some Scene {
         WindowGroup {
             TabView {

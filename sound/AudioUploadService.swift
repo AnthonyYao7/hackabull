@@ -1,10 +1,10 @@
 import Foundation
 import AVFoundation
+import CoreLocation
 
 class AudioUploadService {
     // Configure with your API endpoint
     private let apiURLString = "http://10.245.89.170:3000"
-    private let apiURL = URL(string: "http://10.245.89.170:3000")!
     
     /// Uploads recorded audio data directly without saving to file
     /// - Parameters:
@@ -25,8 +25,8 @@ class AudioUploadService {
     }
     
     // MARK: - Private methods
-    private func performUpload(audioData: Data, completion: @escaping (Result<Data, Error>) -> Void) {
-        guard let url = URL(string: apiURLString + "/setDestination") else {
+    private func performUpload(audioData: Data, completion: @escaping (Result<Data, Error>) -> Void) -> Void {
+        guard let url = URL(string: apiURLString + "/directions") else {
             print("Invalid URL")
             return
         }
@@ -34,25 +34,36 @@ class AudioUploadService {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
-//        request.setValue("audio/m4a", forHTTPHeaderField: "Content-Type")
-//        request.setValue("\(audioData.count)", forHTTPHeaderField: "Content-Length")
-//        request.httpBody = audioData
+        //        request.setValue("audio/m4a", forHTTPHeaderField: "Content-Type")
+        //        request.setValue("\(audioData.count)", forHTTPHeaderField: "Content-Length")
+        //        request.httpBody = audioData
         
         let base64String = audioData.base64EncodedString()
-        guard let base64Data = base64String.data(using: .utf8) else {
-            completion(.failure(AudioUploadError.conversionFailed))
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        guard let location = locationService.getCurrentLocation() else {
             return
         }
-                
-        request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
-        request.setValue("\(base64Data.count)", forHTTPHeaderField: "Content-Length")
-        request.httpBody = base64Data
         
-        let httpClient: HTTPClient = DefaultHTTPClient()
+        let lat = location.coordinate.latitude
+        let lon = location.coordinate.longitude
+        
+        let data = ["audio": base64String, "latitude": String(lat), "longitude": String(lon)]
+        
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {
+            fatalError("Failed to serialize JSON");
+        }
+        
+        request.httpBody = jsonData
         
         httpClient.sendRequest(request) { result in
             switch result {
             case .success(let data):
+                print("Successfully")
+                if let data_str = String(data: data, encoding: .utf8) {
+                    print(data_str)
+                }
                 DispatchQueue.main.async {
                     completion(.success(data))
                 }
@@ -61,6 +72,7 @@ class AudioUploadService {
                     completion(.failure(error))
                 }
             }
+            print(result)
         }
     }
     
