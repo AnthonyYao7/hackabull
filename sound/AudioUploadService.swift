@@ -7,12 +7,6 @@ class AudioUploadService: ObservableObject {
     // Configure with your API endpoint
     private let apiURLString = "http://10.245.89.170:3000"
     
-    var appState: ApplicationState;
-    
-    init(appState: ApplicationState) {
-        self.appState = appState
-    }
-    
     /// Uploads recorded audio data directly without saving to file
     /// - Parameters:
     ///   - recorder: The audio recorder with the recorded data
@@ -73,7 +67,7 @@ class AudioUploadService: ObservableObject {
                     if let data_str_data = data_str.data(using: .utf8) {
                         do {
                             let decoded = try JSONDecoder().decode(Directions.self, from: data_str_data)
-                            self.appState.path = decoded;
+                            applicationState.path = decoded;
                         } catch let error as DecodingError {
                             switch error {
                             case .typeMismatch(let type, let context):

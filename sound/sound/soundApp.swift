@@ -1,14 +1,15 @@
 import SwiftUI
+import CoreLocation
 
 let httpClient: HTTPClient = DefaultHTTPClient()
 let locationService = LocationService()
+var applicationState = ApplicationState()
 
 @main
 struct soundApp: App {
-    @State private var appState = ApplicationState()
-    
     init() {
         locationService.startMonitoring()
+        applicationState.headphone_calibration = locationService.getCurrentHeading()
     }
     
     var body: some Scene {
@@ -19,7 +20,6 @@ struct soundApp: App {
                         Image(systemName: "mic.fill")
                         Text("Record")
                     }
-                    .environmentObject(appState)
                 PathView()
                     .tabItem {
                         Image(systemName: "location.fill")

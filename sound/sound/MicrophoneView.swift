@@ -18,9 +18,7 @@ struct MicrophoneView: View {
     @State private var completedLongPress = true
     @State private var audioRecorder: AVAudioRecorder?
 
-    @EnvironmentObject var applicationState: ApplicationState
-    @StateObject private var audioUploadService = AudioUploadService(appState: ApplicationState())
-
+    @StateObject private var audioUploadService = AudioUploadService()
     @State private var sessionRecordingURL: URL? // To store the temp recording URL
 //    @State private var uploadCancellable: AnyCancellable?
     

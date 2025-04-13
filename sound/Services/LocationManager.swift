@@ -3,11 +3,11 @@ import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var location: CLLocation?
+    @Published var heading: CLHeading?
     @Published var locationStatus: CLAuthorizationStatus?
     @Published var lastError: Error?
     
     private let locationManager = CLLocationManager()
-    private var timer: Timer?
     
     override init() {
         super.init()
@@ -16,32 +16,44 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.headingFilter = 1.0 // Update when heading changes by 1 degree
+        locationManager.headingOrientation = .portrait // Set the orientation reference
     }
     
     func startLocationUpdates() {
         locationManager.startUpdatingLocation()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-            guard let self = self, let loc = self.locationManager.location else { return }
-            self.location = loc
-            print("Location updated: \(loc.coordinate.latitude), \(loc.coordinate.longitude)")
+        
+        // Check if heading is available before starting updates
+        if CLLocationManager.headingAvailable() {
+            locationManager.startUpdatingHeading()
+        } else {
+            print("Heading updates not available on this device")
         }
     }
     
     func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
-        timer?.invalidate()
-        timer = nil
+        locationManager.stopUpdatingHeading()
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         locationStatus = manager.authorizationStatus
         if manager.authorizationStatus == .authorizedWhenInUse || manager.authorizationStatus == .authorizedAlways {
-            locationManager.startUpdatingLocation()
+            startLocationUpdates()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let loc = locations.last { self.location = loc }
+        guard let location = locations.last else { return }
+        self.location = location
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        if newHeading.headingAccuracy >= 0 {
+            self.heading = newHeading
+            print("Heading updated: \(newHeading.magneticHeading)° accuracy: \(newHeading.headingAccuracy)°")
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

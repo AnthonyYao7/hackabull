@@ -5,6 +5,7 @@ import CoreHaptics
 import CoreMotion
 import Combine
 import QuartzCore
+import CoreLocation
 
 
 // MARK: - Background Spatial Audio Service
@@ -19,6 +20,13 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
     private let environmentNode = AVAudioEnvironmentNode()
     private var audioPlayerNode: AVAudioPlayerNode?
     private var mixerNode: AVAudioMixerNode?
+    
+    // Beacon audio components
+    private var beaconPlayerNode: AVAudioPlayerNode?
+    private var beaconMixerNode: AVAudioMixerNode?
+    private var beaconBuffer: AVAudioPCMBuffer?
+    private var lastBeaconBeepTime: CFTimeInterval = 0.0
+    private var beaconInterval: TimeInterval = 0.5 // Default interval
     
     private var beepBuffer: AVAudioPCMBuffer?
 
@@ -70,6 +78,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         
         configureAudioSession()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.setupBeaconAudio()
             self?.startAudioEngine()
         }
         session.run(lidarConfig)
@@ -86,6 +95,11 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         if let player = audioPlayerNode {
             player.stop()
         }
+        
+        if let beaconPlayer = beaconPlayerNode {
+            beaconPlayer.stop()
+        }
+        
         isRunning = false
         print("Spatial audio service stopped")
     }
@@ -157,11 +171,73 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         createAudioPlayer()
     }
     
+    // MARK: - Beacon Audio Setup
+    private func setupBeaconAudio() {
+        // Create dedicated nodes for the beacon sound
+        let beaconPlayer = AVAudioPlayerNode()
+        let beaconMixer = AVAudioMixerNode()
+        
+        audioEngine.attach(beaconPlayer)
+        audioEngine.attach(beaconMixer)
+        
+        let envFormat = environmentNode.inputFormat(forBus: 0)
+        
+        // Connect chain: beaconPlayer -> beaconMixer -> environmentNode
+        audioEngine.connect(beaconPlayer, to: beaconMixer, format: envFormat)
+        audioEngine.connect(beaconMixer, to: environmentNode, format: envFormat)
+        
+        // Store references
+        beaconPlayerNode = beaconPlayer
+        beaconMixerNode = beaconMixer
+        
+        // Configure spatial properties
+        if let mixer3D = beaconMixer as Optional<AVAudio3DMixing> {
+            mixer3D.renderingAlgorithm = .HRTFHQ
+            mixer3D.reverbBlend = 0.1
+            // Position will be updated dynamically
+        }
+        
+        // Create a distinct beacon sound (higher pitch than regular beep)
+        createBeaconBuffer(for: beaconPlayer, format: envFormat)
+    }
+    
+    private func createBeaconBuffer(for player: AVAudioPlayerNode, format: AVAudioFormat) {
+        let sampleRate = format.sampleRate
+        let duration = 0.08   // Very short beep
+        let frameCount = AVAudioFrameCount(sampleRate * duration)
+        
+        guard let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frameCount) else {
+            print("Failed to create beacon buffer")
+            return
+        }
+        buffer.frameLength = frameCount
+        
+        let channels = UnsafeBufferPointer(start: buffer.floatChannelData, count: Int(format.channelCount))
+        for ch in 0..<Int(format.channelCount) {
+            let channelData = channels[ch]
+            for frame in 0..<Int(frameCount) {
+                let t = Double(frame) / sampleRate
+                // Higher frequency beacon sound at 1200 Hz
+                let freq = 1200.0
+                let wave = sin(2.0 * .pi * freq * t)
+                
+                // Envelope to avoid clicks
+                let envelope = fadeInOut(t: t, total: duration)
+                
+                channelData[frame] = Float(wave * envelope * 0.4) // Slightly quieter than main beep
+            }
+        }
+        
+        // Save the buffer for scheduling later
+        self.beaconBuffer = buffer
+    }
+    
     private func startAudioEngine() {
         do {
             try audioEngine.start()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
                 self?.audioPlayerNode?.play()
+                self?.beaconPlayerNode?.play()
             }
             print("Audio engine started successfully")
         } catch {
@@ -221,6 +297,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
             print("Failed to create beep buffer")
             return
         }
+        
         buffer.frameLength = frameCount
         
         let channels = UnsafeBufferPointer(start: buffer.floatChannelData, count: Int(format.channelCount))
@@ -387,6 +464,8 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
             return
         }
         
+        return
+        
         let now = CACurrentMediaTime()
         if now - lastBeepTime >= interval {
             lastBeepTime = now
@@ -480,9 +559,11 @@ extension SpatialAudioService {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // Process frames at about 10Hz to reduce CPU load
         if frame.timestamp.truncatingRemainder(dividingBy: 0.1) < 0.02 {
-            // Update the listener position based on device position
+            // Update the listener position based on device position - this uses your existing head tracking
             updateAudioListener(using: frame.camera)
-                        
+            
+            updateBeaconDirection(camera: frame.camera)
+            
             if let sceneDepth = frame.sceneDepth {
                 updateSoundSourceFromDepthMap(depthMap: sceneDepth.depthMap, camera: frame.camera)
             }
@@ -491,5 +572,107 @@ extension SpatialAudioService {
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         print("AR session failed: \(error.localizedDescription)")
+    }
+}
+
+// MARK: - Location Beacon Methods
+extension SpatialAudioService {
+    func updateBeaconDirection(camera: ARCamera) {
+        guard let userLocation = locationService.getCurrentLocation(),
+              let beaconMixer = beaconMixerNode as? AVAudio3DMixing,
+              applicationState.current_location.latitude != 0,
+              applicationState.current_location.longitude != 0 else {
+            return
+        }
+        
+        // Calculate geographic bearing to target location (in radians)
+        let geographicBearing = userLocation.coordinate.bearing(to: applicationState.current_location)
+        
+        let calibratedBearing = Float(geographicBearing) - Float(applicationState.headphone_calibration?.trueHeading ?? 0.0)
+        
+        print(applicationState.headphone_calibration?.trueHeading ?? 0.0)
+        
+        // Get the listener position from camera
+        let listenerPos = simd_float3(
+            camera.transform.columns.3.x,
+            camera.transform.columns.3.y,
+            camera.transform.columns.3.z
+        )
+        
+        // Fixed distance for the beacon sound
+        let beaconDistance: Float = 2.0
+        
+        // Create a vector pointing in the direction of the geographic bearing IN WORLD SPACE
+        let targetBearingVector = simd_float3(
+            sin(Float(calibratedBearing)),
+            0,
+            -cos(Float(calibratedBearing))
+        )
+        
+        // Calculate the position for the beacon sound source in world space
+        let beaconPosition = listenerPos + targetBearingVector * beaconDistance
+        
+        // Update the spatial position of the beacon sound
+        beaconMixer.position = AVAudio3DPoint(
+            x: beaconPosition.x,
+            y: beaconPosition.y,
+            z: beaconPosition.z
+        )
+        
+        // Calculate distance to target for adjusting beep frequency
+        let distanceToTarget = userLocation.distance(from: CLLocation(
+            latitude: applicationState.current_location.latitude,
+            longitude: applicationState.current_location.longitude
+        ))
+        
+        // Adjust beep interval based on distance (faster when closer)
+        let minInterval = 0.2
+        let maxInterval = 1.5
+        let maxDistance = 500.0 // meters
+        
+        beaconInterval = min(maxInterval, max(minInterval,
+            (distanceToTarget / maxDistance) * (maxInterval - minInterval) + minInterval))
+        
+        // Schedule the beacon sound
+        scheduleBeaconBeepIfNeeded()
+    }
+    
+    private func scheduleBeaconBeepIfNeeded() {
+        guard let player = beaconPlayerNode,
+              let buffer = beaconBuffer else {
+            return
+        }
+        
+        let now = CACurrentMediaTime()
+        if now - lastBeaconBeepTime >= beaconInterval {
+            lastBeaconBeepTime = now
+            
+            // Schedule buffer without stopping first
+            player.scheduleBuffer(buffer, at: nil)
+            
+            // Only call play() if player is not already playing
+            if !player.isPlaying {
+                player.play()
+            }
+        }
+    }
+}
+
+extension CLLocationCoordinate2D {
+    func bearing(to coordinate: CLLocationCoordinate2D) -> Double {
+        let lat1 = self.latitude * .pi / 180
+        let lon1 = self.longitude * .pi / 180
+        let lat2 = coordinate.latitude * .pi / 180
+        let lon2 = coordinate.longitude * .pi / 180
+        
+        let dLon = lon2 - lon1
+        
+        let y = sin(dLon) * cos(lat2)
+        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon)
+        
+        var bearing = atan2(y, x)
+        bearing = (bearing + 2 * .pi).truncatingRemainder(dividingBy: 2 * .pi)
+        
+        return bearing
     }
 }

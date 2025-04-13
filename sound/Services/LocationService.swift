@@ -16,6 +16,10 @@ class LocationService {
         locationManager.location
     }
     
+    func getCurrentHeading() -> CLHeading? {
+        locationManager.heading
+    }
+    
     func getLocationStatus() -> CLAuthorizationStatus? {
         locationManager.locationStatus
     }
