@@ -67,7 +67,7 @@ class AudioUploadService: ObservableObject {
         httpClient.sendRequest(request) { result in
             switch result {
             case .success(let data):
-                speakMessage("Successfully")
+                print("Successfully sent HTML request")
                 if let data_str = String(data: data, encoding: .utf8) {
                     print(data_str)
                     if let data_str_data = data_str.data(using: .utf8) {
@@ -78,20 +78,24 @@ class AudioUploadService: ObservableObject {
                         } catch let error as DecodingError {
                             switch error {
                             case .typeMismatch(let type, let context):
-                                speakMessage("Type Mismatch for type \(type): \(context.debugDescription)")
+                                speakMessage("type mismatch")
+                                print("Type Mismatch for type \(type): \(context.debugDescription)")
                             // print("Coding Path: \(context.codingPath)")
 
                             case .valueNotFound(let type, let context):
                                 speakMessage(
-                                    "Value not found for type \(type): \(context.debugDescription)")
+                                    "Value not found for type")
+                                print("Value not found for type \(type): \(context.debugDescription)")
                             // print("Coding Path: \(context.codingPath)")
 
                             case .keyNotFound(let key, let context):
-                                speakMessage("Key '\(key)' not found: \(context.debugDescription)")
+//                                speakMessage("cannot find key")
+                                print("Key '\(key)' not found: \(context.debugDescription)")
                             // print("Coding Path: \(context.codingPath)")
 
                             case .dataCorrupted(let context):
-                                speakMessage("Data corrupted: \(context.debugDescription)")
+                                speakMessage("Data corrupted")
+                                print("Data corrupted: \(context.debugDescription)")
                             // print("Coding Path: \(context.codingPath)")
 
                             @unknown default:

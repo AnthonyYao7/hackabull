@@ -106,12 +106,12 @@ struct MicrophoneView: View {
                         let url = FileManager.default.temporaryDirectory.appendingPathComponent(
                             fileName)
                         self.sessionRecordingURL = url
-                        speakMessage("Recording started. File saved at: \(url)")
+                        print("Recording started. File saved at: \(url)")
 
                         do {
                             self.audioRecorder = try AVAudioRecorder(url: url, settings: settings)
                             self.audioRecorder?.record()
-                            speakMessage("Recording started: \(url.lastPathComponent)")
+//                            print("Recording started")
                         } catch {
                             speakMessage("Could not start recording: \(error.localizedDescription)")
                         }

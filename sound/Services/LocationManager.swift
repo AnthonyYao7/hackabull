@@ -28,7 +28,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         if CLLocationManager.headingAvailable() {
             locationManager.startUpdatingHeading()
         } else {
-            speakMessage("Heading updates not available on this device")
+            print("Heading updates not available on this device")
         }
     }
     
@@ -52,12 +52,12 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         if newHeading.headingAccuracy >= 0 {
             self.heading = newHeading
-            speakMessage("Heading updated: \(newHeading.magneticHeading)° accuracy: \(newHeading.headingAccuracy)°")
+            print("Heading updated: \(newHeading.magneticHeading)° accuracy: \(newHeading.headingAccuracy)°")
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         lastError = error
-        speakMessage("Location error: \(error.localizedDescription)")
+        print("Location error: \(error.localizedDescription)")
     }
 }

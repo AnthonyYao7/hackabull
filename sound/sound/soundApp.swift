@@ -29,7 +29,7 @@ struct soundApp: App {
         locationService.startMonitoring()
         applicationState.headphone_calibration = locationService.getCurrentHeading()
         
-        speakMessage(text: "Where would you like to go?")
+        speakMessage("Where would you like to go?")
     }
     
     var body: some Scene {

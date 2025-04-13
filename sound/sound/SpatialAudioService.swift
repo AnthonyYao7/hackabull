@@ -62,7 +62,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         if headphoneMotionManager.isDeviceMotionAvailable {
             headphoneMotionManager.startDeviceMotionUpdates()
         } else {
-            speakMessage("Headphone motion not available – falling back to ARCamera orientation")
+            print("Headphone motion not available – falling back to ARCamera orientation")
         }
     }
     
@@ -566,7 +566,7 @@ extension SpatialAudioService {
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
-        speakMessage("AR session failed: \(error.localizedDescription)")
+        print("AR session failed: \(error.localizedDescription)")
     }
 }
 

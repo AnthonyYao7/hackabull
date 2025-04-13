@@ -50,7 +50,7 @@ class MapPath: Identifiable, ObservableObject {
         if currentWaypointIndex >= waypoints.count { isCompleted = true }
         if !isCompleted {
             if let instruction = waypoints[currentWaypointIndex].instruction {
-                speakMessage(text: instruction)
+                speakMessage(instruction)
             }
         }
     }
