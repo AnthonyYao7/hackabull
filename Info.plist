@@ -1,0 +1,7 @@
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs your location to track your progress along paths.</string>
+<key>UIBackgroundModes</key>
+<array>
+    <!-- Only include this if you need background location updates -->
+    <!--<string>location</string>-->
+</array>

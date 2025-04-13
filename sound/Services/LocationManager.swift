@@ -1,5 +1,6 @@
 import Foundation
 import CoreLocation
+import Combine
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var location: CLLocation?
@@ -7,7 +8,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var lastError: Error?
     
     private let locationManager = CLLocationManager()
-    private var timer: Timer?
     
     override init() {
         super.init()
@@ -20,18 +20,13 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func startLocationUpdates() {
         locationManager.startUpdatingLocation()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-            guard let self = self, let loc = self.locationManager.location else { return }
-            self.location = loc
-            print("Location updated: \(loc.coordinate.latitude), \(loc.coordinate.longitude)")
-        }
     }
     
     func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
-        timer?.invalidate()
-        timer = nil
     }
+    
+    // MARK: - CLLocationManagerDelegate
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         locationStatus = manager.authorizationStatus
@@ -41,7 +36,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let loc = locations.last { self.location = loc }
+        if let loc = locations.last {
+            self.location = loc
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

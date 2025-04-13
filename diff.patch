@@ -1,0 +1,534 @@
+diff --git a/api/index.js b/api/index.js
+index 3063a26..e9a2eb9 100644
+--- a/api/index.js
++++ b/api/index.js
+@@ -7,43 +7,87 @@ import axios from 'axios';
+ const computeRoutesURL = 'https://routes.googleapis.com/directions/v2:computeRoutes';
+ 
+ const app = express();
+-app.use(express.json({limit: '10mb'}));
+-app.use(express.urlencoded({ extended: true, limit: '100mb' }));
++app.use(express.json());
++app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+ const port = 3000
+ 
+ app.get('/', async (req, res) => {
+   res.send('hi');
+ })
+ 
++var sessions = new Map();
+ 
+-app.post('/directions', async (req, res) => {
+-  console.log(req.body)
+-  const audio = req.body.audio;
+-  const lat = req.body.latitude;
+-  const lon = req.body.longitude;
++
++
++app.post('/startSession', (req, res) => {
++  const session = generateSession();
++  sessions.set(session.sessionId, session)
++  console.log('Created new session ' + JSON.stringify(session));
++  res.send({sessionId: session.sessionId, token: session.token})
++})
++
++app.post('/setDestination', async (req, res) => {
++  const body= req.body;
++  const sessionId = body.sessionId;
++  const token = body.token;
++  if (sessions.get(sessionId).token !== token) {
++    res.status(400);
++    res.send({'message': 'invalid token'});
++    return;
++  }
++
++  const audio = body.audioFile;
+   const buffer = Buffer.from(audio, 'base64');
+-  const filename = `upload/${generateFileId('upload.m4a')}`;
++  const filename = `upload/${generateFileId('upload.mp3')}`;
+   fs.writeFileSync(filename, buffer);
+ 
+   console.log(`Filename: ${filename}`)
+   const destination_name = await extract_location_name(filename);
++  const session = sessions.get(sessionId);
++  session.destination_name = destination_name;
++  res.status(200)
++  res.send({'message': `Destination set as ${destination_name}.`})
++})
++
++app.get('/destination', (req, res) => {
++  const body= req.body;
++  const sessionId = body.sessionId;
++  const token = body.token;
++  if (sessions.get(sessionId).token !== token) {
++    res.status(400);
++    res.send({'message': 'invalid token'});
++    return;
++  }
++
++  res.send({'destination': sessions.get(sessionId).get('destination_name')});
++})
++
++app.get('/directions', async (req, res) => {
++  const sessionId = req.query.sessionId;
++  const token = req.query.token;
++  if (sessions.get(sessionId).token !== token) {
++    res.status(400);
++    res.send({'message': 'invalid token'});
++    return;
++  }
+ 
+   // TODO: get users coordinates
+   const origin = {
+     "location": {
+       "latLng": {
+-        // "latitude": 28.059656,
+-        "latitude": lat,
+-        // "longitude": -82.418612,
+-        "longitude": lon
++        "latitude": 28.059656,
++        // "latitude": req.query.lat,
++        "longitude": -82.418612,
++        // "longitude": req.query.lon
+       }
+     }
+   }
+ 
++  const destination = sessions.get(sessionId).destination_name;
+   const query = {
+     "origin": origin,
+     "destination": {
+-      "address": destination_name
++      "address": destination
+     },
+     "travelMode": "WALK",
+     "polylineQuality": "HIGH_QUALITY",
+diff --git a/api/testing/mock.py b/api/testing/mock.py
+index 53ce6d1..7f1af06 100644
+--- a/api/testing/mock.py
++++ b/api/testing/mock.py
+@@ -2,18 +2,15 @@ import requests
+ import base64
+ 
+ def main():
+-    with open('../upload/sound.m4a', 'rb') as f:
++    with open('../upload/sound.mp3', 'rb') as f:
+         data = f.read()
+ 
+     encoded = base64.b64encode(data).decode('utf-8')
+ 
+-#     session = requests.post('http://localhost:3000/startSession').json()
+-#     destination = requests.post('http://localhost:3000/setDestination', data={'sessionId': session.get('sessionId'), 'token': session.get('token'), 'audioFile': encoded})
+-#     print(destination.json())
+-    print(len(encoded))
+-
+-    directions = requests.post('http://localhost:3000/directions',
+-        json={'audio': encoded, 'latitude': 28.059656, 'longitude': -82.418612})
++    session = requests.post('http://localhost:3000/startSession').json()
++    destination = requests.post('http://localhost:3000/setDestination', data={'sessionId': session.get('sessionId'), 'token': session.get('token'), 'audioFile': encoded})
++    print(destination.json())
++    directions = requests.get('http://localhost:3000/directions', params={'sessionId': session.get('sessionId'), 'token': session.get('token')})
+     print(directions.json())
+ 
+ 
+diff --git a/api/util.js b/api/util.js
+index 24673a0..4c2e5ff 100644
+--- a/api/util.js
++++ b/api/util.js
+@@ -23,6 +23,12 @@ export function generateFileId(filename) {
+ }
+ 
+ 
++const myfile = await ai.files.upload({
++  file: "upload/sond2.mp3",
++  config: { mimeType: "audio/mp3" },
++});
++
++
+ export async function extract_location_name(filename) {
+   console.log(`In filename: ${filename}`)
+   const myfile = await ai.files.upload({
+diff --git a/sound/.DS_Store b/sound/.DS_Store
+new file mode 100644
+index 0000000..51c4af2
+Binary files /dev/null and b/sound/.DS_Store differ
+diff --git a/sound/AudioUploadService.swift b/sound/AudioUploadService.swift
+index 2ea707f..d05ec45 100644
+--- a/sound/AudioUploadService.swift
++++ b/sound/AudioUploadService.swift
+@@ -1,17 +1,10 @@
+ import Foundation
+ import AVFoundation
+-import CoreLocation
+-import SwiftUI
+ 
+-class AudioUploadService: ObservableObject {
++class AudioUploadService {
+     // Configure with your API endpoint
+     private let apiURLString = "http://10.245.89.170:3000"
+-    
+-    var appState: ApplicationState;
+-    
+-    init(appState: ApplicationState) {
+-        self.appState = appState
+-    }
++    private let apiURL = URL(string: "http://10.245.89.170:3000")!
+     
+     /// Uploads recorded audio data directly without saving to file
+     /// - Parameters:
+@@ -32,8 +25,8 @@ class AudioUploadService: ObservableObject {
+     }
+     
+     // MARK: - Private methods
+-    private func performUpload(audioData: Data, completion: @escaping (Result<Data, Error>) -> Void) -> Void {
+-        guard let url = URL(string: apiURLString + "/directions") else {
++    private func performUpload(audioData: Data, completion: @escaping (Result<Data, Error>) -> Void) {
++        guard let url = URL(string: apiURLString + "/setDestination") else {
+             print("Invalid URL")
+             return
+         }
+@@ -41,65 +34,25 @@ class AudioUploadService: ObservableObject {
+         var request = URLRequest(url: url)
+         request.httpMethod = "POST"
+         
+-        //        request.setValue("audio/m4a", forHTTPHeaderField: "Content-Type")
+-        //        request.setValue("\(audioData.count)", forHTTPHeaderField: "Content-Length")
+-        //        request.httpBody = audioData
++//        request.setValue("audio/m4a", forHTTPHeaderField: "Content-Type")
++//        request.setValue("\(audioData.count)", forHTTPHeaderField: "Content-Length")
++//        request.httpBody = audioData
+         
+         let base64String = audioData.base64EncodedString()
+-        
+-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+-        
+-        guard let location = locationService.getCurrentLocation() else {
++        guard let base64Data = base64String.data(using: .utf8) else {
++            completion(.failure(AudioUploadError.conversionFailed))
+             return
+         }
++                
++        request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
++        request.setValue("\(base64Data.count)", forHTTPHeaderField: "Content-Length")
++        request.httpBody = base64Data
+         
+-        let lat = location.coordinate.latitude
+-        let lon = location.coordinate.longitude
+-        
+-        let data = ["audio": base64String, "latitude": String(lat), "longitude": String(lon)]
+-        
+-        guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {
+-            fatalError("Failed to serialize JSON");
+-        }
+-        
+-        request.httpBody = jsonData
++        let httpClient: HTTPClient = DefaultHTTPClient()
+         
+         httpClient.sendRequest(request) { result in
+             switch result {
+             case .success(let data):
+-                print("Successfully")
+-                if let data_str = String(data: data, encoding: .utf8) {
+-                    print(data_str)
+-                    if let data_str_data = data_str.data(using: .utf8) {
+-                        do {
+-                            let decoded = try JSONDecoder().decode(Directions.self, from: data_str_data)
+-                            self.appState.path = decoded;
+-                        } catch let error as DecodingError {
+-                            switch error {
+-                            case .typeMismatch(let type, let context):
+-                                print("Type Mismatch for type \(type): \(context.debugDescription)")
+-                                print("Coding Path: \(context.codingPath)")
+-                                
+-                            case .valueNotFound(let type, let context):
+-                                print("Value not found for type \(type): \(context.debugDescription)")
+-                                print("Coding Path: \(context.codingPath)")
+-                                
+-                            case .keyNotFound(let key, let context):
+-                                print("Key '\(key)' not found: \(context.debugDescription)")
+-                                print("Coding Path: \(context.codingPath)")
+-                                
+-                            case .dataCorrupted(let context):
+-                                print("Data corrupted: \(context.debugDescription)")
+-                                print("Coding Path: \(context.codingPath)")
+-                                
+-                            @unknown default:
+-                                print("Unknown decoding error: \(error)")
+-                            }
+-                        } catch {
+-                            print("Other error: \(error)")
+-                        }
+-                    }
+-                }
+                 DispatchQueue.main.async {
+                     completion(.success(data))
+                 }
+@@ -108,7 +61,6 @@ class AudioUploadService: ObservableObject {
+                     completion(.failure(error))
+                 }
+             }
+-            print(result)
+         }
+     }
+     
+diff --git a/sound/Model/BaseMapTypes.swift b/sound/Model/BaseMapTypes.swift
+deleted file mode 100644
+index 6a16577..0000000
+--- a/sound/Model/BaseMapTypes.swift
++++ /dev/null
+@@ -1,32 +0,0 @@
+-//
+-//  BaseMapTypes.swift
+-//  sound
+-//
+-//  Created by Cole Smith on 4/13/25.
+-//
+-
+-struct Polyline : Codable {
+-    let encodedPolyline: String
+-}
+-
+-struct Step : Codable {
+-    let distanceMeters: Int
+-    let staticDuration: String
+-    let polyline: Polyline
+-}
+-
+-struct Leg : Codable {
+-    let steps: [Step]
+-    let distanceMeters: Int
+-    let duration: String
+-    let polyline: Polyline
+-}
+-
+-struct Route : Codable {
+-    let legs: [Leg]
+-    
+-}
+-
+-struct Directions : Codable {
+-    let routes: [Route]
+-}
+diff --git a/sound/Model/MapStep.swift b/sound/Model/MapStep.swift
+deleted file mode 100644
+index 6366d9c..0000000
+--- a/sound/Model/MapStep.swift
++++ /dev/null
+@@ -1,29 +0,0 @@
+-//
+-//  MapStep.swift
+-//  sound
+-//
+-//  Created by Cole Smith on 4/13/25.
+-//
+-
+-import Foundation
+-import CoreLocation
+-import Combine
+-
+-
+-class MapStep: Identifiable {
+-    var distance_meters: Double
+-    var duration_seconds: Int
+-    var start_location: CLLocation
+-    var end_location: CLLocation
+-    var waypoints: [Waypoint]
+-    var instruction: String
+-    
+-    init(distance_meters: Double, duration_seconds: Int, start_location: CLLocation, end_location: CLLocation, waypoints: [Waypoint], instruction: String) {
+-        self.distance_meters = distance_meters
+-        self.duration_seconds = duration_seconds
+-        self.start_location = start_location
+-        self.end_location = end_location
+-        self.waypoints = waypoints
+-        self.instruction = instruction
+-    }
+-}
+diff --git a/sound/Model/ProgressTypes.swift b/sound/Model/ProgressTypes.swift
+deleted file mode 100644
+index 3850ffe..0000000
+--- a/sound/Model/ProgressTypes.swift
++++ /dev/null
+@@ -1,59 +0,0 @@
+-//
+-//  ProgressTypes.swift
+-//  sound
+-//
+-//  Created by Cole Smith on 4/13/25.
+-//
+-
+-import CoreLocation
+-
+-func decodePolyline(_ polyline: String) -> [CLLocationCoordinate2D] {
+-    var index = polyline.startIndex
+-    var lat = 0
+-    var lng = 0
+-    var coordinates: [(Double, Double)] = []
+-    
+-    while index < polyline.endIndex {
+-        var result = 0
+-        var shift = 0
+-        var b: Int
+-        
+-        // Decode latitude
+-        repeat {
+-            b = Int(polyline[index].asciiValue!) - 63
+-            index = polyline.index(after: index)
+-            result |= (b & 0x1F) << shift
+-            shift += 5
+-        } while b >= 0x20
+-        let deltaLat = (result & 1) != 0 ? ~(result >> 1) : (result >> 1)
+-        lat += deltaLat
+-        
+-        // Decode longitude
+-        result = 0
+-        shift = 0
+-        repeat {
+-            b = Int(polyline[index].asciiValue!) - 63
+-            index = polyline.index(after: index)
+-            result |= (b & 0x1F) << shift
+-            shift += 5
+-        } while b >= 0x20
+-        let deltaLng = (result & 1) != 0 ? ~(result >> 1) : (result >> 1)
+-        lng += deltaLng
+-        
+-        coordinates.append((Double(lat) / 1e5, Double(lng) / 1e5))
+-    }
+-    
+-    return coordinates.map {(lat, lon) in
+-        return CLLocationCoordinate2D(latitude: lat, longitude: lon)
+-    }
+-}
+-
+-class StepProgress  {
+-    var underlying_step: Step
+-    var path: [CLLocationCoordinate2D]
+-    
+-    init(step: Step) {
+-        underlying_step = step
+-        path = decodePolyline(step.polyline.encodedPolyline)
+-    }
+-}
+diff --git a/sound/Model/State.swift b/sound/Model/State.swift
+deleted file mode 100644
+index d2aba0e..0000000
+--- a/sound/Model/State.swift
++++ /dev/null
+@@ -1,20 +0,0 @@
+-//
+-//  State.swift
+-//  sound
+-//
+-//  Created by Cole Smith on 4/13/25.
+-//
+-
+-import Foundation
+-import CoreLocation
+-import Combine
+-
+-class ApplicationState : ObservableObject {
+-//    @Published var path: MapPath? = nil
+-    @Published var path: Directions?;
+-    var in_route: Bool { path != nil }
+-    
+-    init() {
+-        path = nil;
+-    }
+-}
+diff --git a/sound/sound.xcodeproj/project.pbxproj b/sound/sound.xcodeproj/project.pbxproj
+index 14ac086..8b3e72e 100644
+--- a/sound/sound.xcodeproj/project.pbxproj
++++ b/sound/sound.xcodeproj/project.pbxproj
+@@ -287,12 +287,10 @@
+ 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+ 				CODE_SIGN_STYLE = Automatic;
+ 				CURRENT_PROJECT_VERSION = 1;
+-				DEVELOPMENT_TEAM = 9A33BY5TZQ;
++				DEVELOPMENT_TEAM = 242878W3XQ;
+ 				ENABLE_PREVIEWS = YES;
+ 				GENERATE_INFOPLIST_FILE = YES;
+ 				INFOPLIST_KEY_NSCameraUsageDescription = LiDAR;
+-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Even MORE GPS";
+-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS";
+ 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For voice commands";
+ 				INFOPLIST_KEY_NSMotionUsageDescription = Motion;
+ 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+@@ -306,7 +304,7 @@
+ 					"@executable_path/Frameworks",
+ 				);
+ 				MARKETING_VERSION = 1.0;
+-				PRODUCT_BUNDLE_IDENTIFIER = com.colesmith54.sound;
++				PRODUCT_BUNDLE_IDENTIFIER = com.ANDREWWWWW.sound;
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				SWIFT_EMIT_LOC_STRINGS = YES;
+ 				SWIFT_VERSION = 5.0;
+@@ -321,12 +319,10 @@
+ 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+ 				CODE_SIGN_STYLE = Automatic;
+ 				CURRENT_PROJECT_VERSION = 1;
+-				DEVELOPMENT_TEAM = 9A33BY5TZQ;
++				DEVELOPMENT_TEAM = 242878W3XQ;
+ 				ENABLE_PREVIEWS = YES;
+ 				GENERATE_INFOPLIST_FILE = YES;
+ 				INFOPLIST_KEY_NSCameraUsageDescription = LiDAR;
+-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Even MORE GPS";
+-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS";
+ 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For voice commands";
+ 				INFOPLIST_KEY_NSMotionUsageDescription = Motion;
+ 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+@@ -340,7 +336,7 @@
+ 					"@executable_path/Frameworks",
+ 				);
+ 				MARKETING_VERSION = 1.0;
+-				PRODUCT_BUNDLE_IDENTIFIER = com.colesmith54.sound;
++				PRODUCT_BUNDLE_IDENTIFIER = com.ANDREWWWWW.sound;
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				SWIFT_EMIT_LOC_STRINGS = YES;
+ 				SWIFT_VERSION = 5.0;
+diff --git a/sound/sound.xcodeproj/project.xcworkspace/xcuserdata/colesmith54.xcuserdatad/UserInterfaceState.xcuserstate b/sound/sound.xcodeproj/project.xcworkspace/xcuserdata/colesmith54.xcuserdatad/UserInterfaceState.xcuserstate
+index 4a37c84..342e187 100644
+Binary files a/sound/sound.xcodeproj/project.xcworkspace/xcuserdata/colesmith54.xcuserdatad/UserInterfaceState.xcuserstate and b/sound/sound.xcodeproj/project.xcworkspace/xcuserdata/colesmith54.xcuserdatad/UserInterfaceState.xcuserstate differ
+diff --git a/sound/sound/MicrophoneView.swift b/sound/sound/MicrophoneView.swift
+index 7dd86cb..5df1b6b 100644
+--- a/sound/sound/MicrophoneView.swift
++++ b/sound/sound/MicrophoneView.swift
+@@ -18,9 +18,7 @@ struct MicrophoneView: View {
+     @State private var completedLongPress = true
+     @State private var audioRecorder: AVAudioRecorder?
+ 
+-    @EnvironmentObject var applicationState: ApplicationState
+-    @StateObject private var audioUploadService = AudioUploadService(appState: ApplicationState())
+-
++    @State private var audioUploadService = AudioUploadService()
+     @State private var sessionRecordingURL: URL? // To store the temp recording URL
+ //    @State private var uploadCancellable: AnyCancellable?
+     
+diff --git a/sound/sound/soundApp.swift b/sound/sound/soundApp.swift
+index 4875e99..19086c2 100644
+--- a/sound/sound/soundApp.swift
++++ b/sound/sound/soundApp.swift
+@@ -1,16 +1,7 @@
+ import SwiftUI
+ 
+-let httpClient: HTTPClient = DefaultHTTPClient()
+-let locationService = LocationService()
+-
+ @main
+ struct soundApp: App {
+-    @State private var appState = ApplicationState()
+-    
+-    init() {
+-        locationService.startMonitoring()
+-    }
+-    
+     var body: some Scene {
+         WindowGroup {
+             TabView {
+@@ -19,7 +10,6 @@ struct soundApp: App {
+                         Image(systemName: "mic.fill")
+                         Text("Record")
+                     }
+-                    .environmentObject(appState)
+                 PathView()
+                     .tabItem {
+                         Image(systemName: "location.fill")
