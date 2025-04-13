@@ -3,6 +3,9 @@ import ARKit
 import AVFoundation
 import CoreHaptics
 import CoreMotion
+import Combine
+import QuartzCore
+
 
 // MARK: - Background Spatial Audio Service
 class SpatialAudioService: NSObject, ARSessionDelegate {
@@ -79,6 +82,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         
         session.pause()
         audioEngine.stop()
+        
         if let player = audioPlayerNode {
             player.stop()
         }
@@ -198,7 +202,7 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
         mixerNode = mixer
         
         // Configure spatial properties
-        if let mixer3D = mixer as? AVAudio3DMixing {
+        if let mixer3D = mixer as Optional<AVAudio3DMixing> {
             mixer3D.renderingAlgorithm = .sphericalHead
             mixer3D.reverbBlend = 0.2
             mixer3D.position = AVAudio3DPoint(x: 0, y: 0, z: -1.0)
