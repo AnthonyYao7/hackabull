@@ -41,16 +41,22 @@ class PathMonitorService: ObservableObject {
         let dfp = path.calculateDistanceFromPath(location: location)
         path.distanceFromPath = dfp
         path.isDeviatingFromPath = dfp > path.maxDeviationDistance
-        
+        print("In update path progress")
         if let wp = path.currentWaypoint {
+            print("found waypoint")
             let wpLoc = CLLocation(latitude: wp.coordinate.latitude,
                                    longitude: wp.coordinate.longitude)
             let dtn = location.distance(from: wpLoc)
             path.distanceToNextWaypoint = dtn
+            print("distance to next waypoint: \(dtn)")
             if dtn <= wp.requiredProximity {
+                print("moving to next waypoint")
                 path.moveToNextWaypoint()
-                if path.isCompleted { handlePathCompletion() }
+                let dfp = path.calculateDistanceFromPath(location: location)
+                path.distanceFromPath = dfp
+                if path.isCompleted { handlePathCompletion(); print("path completed") }
             }
+
         }
     }
     

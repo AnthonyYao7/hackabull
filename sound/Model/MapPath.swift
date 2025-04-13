@@ -1,6 +1,8 @@
 import Foundation
 import CoreLocation
 import Combine
+import AVFoundation
+
 
 class MapPath: Identifiable, ObservableObject {
     let id = UUID()
@@ -18,7 +20,7 @@ class MapPath: Identifiable, ObservableObject {
         currentWaypointIndex < waypoints.count ? waypoints[currentWaypointIndex] : nil
     }
     
-    init(title: String, waypoints: [Waypoint], maxDeviationDistance: Double = 50.0) {
+    init(title: String, waypoints: [Waypoint], maxDeviationDistance: Double = 30.0) {
         self.title = title
         self.waypoints = waypoints
         self.maxDeviationDistance = maxDeviationDistance
@@ -48,7 +50,7 @@ class MapPath: Identifiable, ObservableObject {
         if currentWaypointIndex >= waypoints.count { isCompleted = true }
         if !isCompleted {
             if let instruction = waypoints[currentWaypointIndex].instruction {
-                // speak instruction
+                speakMessage(text: instruction)
             }
         }
     }

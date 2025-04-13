@@ -464,8 +464,6 @@ class SpatialAudioService: NSObject, ARSessionDelegate {
             return
         }
         
-        return
-        
         let now = CACurrentMediaTime()
         if now - lastBeepTime >= interval {
             lastBeepTime = now

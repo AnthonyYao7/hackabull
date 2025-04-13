@@ -110,6 +110,7 @@ struct PathNavigationView: View {
                                 for (j, coord) in coords.enumerated() {
                                     let waypoint = Waypoint(coordinate: coord, requiredProximity: 50.0)
                                     waypoints.append(waypoint)
+                                    print(waypoint)
                                 }
                                 
                                 if waypoints.count > 0 {
