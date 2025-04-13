@@ -9,10 +9,16 @@ struct Polyline : Codable {
     let encodedPolyline: String
 }
 
+struct NavigationInstruction : Codable {
+    let maneuver: String
+    let instructions: String
+}
+
 struct Step : Codable {
     let distanceMeters: Int
     let staticDuration: String
     let polyline: Polyline
+    let navigationInstruction: NavigationInstruction
 }
 
 struct Leg : Codable {

@@ -46,6 +46,11 @@ class MapPath: Identifiable, ObservableObject {
         guard currentWaypointIndex < waypoints.count else { return }
         currentWaypointIndex += 1
         if currentWaypointIndex >= waypoints.count { isCompleted = true }
+        if !isCompleted {
+            if let instruction = waypoints[currentWaypointIndex].instruction {
+                // speak instruction
+            }
+        }
     }
     
     func reset() {
