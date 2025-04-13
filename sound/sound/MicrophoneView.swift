@@ -4,15 +4,17 @@ import Combine
 
 struct MicrophoneView: View {
     enum AppState {
+        case neutral
         case listening
-        case processing
+        case uploading
+        
+        // Separate use in the path screen
         case caution
-        case uploading // New state for uploading
     }
     
-    @State private var appState: AppState = .listening
+    @State private var appState: AppState = .neutral
     @State private var flashingAnimation = false
-    @GestureState private var isDetectingLongPress = false
+    @GestureState private var   isDetectingLongPress = false
     @State private var completedLongPress = true
     @State private var audioRecorder: AVAudioRecorder?
 
@@ -28,7 +30,6 @@ struct MicrophoneView: View {
                 .animation(appState == .caution ? Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true) : .default, value: flashingAnimation)
             
             VStack {
-                // Text based on state
                 Text(stateText)
                     .font(.system(size: 65, weight: .bold))
                     .foregroundColor(textColor)
@@ -49,7 +50,7 @@ struct MicrophoneView: View {
                     ))
                 
 //                // Show cancel button during uploading
-//                if appState == .processing || appState == .uploading {
+//                if appState == .listening || appState == .uploading {
 //                    Button("Cancel Upload") {
 //                        cancelUpload()
 //                    }
@@ -65,17 +66,15 @@ struct MicrophoneView: View {
         .gesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { _ in
-                    if appState != .processing {
-                        withAnimation {
-                            appState = .processing
-                        }
+                    if appState == .neutral {
+                        withAnimation {appState = .listening}
                         startRecording()
                     }
                 }
                 .onEnded { _ in
                     stopRecordingAndUpload()
                     withAnimation {
-                        appState = .uploading
+                        appState = .neutral
                     }
                 }
         )
@@ -87,7 +86,7 @@ struct MicrophoneView: View {
         do {
             try session.setCategory(.playAndRecord, mode: .default)
             try session.setActive(true)
-            session.requestRecordPermission { allowed in
+            AVAudioApplication.requestRecordPermission { allowed in
                 DispatchQueue.main.async {
                     if allowed {
                         let settings = [
@@ -124,6 +123,10 @@ struct MicrophoneView: View {
             recorder.stop()
             print("🛑 Recording stopped")
             
+            withAnimation {
+                appState = .uploading
+            }
+            
             // Upload the recording
             audioUploadService.uploadFromRecorder(recorder) { result in
                 DispatchQueue.main.async {
@@ -131,16 +134,15 @@ struct MicrophoneView: View {
                     case .success(let responseData):
                         print("✅ Audio uploaded successfully: \(responseData)")
                         withAnimation {
-                            appState = .caution
+                            appState = .neutral
                         }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                             flashingAnimation = true
                         }
-                        
                     case .failure(let error):
                         print("❌ Upload failed: \(error.localizedDescription)")
                         withAnimation {
-                            appState = .listening
+                            appState = .neutral
                         }
                     }
                     
@@ -148,34 +150,7 @@ struct MicrophoneView: View {
             }
         } else {
             withAnimation {
-                appState = .listening
-            }
-        }
-    }
-    
-    // Alternative direct recording and upload approach
-    private func directRecordAndUpload(duration: TimeInterval = 5.0) {
-        withAnimation {
-            appState = .processing
-        }
-        
-        audioUploadService.recordAndUpload(duration: duration) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    withAnimation {
-                        appState = .caution
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                        flashingAnimation = true
-                    }
-                    
-                case .failure(let error):
-                    print("❌ Direct recording and upload failed: \(error.localizedDescription)")
-                    withAnimation {
-                        appState = .listening
-                    }
-                }
+                appState = .neutral
             }
         }
     }
@@ -184,28 +159,31 @@ struct MicrophoneView: View {
 //        uploadCancellable?.cancel()
 //        uploadCancellable = nil
 //        print("🚫 Upload cancelled")
-//        withAnimation { appState = .listening }
+//        withAnimation { appState =  }
 //    }
     
     // Helper properties to determine appearance based on state
     
     private var backgroundColor: Color {
         switch appState {
-        case .listening:
+        case .neutral:
             return Color.white
-        case .processing, .uploading:
+        case .listening:
             return Color.blue
+        case .uploading:
+            return Color.purple
         case .caution:
+            // TODO: Fix
             return flashingAnimation ? Color.red : Color.white
         }
     }
     
     private var stateText: String {
         switch appState {
+        case .neutral:
+            return "Hold to speak..."
         case .listening:
             return "Listening..."
-        case .processing:
-            return "Processing..."
         case .uploading:
             return "Uploading..."
         case .caution:
@@ -215,10 +193,10 @@ struct MicrophoneView: View {
     
     private var stateIcon: Image {
         switch appState {
+        case .neutral:
+            return Image(systemName: "dot.circle")
         case .listening:
-            return Image(systemName: "mic.fill")
-        case .processing:
-            return Image(systemName: "waveform")
+            return Image(systemName: "waveform") // mic.fill
         case .uploading:
             return Image(systemName: "arrow.up.circle")
         case .caution:
@@ -228,19 +206,21 @@ struct MicrophoneView: View {
     
     private var textColor: Color {
         switch appState {
-        case .listening:
+        case .neutral:
             return .black
-        case .processing, .uploading, .caution:
+        case .listening:
             return .white
+        case _:
+            return .gray
         }
     }
     
     private var iconColor: Color {
         switch appState {
         case .listening:
-            return .black
-        case .processing, .uploading, .caution:
             return .white
+        case _:
+            return .gray
         }
     }
 }
