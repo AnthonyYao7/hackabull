@@ -641,6 +641,8 @@ extension SpatialAudioService {
             return
         }
         
+        return;
+        
         let now = CACurrentMediaTime()
         if now - lastBeaconBeepTime >= beaconInterval {
             lastBeaconBeepTime = now
