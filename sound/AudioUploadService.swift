@@ -1,10 +1,17 @@
 import Foundation
 import AVFoundation
 import CoreLocation
+import SwiftUI
 
-class AudioUploadService {
+class AudioUploadService: ObservableObject {
     // Configure with your API endpoint
     private let apiURLString = "http://10.245.89.170:3000"
+    
+    var appState: ApplicationState;
+    
+    init(appState: ApplicationState) {
+        self.appState = appState
+    }
     
     /// Uploads recorded audio data directly without saving to file
     /// - Parameters:
@@ -63,6 +70,35 @@ class AudioUploadService {
                 print("Successfully")
                 if let data_str = String(data: data, encoding: .utf8) {
                     print(data_str)
+                    if let data_str_data = data_str.data(using: .utf8) {
+                        do {
+                            let decoded = try JSONDecoder().decode(Directions.self, from: data_str_data)
+                            self.appState.path = decoded;
+                        } catch let error as DecodingError {
+                            switch error {
+                            case .typeMismatch(let type, let context):
+                                print("Type Mismatch for type \(type): \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                                
+                            case .valueNotFound(let type, let context):
+                                print("Value not found for type \(type): \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                                
+                            case .keyNotFound(let key, let context):
+                                print("Key '\(key)' not found: \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                                
+                            case .dataCorrupted(let context):
+                                print("Data corrupted: \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                                
+                            @unknown default:
+                                print("Unknown decoding error: \(error)")
+                            }
+                        } catch {
+                            print("Other error: \(error)")
+                        }
+                    }
                 }
                 DispatchQueue.main.async {
                     completion(.success(data))

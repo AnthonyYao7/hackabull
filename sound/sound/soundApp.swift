@@ -5,6 +5,8 @@ let locationService = LocationService()
 
 @main
 struct soundApp: App {
+    @State private var appState = ApplicationState()
+    
     init() {
         locationService.startMonitoring()
     }
@@ -17,6 +19,7 @@ struct soundApp: App {
                         Image(systemName: "mic.fill")
                         Text("Record")
                     }
+                    .environmentObject(appState)
                 PathView()
                     .tabItem {
                         Image(systemName: "location.fill")
