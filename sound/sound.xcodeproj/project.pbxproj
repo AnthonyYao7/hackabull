@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72A329452DAB4A720049A5D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A329442DAB4A720049A5D8 /* ContentView.swift */; };
-		72DFFA512DAB27CC009C15B1 /* SpatialAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA502DAB27CC009C15B1 /* SpatialAudioViewController.swift */; };
+		72A329452DAB4A720049A5D8 /* MicrophoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A329442DAB4A720049A5D8 /* MicrophoneView.swift */; };
+		72DFFA512DAB27CC009C15B1 /* SpatialAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA502DAB27CC009C15B1 /* SpatialAudioView.swift */; };
 		72DFFA532DAB27DA009C15B1 /* soundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFFA522DAB27DA009C15B1 /* soundApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		729D0CB32DAA34E800438DCD /* sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sound.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		72A329442DAB4A720049A5D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = sound/ContentView.swift; sourceTree = "<group>"; };
-		72DFFA502DAB27CC009C15B1 /* SpatialAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpatialAudioViewController.swift; path = sound/SpatialAudioViewController.swift; sourceTree = "<group>"; };
+		72A329442DAB4A720049A5D8 /* MicrophoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MicrophoneView.swift; path = sound/MicrophoneView.swift; sourceTree = "<group>"; };
+		72DFFA502DAB27CC009C15B1 /* SpatialAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpatialAudioView.swift; path = sound/SpatialAudioView.swift; sourceTree = "<group>"; };
 		72DFFA522DAB27DA009C15B1 /* soundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = soundApp.swift; path = sound/soundApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D1284D362DAB58EA00B710F1 /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1284D3B2DAB593E00B710F1 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		729D0CB02DAA34E800438DCD /* Frameworks */ = {
@@ -33,10 +46,12 @@
 		729D0CAA2DAA34E800438DCD = {
 			isa = PBXGroup;
 			children = (
-				72A329442DAB4A720049A5D8 /* ContentView.swift */,
+				D1284D362DAB58EA00B710F1 /* Model */,
+				72A329442DAB4A720049A5D8 /* MicrophoneView.swift */,
+				72DFFA502DAB27CC009C15B1 /* SpatialAudioView.swift */,
 				72DFFA522DAB27DA009C15B1 /* soundApp.swift */,
-				72DFFA502DAB27CC009C15B1 /* SpatialAudioViewController.swift */,
 				729D0CB42DAA34E800438DCD /* Products */,
+				D1284D3B2DAB593E00B710F1 /* Services */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +77,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D1284D362DAB58EA00B710F1 /* Model */,
+				D1284D3B2DAB593E00B710F1 /* Services */,
 			);
 			name = sound;
 			packageProductDependencies = (
@@ -119,9 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72A329452DAB4A720049A5D8 /* ContentView.swift in Sources */,
+				72A329452DAB4A720049A5D8 /* MicrophoneView.swift in Sources */,
 				72DFFA532DAB27DA009C15B1 /* soundApp.swift in Sources */,
-				72DFFA512DAB27CC009C15B1 /* SpatialAudioViewController.swift in Sources */,
+				72DFFA512DAB27CC009C15B1 /* SpatialAudioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
