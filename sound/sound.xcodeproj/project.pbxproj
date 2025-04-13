@@ -13,6 +13,12 @@
 		D1284D562DAB681200B710F1 /* SpatialAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1284D552DAB680B00B710F1 /* SpatialAudioView.swift */; };
 		D1284D582DAB699200B710F1 /* AudioUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1284D572DAB698D00B710F1 /* AudioUploadService.swift */; };
 		D1284D5A2DAB7B9800B710F1 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1284D592DAB7B9800B710F1 /* HTTPRequest.swift */; };
+		D1284D632DAB7E2600B710F1 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = D1284D5D2DAB7E2600B710F1 /* .env */; };
+		D1284D642DAB7E2600B710F1 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = D1284D5E2DAB7E2600B710F1 /* index.js */; };
+		D1284D652DAB7E2600B710F1 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = D1284D5F2DAB7E2600B710F1 /* package.json */; };
+		D1284D662DAB7E2600B710F1 /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = D1284D602DAB7E2600B710F1 /* package-lock.json */; };
+		D1284D672DAB7E2600B710F1 /* mock.py in Resources */ = {isa = PBXBuildFile; fileRef = D1284D5B2DAB7E2600B710F1 /* mock.py */; };
+		D1284D682DAB7E2600B710F1 /* util.js in Resources */ = {isa = PBXBuildFile; fileRef = D1284D612DAB7E2600B710F1 /* util.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		D1284D552DAB680B00B710F1 /* SpatialAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialAudioView.swift; sourceTree = "<group>"; };
 		D1284D572DAB698D00B710F1 /* AudioUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUploadService.swift; sourceTree = "<group>"; };
 		D1284D592DAB7B9800B710F1 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		D1284D5B2DAB7E2600B710F1 /* mock.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = mock.py; sourceTree = "<group>"; };
+		D1284D5D2DAB7E2600B710F1 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		D1284D5E2DAB7E2600B710F1 /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		D1284D5F2DAB7E2600B710F1 /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		D1284D602DAB7E2600B710F1 /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
+		D1284D612DAB7E2600B710F1 /* util.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = util.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -55,6 +67,7 @@
 				D1284D362DAB58EA00B710F1 /* Model */,
 				72A329442DAB4A720049A5D8 /* MicrophoneView.swift */,
 				D1284D572DAB698D00B710F1 /* AudioUploadService.swift */,
+				D1284D622DAB7E2600B710F1 /* api */,
 				D1284D592DAB7B9800B710F1 /* HTTPRequest.swift */,
 				D1284D552DAB680B00B710F1 /* SpatialAudioView.swift */,
 				72DFFA502DAB27CC009C15B1 /* SpatialAudioService.swift */,
@@ -70,6 +83,27 @@
 				729D0CB32DAA34E800438DCD /* sound.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D1284D5C2DAB7E2600B710F1 /* testing */ = {
+			isa = PBXGroup;
+			children = (
+				D1284D5B2DAB7E2600B710F1 /* mock.py */,
+			);
+			path = testing;
+			sourceTree = "<group>";
+		};
+		D1284D622DAB7E2600B710F1 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				D1284D5C2DAB7E2600B710F1 /* testing */,
+				D1284D5D2DAB7E2600B710F1 /* .env */,
+				D1284D5E2DAB7E2600B710F1 /* index.js */,
+				D1284D5F2DAB7E2600B710F1 /* package.json */,
+				D1284D602DAB7E2600B710F1 /* package-lock.json */,
+				D1284D612DAB7E2600B710F1 /* util.js */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +171,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1284D632DAB7E2600B710F1 /* .env in Resources */,
+				D1284D642DAB7E2600B710F1 /* index.js in Resources */,
+				D1284D652DAB7E2600B710F1 /* package.json in Resources */,
+				D1284D662DAB7E2600B710F1 /* package-lock.json in Resources */,
+				D1284D672DAB7E2600B710F1 /* mock.py in Resources */,
+				D1284D682DAB7E2600B710F1 /* util.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
